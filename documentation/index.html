@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOAPI Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Open Education API documentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Docsify and theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-versioned-plugin@0.0.1/styles.css">
+  <link rel="stylesheet" href="../theme.css">
+</head>
+
+<body>
+  <!-- Version banner rendered dynamically -->
+  <div id="version-banner"></div>
+
+  <!-- Docsify application root -->
+  <div id="app"></div>
+
+  <!-- Docsify configuration -->
+  <script>
+    window.$docsify = {
+      repo: 'https://github.com/open-education-api/specification',
+      homepage: 'home.md',
+      basePath: '',
+      search: 'auto',
+      name: 'Open Education API V6.0',
+      externalLinkTarget: '_self',
+      loadSidebar: true,
+      //loadNavbar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      subMaxLevel: 0,
+      maxLevel: 1,          // sidebar nesting depth
+      logo: '_media/OpenEducationApi_Logo.png',
+      tabs: {
+        persist    : true,       // default
+        sync       : true,       // default
+        theme      : 'classic',  // default
+        tabComments: true,       // default
+        tabHeadings: true        // default
+      },
+
+      /* Available documentation versions */
+      versionSelectorLabel: 'Version'
+    }
+  </script>
+
+  <!-- Docsify core scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/front-matter.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-versioned-plugin@0.0.1/index.js"></script>
+
+  <!-- Custom versioning behaviour -->
+  <script src="../ooapi-versioning.js"></script>
+</body>
+</html>
