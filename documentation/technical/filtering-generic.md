@@ -5,18 +5,18 @@
 - Filtering support is **optional**. Implementing organisations **MAY** support it fully,
   partially, or not at all. Support for filtering **SHOULD** be documented in the service
   endpoint description. Support for this functionality **cannot be enforced** by any
-  party, including organisations that provide or consume OOAPI endpoints.  
+  party, including organisations that provide or consume OOAPI endpoints.
 - The **availability** of this filter functionality is determined by each implementing
   organisation. The general structure and semantics are
-  **standardised** within the OOAPI specification.  
+  **standardised** within the OOAPI specification.
 - This mechanism is intended to promote **consistency** across implementations, while
-  allowing flexibility in technical realisation.  
+  allowing flexibility in technical realisation.
 - Filtering can complement **[data minimisation](technical/data-minimisation.md)** principles, as it allows clients to
-  request only relevant data subsets.  
+  request only relevant data subsets.
 - Consumers or working groups that wish to apply **generic filtering mechanisms** are
-  encouraged to use this approach for the sake of consistency across implementations.  
+  encouraged to use this approach for the sake of consistency across implementations.
 - The structure is **extensible**. New operations or fields can be introduced if they
-  follow the same serialisation pattern.  
+  follow the same serialisation pattern.
 - Filters are a **convenience feature** and not part of the formal API contract.
 
 ---
@@ -52,7 +52,7 @@ GET /organisations/{organisationId}/course-offerings
   &filter_query[enrol_start_date_time][gt_date]=2025-08-01T00:00:00Z
 ```
 
-This request returns all course offerings from an organisation with organisationId that starts 
+This request returns all course offerings from an organisation with organisationId that starts
 after 1 August 2025 and belong to the programme with code `B-IT-2025`.
 
 Additional fields can be filtered in the same way. For instance:
@@ -99,7 +99,7 @@ filter_query[__or][][field][operation]=value
 GET /courses?filter_query[__or][][name[].value][like]=bio*&filter_query[__or][][name][like]=chem*
 ```
 
-This request returns all course offerings whose `name` starts with either “bio” or “chem”.  
+This request returns all course offerings whose `name` starts with either “bio” or “chem”.
 Outside the `__or` block, all filters continue to be combined with logical **AND**.
 
 **Note:** OR blocks support a **restricted subset of operators**, typically those used for
@@ -176,13 +176,13 @@ new endpoint-specific parameters.
 
 `filter_query` provides a consistent and extensible way for clients to filter API
 responses. It improves flexibility and reduces the need for endpoint-specific query
-parameters. 
+parameters.
 
-However, support for filtering is **optional**, and implementers may differ in the 
+However, support for filtering is **optional**, and implementers may differ in the
 **set of attributes** they allow filtering on, or the **extent to which complex filter
-logic (such as nested OR/AND combinations)** is supported. Where supported, the 
+logic (such as nested OR/AND combinations)** is supported. Where supported, the
 behaviour of individual operators and wildcards is expected to be consistent across
-implementations. 
+implementations.
 
 Implementing organisations are encouraged to document which fields and
 operators are available, but support for this feature can **never be required** by the

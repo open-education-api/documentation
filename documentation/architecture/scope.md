@@ -27,12 +27,12 @@ information in the following [HORA](https://www.surf.nl/hoger-onderwijs-referent
 
 For future use the OOAPI has also been mapped to the [MORA](https://mbodigitaal.nl/mora/) information model:
 
-![](../_media/ooapi_v50_rosa_mora_information_model.png)
+![OOAPI, ROSA, MOERA Information model](../_media/ooapi_v50_rosa_mora_information_model.png)
 
 Where the OOAPI maps to:
 
 * Education offering
 * Course catalogue
-* Education 
+* Education
 * Education demand
 * Exams/Testing

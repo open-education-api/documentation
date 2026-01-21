@@ -1,0 +1,13 @@
+name: Markdown lint
+
+on:
+  pull_request:
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run markdownlint-cli2
+        run: npx markdownlint-cli2 "**/*.md"

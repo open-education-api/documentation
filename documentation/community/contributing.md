@@ -63,7 +63,7 @@ directly on `main`.
 - the latest in-development specification, and
 - the next intended major or minor release.
 
-**Clarification (to avoid confusion):**  
+**Clarification (to avoid confusion):**
 `main` is **not** the latest stable release. It is the **integration branch for ongoing work**.
 The latest stable release is defined by the **most recent Git tag** (for example
 `v6.0.0` or `v6.1.0`), not by a branch.
@@ -86,7 +86,7 @@ A release branch:
 
 Release branches are **not** used for feature development or breaking changes.
 
-**Patch releases are the exception, not the rule:**  
+**Patch releases are the exception, not the rule:**
 In principle, the specification does **not** publish patch releases (for example
 `v6.0.1`). Patch releases are only created under **special circumstances**, such as:
 - a serious error in a published tag that must be corrected,
@@ -96,7 +96,7 @@ In principle, the specification does **not** publish patch releases (for example
 In all normal cases, fixes and improvements are delivered through the next planned
 minor or major release on `main`.
 
-**Example scenario:**  
+**Example scenario:**
 If `main` is currently developing **6.1**, but an issue is found that must be fixed
 in **6.0**, then under exceptional circumstances a patch release may be created:
 
