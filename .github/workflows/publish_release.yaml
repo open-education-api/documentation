@@ -51,7 +51,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "Publish documentation for v${{ steps.release.outputs.version }}"
+            git commit -m "Publish documentation for release v${{ steps.release.outputs.version }}"
             git push
           else
             echo "No changes to publish."
