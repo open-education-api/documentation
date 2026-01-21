@@ -1,3 +1,4 @@
+
 # Governance
 *Governance document 1 January 2019, Version: 3*
 
@@ -12,7 +13,7 @@ The shared goals of the governance model are:
 * **Development**: support effective development and maintenance of the Open Education API.
 
 ## Community (governance)
-The Community consists of members (representatives) of educational institutions and suppliers that work closely with SURF to further define and develop the Open Education API. See [Community](community/) for more information. 
+The Community consists of members (representatives) of educational institutions and suppliers that work closely with SURF to further define and develop the Open Education API. See [Community](community/) for more information.
 
 ## Working group (governance)
 The Working group is a subgroup of the Community and consists of a number of members that meet on a regular basis. See [Working group](community/workinggroup.md)

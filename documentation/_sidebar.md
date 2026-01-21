@@ -1,3 +1,4 @@
+
 * [Home](/)
   * [Scope](architecture/scope.md "Scope")
   * [Architecture](architecture/ "ROSA-scan and architecture")

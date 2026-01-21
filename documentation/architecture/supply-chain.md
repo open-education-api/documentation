@@ -1,3 +1,4 @@
+
 # Supply chain
 
 Currently institutions for Higher Education face significant overhead for developing and supporting different types of data exchanges. In the current AS-IS situation most effort required to provide data to potential users of the data such as DUO, KOM, eduXchange, etc lies with the institutions. They need to provide a broad set of interfaces.

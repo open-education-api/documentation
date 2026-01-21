@@ -1,6 +1,7 @@
-# IAA (Identification, Authentication and Authorisation) 
 
-Although the name Open Education API might suggest that all data provided by an API is open to the public, this is not the case. The implementation of the different OOAPI requests and responses requires different types of security. 
+# IAA (Identification, Authentication and Authorisation)
+
+Although the name Open Education API might suggest that all data provided by an API is open to the public, this is not the case. The implementation of the different OOAPI requests and responses requires different types of security.
 
 A typical implementation of OOAPI exposes internal (data) service endpoints for external consumption. This can be either through additional aggregation, e.g. OOAPI gateway, or directly form the OOAPI endpoints from institutions (e.g. Leiden University, or inHolland). The next figure provides an overview of components that are usually used.
 
@@ -12,7 +13,7 @@ To optimize the use and adoption of the Open Education API (with the focus on pr
 ## Minimal level of classification
 Since the current OOAPIv5 implementation only provides information on a REST API, based on the [OpenAPI specification 3.0](https://swagger.io/specification/). We suggest API endpoints that have CIA (Confidentiality, Integrity, Availability) scores above 'LLL' to implement security measures for accessing the endpoints. The types of security measures would depend on the sensitivity of the types of data exposed by the endpoint.
 
-## Internet standards for Identification and authentication 
+## Internet standards for Identification and authentication
 To ensure secure data exchange, we recommend using an open and dominant standard that is actively being developed. Proper implementation and use of a security standard are crucial. Choosing an open and widely used standard ensures broad support from vendors and/or the availability of sufficient libraries for correct implementation, ultimately achieving the main goal: secure data exchange. The Dutch ‘forum standaardisatie’ (https://www.forumstandaardisatie.nl/) is a valuable resource for consulting advice on the use of open standards.
 
 Based on the above, we recommend the OAuth2 protocol, an open standard developed and maintained within the IETF.
@@ -26,16 +27,15 @@ For both flows, we recommend supporting both JWT and reference tokens for access
 
 ## Authorisation at multiple levels
 
-For handling authorisation this is usually either business rule based which would be handled in the data services themselves or in the API manager when rules pertain to: 
+For handling authorisation this is usually either business rule based which would be handled in the data services themselves or in the API manager when rules pertain to:
 * device
 * key
-* IP range 
-* Throttling 
+* IP range
+* Throttling
 
-Of course the API manager itself could also have additional security measures, such as firewalls, whitelisting for specific endpoints or Access Control Lists 
+Of course the API manager itself could also have additional security measures, such as firewalls, whitelisting for specific endpoints or Access Control Lists
 
 In the OOAPI IAA efforts we conform to the [IAA vision of SURF](https://www.surf.nl/visie-iaa-belangrijkste-trends-identiteitsstelsels)
 
-In the eduXchange project the OAuth token of the student is used to exchange information on their behalf.  
+In the eduXchange project the OAuth token of the student is used to exchange information on their behalf.
 [![swimlanes for enrolling students](https://static.swimlanes.io/1d4366f0a7a921b63426545ef8219b1c.png)](https://swimlanes.io/d/PtQjnQqqF)
-

@@ -1,3 +1,4 @@
+
 # Consumers and profiles
 Since version 5.0, OOAPI has two mechanisms to support specific consumers. Sometimes specific consumers of an OOAPI endpoint should be able to request items just for them, or they need attributes that are not specified in the base specification. In other cases existing fields are being made mandatory for the project to achieve its goals.
 
@@ -31,7 +32,7 @@ The value of the `consumers` attribute is an array of objects. Since the value i
 !> Note that the consumer query parameter and the consumer objects are related but separate things! It is perfectly valid to use one without the other.
 
 ## Consumer registry
-The following table lists which consumer keys are in use by which consumers. This list only shows the official and registered consumers of the OOAPI that are part of the specification and are maintained by OOAPI. Implementations that want to use this mechanism without registering a key, should prefix their key with `x-`. The registered consumers are: 
+The following table lists which consumer keys are in use by which consumers. This list only shows the official and registered consumers of the OOAPI that are part of the specification and are maintained by OOAPI. Implementations that want to use this mechanism without registering a key, should prefix their key with `x-`. The registered consumers are:
 
 | Key           | Description                                                                                                                                      |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,17 +43,17 @@ The following table lists which consumer keys are in use by which consumers. Thi
 Consumers that are registered are shown here and are included in the specification of the OOAPI (once and only the specification is supplied by the specific consumer).  These consumers serve a specific use case and are implemented by multiple solutions and organisations. In order to register a new consumer and include it in the specification a request can be made for a 'consumer adoption' via GitHub (new issue -> change request). This is applicable if a new consumer needs to be maintained via the OOAPI governance. As a requester you are responsible for the maintenance of the consumer.
 
 ## Consumer versioning
-Consumers that are part of the standard are being kept in sync with the versioning scheme of the OOAPI. This is required to communicate with which OOAPI versions a consumer is compatible and can be used. The basic rule is that the major version number of the OOAPI standard always needs to be adopted by the consumer specification: 
-1.	A new major version of the OOAPI is released, all consumers need to be reviewed and if required adjusted:
+Consumers that are part of the standard are being kept in sync with the versioning scheme of the OOAPI. This is required to communicate with which OOAPI versions a consumer is compatible and can be used. The basic rule is that the major version number of the OOAPI standard always needs to be adopted by the consumer specification:
+1.  A new major version of the OOAPI is released, all consumers need to be reviewed and if required adjusted:
 This always results in a new consumer version (with or without changes) following the major version number of the OOAPI standard.
 
 Besides this basic rule regarding a major OOAPI release. Three other situations can occur regarding OOAPI minor releases (1a and 1b) and new consumer releases (2):
-1.	A new OOAPI minor version is released, consumers can be:
-a.	Compatible with the new release, and require no change:
-The consumer version will not change to indicate the backwards (and forward) compatibility 
-b.	Not compatible with the new OOAPI release, any impact on the consumer needs to be reviewed and resolved. A new consumer release will take place:
-The consumer version number of this new release will change and will use the lowest (or current) minor version of the OOAPI specification to which it is backwards compatible. This could be the current minor version, but also one or multiple earlier minor releases. If this conflicts with an earlier consumer version number, a patch number is introduced/increased. 
-2.	A new consumer version is released without a new OOAPI release:
+1.  A new OOAPI minor version is released, consumers can be:
+a.  Compatible with the new release, and require no change:
+The consumer version will not change to indicate the backwards (and forward) compatibility
+b.  Not compatible with the new OOAPI release, any impact on the consumer needs to be reviewed and resolved. A new consumer release will take place:
+The consumer version number of this new release will change and will use the lowest (or current) minor version of the OOAPI specification to which it is backwards compatible. This could be the current minor version, but also one or multiple earlier minor releases. If this conflicts with an earlier consumer version number, a patch number is introduced/increased.
+2.  A new consumer version is released without a new OOAPI release:
 The consumer version number will use the patch version number, introducing/increasing the patch version number following the lowest minor release of the OOAPI to which this release is compatible with.
 
 An example of the versioning of consumers based on these rules is shown in the following table:

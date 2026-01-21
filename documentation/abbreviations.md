@@ -1,3 +1,4 @@
+
 # Abbreviations and definitions
 
 | Abbreviation                     | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |

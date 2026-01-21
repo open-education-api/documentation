@@ -1,11 +1,12 @@
+
 # Expanding responses
 
 The OOAPI is based on resources that are represented as objects in the object model. The objects themselves are identified through unique UUIDs. This allows for referencing the object for retrieval, updates and information on the creation of the object. The objects can also refer to each other through these UUIDs. For example the course object has a coordinator this coordinator is identified as the UUID of the person filling the coordination role for this course.
 
-If you would like to get the complete information from a linked object you could do this by calling the UUID of this linked object. This then would require two API requests. If more than one object is linked to the object this would even require more requests. To reduce the number of requests the expand mechanism is introduced. 
+If you would like to get the complete information from a linked object you could do this by calling the UUID of this linked object. This then would require two API requests. If more than one object is linked to the object this would even require more requests. To reduce the number of requests the expand mechanism is introduced.
 
-This is why the expand mechanism is introduced. This mechanism allows you to retrieve the linked objects in a single call by replacing the object ID of the linked object with all its properties. 
-The expand mechanism works by adding an expand parameter and the name of the linked object you would like to expand. For example if you would like to see the details of the person in an association this is done by 
+This is why the expand mechanism is introduced. This mechanism allows you to retrieve the linked objects in a single call by replacing the object ID of the linked object with all its properties.
+The expand mechanism works by adding an expand parameter and the name of the linked object you would like to expand. For example if you would like to see the details of the person in an association this is done by
 `GET association/{associationID}?expand=person`
 
 ## Endpoints which are expandable
@@ -158,7 +159,7 @@ To complete this information a person request and an offering request is needed.
             }
         ],
         "ext": { }
-    }, 
+    },
     "offering": {
         "offeringId": "811aede5-3f86-4ee8-bd58-925df0b0509d",
         "primaryCode": {

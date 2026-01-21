@@ -1,3 +1,4 @@
+
 # Timetabling in the OOAPI Model
 
 ## Overview
@@ -96,7 +97,7 @@ class diagram or an entity–relationship diagram (ERD).
 This example follows the OOAPI v6 schemas for `ProgrammeOffering`, `CourseOffering`, `LearningComponentOffering` and `TestComponentOffering`. Objects are shown as separate resources, as they would be returned by their own endpoints.
 
 ### Conceptual Definition
-**Course:** *Introduction to Data Science*  
+**Course:** *Introduction to Data Science*
 **LearningComponents:**
 - *Lecture Series*
 - *Lab Sessions*

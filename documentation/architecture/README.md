@@ -1,3 +1,4 @@
+
 # Background and architecture
 # Architecture
 To facilitate future ROSA scans, additional information is provided about the OOAPI specification.

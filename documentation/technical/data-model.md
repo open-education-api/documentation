@@ -1,3 +1,4 @@
+
 # Data model
 
 ![OOAPI objects and their relationships in a schema](https://open-education-api.github.io/specification/v5/OOAPIv5_model.png)
@@ -65,4 +66,3 @@ A ComponentOffering is the concrete offering of a Component in time. Persons can
 ### NewsFeed
 
 ### NewsItem
-

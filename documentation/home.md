@@ -1,3 +1,4 @@
+
 # Open Education API V6.0
 
 Educational institutions are increasingly sharing educational data: with their students via apps, between different systems within an institution, and with other institutions.
@@ -50,4 +51,3 @@ Furthermore, educational institutions that want to publish education data in a s
 ## Interested in joining us?
 
 Are you an educational institution and interested in having the OOAPI developed to suit your needs? Then why not join us. For more information, please visit the [Community](community/) link.
-

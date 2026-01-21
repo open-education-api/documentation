@@ -1,3 +1,4 @@
+
 # RIO
 
 RIO stands for [Register Instellingen en Opleidingen](https://www.rio-onderwijs.nl/). It is a Dutch national register provided by [DUO](https://www.duo.nl) in which educational institutions record three things: their educational offerings, how they are organised, and how to get in touch with them. DUO and other accrediting organisations record accreditations and licences in RIO.
@@ -464,7 +465,7 @@ Notes:
 
 ## Enumeration mappings
 
-### formalDocument › waardedocumentsoort   	
+### formalDocument › waardedocumentsoort
 
 | formalDocument       | waardedocumentsoort     |
 | -------------------- | ----------------------- |
@@ -513,14 +514,14 @@ Note: When present, the value of the RIO consumer: consumers › RIO › modeOfD
 
 ### consumers RIO modeOfDelivery › opleidingsvorm
 
-| consumers RIO modeOfDelivery | opleidingsvorm       | 
-| ---------------------------- | -------------------- | 
-| online                       | ONLINE               | 
+| consumers RIO modeOfDelivery | opleidingsvorm       |
+| ---------------------------- | -------------------- |
+| online                       | ONLINE               |
 | hybrid                       | KLASSIKAAL_EN_ONLINE |
-| situated                     | KLASSIKAAL           | 
-| lecture                      | LEZING               | 
-| self-study                   | ZELFSTUDIE           | 
-| coaching                     | COACHING             | 
+| situated                     | KLASSIKAAL           |
+| lecture                      | LEZING               |
+| self-study                   | ZELFSTUDIE           |
+| coaching                     | COACHING             |
 
 NOTE: the value of consumers › RIO › modeOfDelivery will override the main object's modeOfDelivery
 

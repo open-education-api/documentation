@@ -1,3 +1,4 @@
+
 # `supplementaryInformation` – Modelling Supplementary and Promotional Data
 
 The `supplementaryInformation` structure provides a generic and extensible way to
@@ -12,7 +13,7 @@ predictable and interoperable across institutions.
 
 ## 1. Overview
 
-`supplementaryInformation` is an array of structured entries.  
+`supplementaryInformation` is an array of structured entries.
 Each entry consists of three components:
 
 | Field  | Purpose                                                     |
@@ -28,12 +29,12 @@ This model is **extensible**: institutions may add additional entries using
 
 Use `supplementaryInformation` when including:
 
-- promotional or inspirational text  
-- badges and visual markers  
-- images for student-facing platforms  
-- promotional or informative videos  
-- announcements or highlight blocks  
-- institution-specific content via custom (`x-*`) roles or types  
+- promotional or inspirational text
+- badges and visual markers
+- images for student-facing platforms
+- promotional or informative videos
+- announcements or highlight blocks
+- institution-specific content via custom (`x-*`) roles or types
 
 Do **not** use this field for core academic information, such as formal
 descriptions, learning outcomes, credits, or admission requirements.
@@ -157,18 +158,18 @@ supplementaryInformation:
 
 ## 5. Validation considerations
 
-- `type` MUST be consistent with the content held in each `value` entry  
-  (e.g. `image` and `video` MUST contain valid URIs).  
-- `role` MUST NOT duplicate or encode the technical form defined by `type`.  
-- Consumers SHOULD gracefully handle unknown `x-*` roles and types.  
-- Institutions SHOULD document any custom (`x-*`) roles they publish.  
+- `type` MUST be consistent with the content held in each `value` entry
+  (e.g. `image` and `video` MUST contain valid URIs).
+- `role` MUST NOT duplicate or encode the technical form defined by `type`.
+- Consumers SHOULD gracefully handle unknown `x-*` roles and types.
+- Institutions SHOULD document any custom (`x-*`) roles they publish.
 
 ## 6. Benefits
 
-- Enables richer and more inspiring presentation layers.  
-- Keeps the core schema stable and clean.  
-- Prevents schema proliferation for promotional use cases.  
-- Provides a future-proof, generic extension mechanism.  
+- Enables richer and more inspiring presentation layers.
+- Keeps the core schema stable and clean.
+- Prevents schema proliferation for promotional use cases.
+- Provides a future-proof, generic extension mechanism.
 
 ## 7. Summary
 

@@ -1,13 +1,14 @@
-# Mapping OOAPI to BIV 
+
+# Mapping OOAPI to BIV
 
 ## CIA and BIV
 CIA (or in Dutch BIV) classifications help institutions choose proper measures to secure and optimise systems that have been classified. CIA is an acronym for Confidentiality, Integrity and Availability. More information on CIA/BIV can be found [here](https://nl.wikipedia.org/wiki/BIV-classificatie)
 
-## Institutions in the lead 
-Determining the CIA classification of an OOAPI endpoint is usually done by institutions themselves since they are in the best position to assess impact regarding for instance availability issues. 
+## Institutions in the lead
+Determining the CIA classification of an OOAPI endpoint is usually done by institutions themselves since they are in the best position to assess impact regarding for instance availability issues.
 
 ## Classification through matching
-This document helps institutions to get a general overview of the objects within the specification and their preliminary CIA classification. The objects and specifically the endpoints in question are [OOAPI endpoints](https://open-education-api.github.io/specification/v5/docs.html). To make a preliminary CIA classification we have chosen to map the endpoints to [HORA](https://www.wikixl.nl/wiki/hora/index.php/Hoofdpagina). This is done by mapping the OOAPI objects to HORA business objects. These HORA business objects already have a CIA consensus from architects at the educational institutions. 
+This document helps institutions to get a general overview of the objects within the specification and their preliminary CIA classification. The objects and specifically the endpoints in question are [OOAPI endpoints](https://open-education-api.github.io/specification/v5/docs.html). To make a preliminary CIA classification we have chosen to map the endpoints to [HORA](https://www.wikixl.nl/wiki/hora/index.php/Hoofdpagina). This is done by mapping the OOAPI objects to HORA business objects. These HORA business objects already have a CIA consensus from architects at the educational institutions.
 
 ## The OOAPI objects
 ![OOAPI objects and their relationships in a schema](https://open-education-api.github.io/specification/v5/OOAPIv5_model.png)
@@ -42,8 +43,8 @@ This document helps institutions to get a general overview of the objects within
 
 ![HORA business objects and their relationships in a schema](https://github.com/open-education-api/specification/wiki/HORA2_onderwijsobjecten_wiki.png)
 
-## CIA and BIV
-CIA (or BIV) is a triad of 
+## CIA and BIV clasification
+CIA (or BIV) is a triad of
 - Confidentiality
 - Integrity
 - Availability
@@ -52,7 +53,7 @@ These three elements of the triad are then classified in 4 different levels:
 - H = high
 - M = medium,
 - L = low,
-- P = publicly available  
+- P = publicly available
 
 ## Overview of OOAPI endpoints and their classification
 
@@ -82,5 +83,5 @@ These three elements of the triad are then classified in 4 different levels:
 | newsfeed                           | Not part of HORA (could be cluster of Notification: "Melding")                                                                                                    | LLL       | LLL      |
 | newsitem                           | Melding: "Notification"                                                                                                                                           | LLL       | LLL      |
 
-* When an OOAPI objects maps to more than one HORA object the CIA classification is based on the highest values of the joint objects, e.g. if CIA for object one is LLH and for object two is HLL, the combined CIA classification results in HLH
-* Unit of Study. (Unit) means a component of a higher education course of study with a designated unit code, title and credit point allocation in which students enrol and undertake assessment tasks in order to achieve specified learning outcomes.(based on [Law Insider](https://www.lawinsider.com/dictionary/unit-of-study) )
+- When an OOAPI objects maps to more than one HORA object the CIA classification is based on the highest values of the joint objects, e.g. if CIA for object one is LLH and for object two is HLL, the combined CIA classification results in HLH
+- Unit of Study. (Unit) means a component of a higher education course of study with a designated unit code, title and credit point allocation in which students enrol and undertake assessment tasks in order to achieve specified learning outcomes.(based on [Law Insider](https://www.lawinsider.com/dictionary/unit-of-study) )

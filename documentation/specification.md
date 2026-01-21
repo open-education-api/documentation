@@ -1,3 +1,4 @@
+
 # The specification
 The actual OOAPI specification is specified using the [OpenAPI Specification](https://www.openapis.org/), a standard that specifies how to specify (among other things) REST APIs. The detailed OOAPI specifications can be found here:
 

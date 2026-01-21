@@ -1,3 +1,4 @@
+
 # Working group
 
 The working group is a subgroup of the Community and consists of a number of members who meet on a regular basis. The [Working group members](#working-group-members) are responsible for topics such as:
@@ -48,4 +49,3 @@ The (online) working group and community meetings take place on the following da
 * Thursday 6 Jul 14.00-16.00
 * Tuesday 12 Sep. 14.00-16.00
 * Thursday 16 Nov. 10.00-12.00
-

@@ -1,5 +1,6 @@
+
 # Extending OOAPI
- 
+
 Implementations can extend OOAPI by adding extra attributes to the `ext` object that is defined in the specification for most resources. Extending OOAPI can also be done by specifying a specific consumer, this is a mechanism that allows specifying an extension that can be more easily reused across several implementations. See [Specific consumers](consumers.md) for more information.
 
 All users of the OOAPI are encouraged to feed their extensions back to the OOAPI working group so this information can be used as feedback for future versions of the OOAPI.

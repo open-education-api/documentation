@@ -1,3 +1,4 @@
+
 ### Formatting text
 
 Most resources include attributes intended to convey longer texts, such as `description`.

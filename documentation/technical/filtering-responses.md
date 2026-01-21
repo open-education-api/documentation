@@ -1,3 +1,4 @@
+
 # Filtering responses
 
 When requesting collections of resources a client can request that the items be filtered using the following query parameters.
