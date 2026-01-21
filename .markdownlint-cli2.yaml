@@ -2,7 +2,7 @@ config:
   default: true
 
   # Structural constraints intentionally not enforced
-  MD003: false   # Heading style is not enforced
+ #MD003: false   # Heading style is not enforced
   MD024: false   # Duplicate headings are allowed
   MD025: false   # Multiple top-level headings are allowed
   MD026: false   # Trailing punctuation in headings is allowed
