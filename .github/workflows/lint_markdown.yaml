@@ -5,12 +5,40 @@ on:
     branches:
       - release/6.0
       - main
-      
+  push:
+    branches:
+      - release/6.0
+      - main
+
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      statuses: write
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Run markdownlint-cli2
+        id: lint
+        continue-on-error: true
         run: npx markdownlint-cli2 "**/*.md"
+
+      - name: Publish commit status (markdownlint)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const ok = "${{ steps.lint.outcome }}" === "success";
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: ok ? "success" : "failure",
+              context: "markdownlint",
+              description: ok ? "Markdown lint passed" : "Markdown lint failed"
+            });
+
+      - name: Fail if lint failed
+        if: steps.lint.outcome != 'success'
+        run: exit 1
