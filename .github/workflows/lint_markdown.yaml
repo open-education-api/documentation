@@ -6,6 +6,11 @@ on:
       - release/6.0
       - main
       
+  push:
+    branches:
+      - release/6.0
+      - main
+
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
