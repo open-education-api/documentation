@@ -2,7 +2,10 @@ name: Markdown lint
 
 on:
   pull_request:
-
+    branches:
+      - release/6.0
+      - main
+      
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
