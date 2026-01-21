@@ -6,7 +6,7 @@ This page provides you, the reader with 4 steps which you could take to start im
 
 1. Data modelling (locating authoritative sources, determining scope of OOAPI endpoint), mainly on the level of entities.
 
-The first step is to determine which OOAPI endpoints you would like to expose. This determines the data sources that need to be found. When the choice has been made the source(s) that can act as a source of truth for the specific data can be identified and a global match can be made between the OOAPI data objects and the objects in the data source(s).  
+The first step is to determine which OOAPI endpoints you would like to expose. This determines the data sources that need to be found. When the choice has been made the source(s) that can act as a source of truth for the specific data can be identified and a global match can be made between the OOAPI data objects and the objects in the data source(s).
 
 2. Designing the endpoint (using a single source, ESB, etc)
 
@@ -14,8 +14,8 @@ Depending on the amount of data sources and the possibility of joining, aggregat
 
 3. Detailed information mapping, on the level of individual attributes.
 
-Once the choices on interaction have been made a further detailed mapping of the data can take place to ensure all the data needed can be made available and can be translated. 
+Once the choices on interaction have been made a further detailed mapping of the data can take place to ensure all the data needed can be made available and can be translated.
 
 4. Technical realisation.
 
-The final step is to do the actual technical implementation of the selected endpoints and methods. 
+The final step is to do the actual technical implementation of the selected endpoints and methods.

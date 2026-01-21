@@ -74,20 +74,20 @@ Also the targetgroup extension object should be added to the course object. The 
 
 **Example**
 
-This is an example of the extension object for eduXchange courses. 
+This is an example of the extension object for eduXchange courses.
 
 ```json
 {
-	"ext": {
-		"targetGroup": [{
-			"name": "euroteq",
-			"theme": "Computer Science and ICT, Data, AI",
-			"instructorNames": ["John Smith"],
-			"contactHours": 3.5,
-			"modeOfDelivery": "Hybrid",
-			"activities": "lectures and practises"
-		}]
-	}
+  "ext": {
+    "targetGroup": [{
+      "name": "euroteq",
+      "theme": "Computer Science and ICT, Data, AI",
+      "instructorNames": ["John Smith"],
+      "contactHours": 3.5,
+      "modeOfDelivery": "Hybrid",
+      "activities": "lectures and practises"
+    }]
+  }
 }
 ```
 
@@ -102,16 +102,16 @@ The targetgroup extension object should also be added to the offering object. Th
 
 **Example**
 
-This is an example of the extension object for eduXchange offerings. 
+This is an example of the extension object for eduXchange offerings.
 
 ```json
 {
-	"ext": {
-		"enrolmentStartDate": "2022-11-03",
-		"enrolmentEndDate": "2022-11-04",
-		"enrolmentUrl": "https://my.institution.org/my-enrolment",
-		"notificationUrl": "https://my.institution.org/my-notification",
-		"dateComment": "This date is in CET and the course takes place on Monday morning."
-	}
+  "ext": {
+    "enrolmentStartDate": "2022-11-03",
+    "enrolmentEndDate": "2022-11-04",
+    "enrolmentUrl": "https://my.institution.org/my-enrolment",
+    "notificationUrl": "https://my.institution.org/my-notification",
+    "dateComment": "This date is in CET and the course takes place on Monday morning."
+  }
 }
 ```
