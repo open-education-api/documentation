@@ -1,0 +1,11 @@
+# Force alle MD als Markdown voor stats
+**/*.md linguist-language=Markdown
+**/*.md linguist-detectable=true
+
+# Vendor de rest uit
+*.html linguist-language=HTML
+*.json linguist-vendored
+*.js linguist-vendored
+*.jpg linguist-vendored
+*.ico linguist-vendored
+*.png linguist-vendored
