@@ -24,7 +24,7 @@ The decision-making procedure is as follows: There are two forms of decision-mak
 *  Decisions on the specification description on GitHub
 *  Decisions on the method and the acceptance of proposed major changes within GitHub, for example, a release.
 
-**Decisions within GitHub** For issues within the GitHub environment, the following applies: If an issue is submitted, the master committer has 5 days to prepare for handling the issue. The voting procedure is started within these 5 days so that the decision can be voted on. The decision in respect of which an issue is handled is recorded within the GitHub environment. See the info at https://openonderwijsapi.nl/v6/#/community/
+**Decisions within GitHub** For issues within the GitHub environment, the following applies: If an issue is submitted, the master committer has 5 days to prepare for handling the issue. The voting procedure is started within these 5 days so that the decision can be voted on. The decision in respect of which an issue is handled is recorded within the GitHub environment. See the info at https://openonderwijsapi.nl/v6.0/#/community/
 
 **Other decisions** Voting can take place by sending your vote to info@openonderwijsapi.nl. Any working group member can submit a decision to be voted on. All working group members receive an email of the forthcoming vote. This notification specifies:
 *  the matter which is the subject of the vote;

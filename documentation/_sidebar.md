@@ -18,7 +18,7 @@
   * [By-laws](governance/bylaws.md)
   * [Code of conduct](governance/code-of-conduct.md)
 * [The specification](specification.md)
-  * [OOAPI v6.0 (current)](https://open-education-api.github.io/specification/v6/docs.html "OOAPI - OOAPI v6.0 beta Specification")
+  * [OOAPI v6.0 (current)](https://open-education-api.github.io/specification/v6.0/docs.html "OOAPI - OOAPI v6.0 beta Specification")
   * [OOAPI v5.0 (extended support)](https://open-education-api.github.io/specification/v5/docs.html)
   * [OOAPI v4 (extended suport)](https://open-education-api.github.io/specification/v4/docs.html)
 * [Technical information](technical/)
