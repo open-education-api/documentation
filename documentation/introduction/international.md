@@ -8,8 +8,6 @@ The standard is based on the English language, specifically British
 English. English is the official working language used in the GitHub
 repositories.
 
----
-
 ## International perspective
 
 The Technical Working Group and SURF actively follow developments in
@@ -27,8 +25,6 @@ Several European university alliances already make use of the OEAPI:
 - Enlight uses the OEAPI internally
 - UNITA has mapped its course catalogue to the OEAPI
 - Aurora is investigating the possibilities of using the OEAPI
-
----
 
 ## Join us
 

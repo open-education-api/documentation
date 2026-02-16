@@ -1,13 +1,11 @@
-## Benefits of using the Open Education API (OEAPI)
+# Benefits of using the Open Education API (OEAPI)
 
 Using the Open Education API (OEAPI) delivers clear efficiency gains for
 organisations, as well as tangible improvements to the student journey.
 By working with a shared open standard, institutions can innovate more
 quickly while offering students a more coherent digital experience.
 
----
-
-### Benefits for development teams
+## Benefits for development teams
 
 - Faster development cycles thanks to standardisation
 - No major upfront investment required to get started
@@ -18,9 +16,7 @@ quickly while offering students a more coherent digital experience.
 - Continuous knowledge sharing through collaboration with other
   institutions using the OEAPI
 
----
-
-### Benefits for students and their educational journey
+## Benefits for students and their educational journey
 
 By incorporating the OEAPI into the IT landscape, students can easily:
 

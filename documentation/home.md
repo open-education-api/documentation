@@ -20,7 +20,7 @@ databases, both within and outside educational institutions. To be able
 to communicate with these systems, a set of definitions known as an
 Application Programming Interface (API) is required.
 
-# A standard is needed
+## A standard is needed
 
 Of course, each school, college or university can develop its own APIs,
 but this is a time-consuming and costly process. That is why the Open
@@ -36,7 +36,7 @@ Working Group of the Community, the OEAPI is constantly defined and
 developed so that new and existing education data can be processed
 efficiently.
 
-# OEAPI is widely supported
+## OEAPI is widely supported
 
 Via the Dutch Npuls programme, MBO, HBO and WO institutions have
 embraced the OEAPI standard. Implementation of the standard is needed
@@ -51,7 +51,7 @@ institutions find their way to OEAPI. Increasingly, there are
 international initiatives and use cases. Check out the page about
 international usage and find out more on our use cases page.
 
-# Creating a standard together
+## Creating a standard together
 
 Apps are constantly evolving. To create an all-encompassing standard
 API, it is essential to understand the ever-changing needs of the
@@ -64,7 +64,7 @@ Furthermore, educational institutions that want to publish education
 data in a standardised way can implement their own API based on the
 OEAPI standard.
 
-# Interested in joining us?
+## Interested in joining us?
 
 Are you an educational institution and interested in having the OEAPI
 developed to suit your needs? Then why not join us. You can find more
