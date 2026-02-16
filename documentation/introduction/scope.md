@@ -23,8 +23,7 @@ The current scope of the OEAPI, as mapped to the
 [HORA](https://www.surf.nl/hoger-onderwijs-referentie-architectuur-hora)
 information objects, is shown in the figure below:
 
-![OEAPI mapping to HORA information model]
-(../_media/OEAPI_v50_rosa_hora_information_model.png)
+![OEAPI mapping to HORA information model](../_media/ooapi_v50_rosa_hora_information_model.png)
 
 ## OEAPI domains
 
@@ -39,8 +38,7 @@ domains:
 For future use, the OEAPI has also been mapped to the
 [MORA](https://mbodigitaal.nl/mora/) information model:
 
-![OEAPI, ROSA, MORA Information model]
-(../_media/OEAPI_v50_rosa_mora_information_model.png)
+![OEAPI, ROSA, MORA Information model](../_media/ooapi_v50_rosa_mora_information_model.png) 
 
 Where the OEAPI maps to:
 
