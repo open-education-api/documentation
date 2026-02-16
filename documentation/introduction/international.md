@@ -4,16 +4,17 @@ The Open Education API (OEAPI) has its roots in the Netherlands and was
 created to support a more flexible educational application landscape.
 As an open standard, the OEAPI can be used internationally.
 
-The standard is based on the English language.
-English is the official working language used in the GitHub repositories.
+The standard is based on the English language, specifically British
+English. English is the official working language used in the GitHub
+repositories.
 
 ---
 
 ## International perspective
 
-The technical working group and SURF actively follow developments in
+The Technical Working Group and SURF actively follow developments in
 European and international standards. Alignment at European and
-international level is important, as new developments help move the
+international level is important, as new developments help to move the
 educational landscape forward.
 
 At present, European initiatives such as Erasmus Without Papers+ and
@@ -32,11 +33,11 @@ Several European university alliances already make use of the OEAPI:
 ## Join us
 
 One of the key pillars of the OEAPI standard is the active involvement
-of its users. Their feedback and contributions help guide the ongoing
-development of the standard when needed. For this reason, a new
-governance model is currently being developed.
+of its users. Their feedback and contributions help to guide the
+ongoing development of the standard where needed. For this reason, a
+new governance model is currently being developed.
 
-Participation in the technical working group is open to partners
+Participation in the Technical Working Group is open to partners
 outside the Netherlands.
 
 - OEAPI meetings take place during European working hours
