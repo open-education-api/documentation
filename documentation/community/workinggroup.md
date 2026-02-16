@@ -7,7 +7,7 @@ The working group is a subgroup of the Community and consists of a number of mem
 * project management.
 * the implementation of new data.
 * evaluation of work done (new information implemented by SURF).
-* promotion of the OOAPI.
+* promotion of the OEAPI.
 * the Community.
 
 The working group "way of working" is defined in the [Governance](governance/) model, which includes detailed information such as:

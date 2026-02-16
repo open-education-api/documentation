@@ -1,6 +1,6 @@
 ## GitHub versioning: how we work
 
-This repository manages OOAPI API specifications using a simple branch and release model.
+This repository manages OEAPI API specifications using a simple branch and release model.
 
 The model distinguishes between:
 

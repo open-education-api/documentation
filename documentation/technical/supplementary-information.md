@@ -2,7 +2,7 @@
 
 The `supplementaryInformation` structure provides a generic and extensible way to
 include additional, promotional, contextual, or visually rich information within
-OOAPI resources. This pattern separates the *technical media form* (`type`) from
+OEAPI resources. This pattern separates the *technical media form* (`type`) from
 the *semantic purpose* (`role`), resulting in a clean and implementation-friendly
 method to enrich educational offerings without modifying the core schema.
 
@@ -173,6 +173,6 @@ supplementaryInformation:
 ## 7. Summary
 
 `supplementaryInformation` provides a robust, extensible and technically clean
-way to attach promotional, contextual, or visually enriched material to OOAPI
+way to attach promotional, contextual, or visually enriched material to OEAPI
 resources. By decoupling **media form** (`type`) and **semantic purpose** (`role`),
 the model remains clear, predictable and interoperable across institutions.

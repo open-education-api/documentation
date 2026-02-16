@@ -2,7 +2,7 @@
 
 ## Required requests
 
-To be compatible with OOAPI V4 and eduXchange v1 an institution within EuroTeQ alliance needs to implement the following requests:
+To be compatible with OEAPI V4 and eduXchange v1 an institution within EuroTeQ alliance needs to implement the following requests:
 
 * `GET /organisations`
 * `GET /organisations?type=root`
@@ -28,7 +28,7 @@ To be compatible with OOAPI V4 and eduXchange v1 an institution within EuroTeQ a
 
 ## Agreements on language use
 
-Some attributes in OOAPI can have multiple values. It is recommended that all participants agree on the use of these values. This results in an unambiguous list on the front end.
+Some attributes in OEAPI can have multiple values. It is recommended that all participants agree on the use of these values. This results in an unambiguous list on the front end.
 
 ### level attribute of a course
 
@@ -39,7 +39,7 @@ For the level attribute of a course the participants agreed to use
 
 ## Extension objects
 
-Extension objects are used to supply the eduXchange front end with additional information which is not specified in the OOAPI V4 specification.
+Extension objects are used to supply the eduXchange front end with additional information which is not specified in the OEAPI V4 specification.
 
 ### Course extension
 When eduXchange requests courses and the query parameter `targetgroup` is set to `euroteq`, only courses meant for euroteq should be returned.

@@ -1,11 +1,11 @@
 # Historical and future data
 
 ## timelineOverrides
-OOAPI v5 has added a mechanism to communicate about data that were valid in the past or will become valid in the future. An implementation is expected to always return *the current value* of an entity as the main object in a response. To specify historic and future changes an implementation can add one or more "timelineOverrides". Each timelineOverride is a repetition of the main object, but with attributes that can have a different value or with absent optional attributes (indicating that an attribute did not exists in the past or will not exist in the future).
+OEAPI v5 has added a mechanism to communicate about data that were valid in the past or will become valid in the future. An implementation is expected to always return *the current value* of an entity as the main object in a response. To specify historic and future changes an implementation can add one or more "timelineOverrides". Each timelineOverride is a repetition of the main object, but with attributes that can have a different value or with absent optional attributes (indicating that an attribute did not exists in the past or will not exist in the future).
 
 A timelineOverride also specifies two date fields: `validFrom` (inclusive) and `validTo` (exclusive) indicating for which period of time the changed attributes are valid.
 
-!> The timelineOverride mechanism is only available when requesting single instances of either `EducationSpecification`, `Programme` or `Course`. In future versions of the OOAPI specification this mechanism might be added to other entities as well.
+!> The timelineOverride mechanism is only available when requesting single instances of either `EducationSpecification`, `Programme` or `Course`. In future versions of the OEAPI specification this mechanism might be added to other entities as well.
 
 ## Usage
 The timelineOverride mechanism consists of the following:
@@ -28,7 +28,7 @@ In the following example `name` is a required field and so must be repeated in t
     - name: Example entity
     - website: https://the-new-website.com
 
-This sequence of changes can be specified in OOAPI as follows:
+This sequence of changes can be specified in OEAPI as follows:
 
 ```json
 {

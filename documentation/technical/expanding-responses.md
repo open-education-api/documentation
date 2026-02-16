@@ -1,6 +1,6 @@
 # Expanding responses
 
-The OOAPI is based on resources that are represented as objects in the object model. The objects themselves are identified through unique UUIDs. This allows for referencing the object for retrieval, updates and information on the creation of the object. The objects can also refer to each other through these UUIDs. For example the course object has a coordinator this coordinator is identified as the UUID of the person filling the coordination role for this course.
+The OEAPI is based on resources that are represented as objects in the object model. The objects themselves are identified through unique UUIDs. This allows for referencing the object for retrieval, updates and information on the creation of the object. The objects can also refer to each other through these UUIDs. For example the course object has a coordinator this coordinator is identified as the UUID of the person filling the coordination role for this course.
 
 If you would like to get the complete information from a linked object you could do this by calling the UUID of this linked object. This then would require two API requests. If more than one object is linked to the object this would even require more requests. To reduce the number of requests the expand mechanism is introduced.
 

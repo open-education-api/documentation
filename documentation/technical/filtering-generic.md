@@ -5,10 +5,10 @@
 - Filtering support is **optional**. Implementing organisations **MAY** support it fully,
   partially, or not at all. Support for filtering **SHOULD** be documented in the service
   endpoint description. Support for this functionality **cannot be enforced** by any
-  party, including organisations that provide or consume OOAPI endpoints.
+  party, including organisations that provide or consume OEAPI endpoints.
 - The **availability** of this filter functionality is determined by each implementing
   organisation. The general structure and semantics are
-  **standardised** within the OOAPI specification.
+  **standardised** within the OEAPI specification.
 - This mechanism is intended to promote **consistency** across implementations, while
   allowing flexibility in technical realisation.
 - Filtering can complement **[data minimisation](technical/data-minimisation.md)** principles, as it allows clients to

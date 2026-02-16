@@ -1,7 +1,7 @@
 # eduXchange
 
 In this documentation of the eduxchange consumer object you will find
-- [Required OOAPI resources](#required-ooapi-resources)
+- [Required OEAPI resources](#required-OEAPI-resources)
 - [Agreements per eduxchange instance](#agreements-per-eduxchange-instance)
 - [Agreements per alliance](#agreements-per-alliance)
 - [The student orientation consumer objects](#the-student-orientation-consumer-objects)
@@ -30,16 +30,16 @@ Version 2.0 has been worked on in 2021 and 2022 and is the current live version 
 
 Before version 2.0 we started eduXchange with the EWUU alliance.
 
-# Required OOAPI resources
+# Required OEAPI resources
 
-The subset of OOAPI Resources that is used in eduXchange is described in the picture below.
+The subset of OEAPI Resources that is used in eduXchange is described in the picture below.
 * The white resources are used in the orientation proces.
   * The dashed lines are resources that are only accessed by another resource through the expand parameter.
 * The grey resources are used in the enrolment and grade transmission processes.
 
-![OOAPI Resources used in eduXchange](../../_media/Student%20mobility%202025%20-%20OOAPI%20Resources.jpg "OOAPI Resources used in eduXchange")
+![OEAPI Resources used in eduXchange](../../_media/Student%20mobility%202025%20-%20OEAPI%20Resources.jpg "OEAPI Resources used in eduXchange")
 
-To be compatible with eduXchange an institution needs to implement the following OOAPI resources. The endpoints currently in use are highlighted.
+To be compatible with eduXchange an institution needs to implement the following OEAPI resources. The endpoints currently in use are highlighted.
 
 Orientation
 * `GET /organizations`
@@ -79,9 +79,9 @@ To be compatible with the [eduXchange catalogue website](https://www.eduxchange.
 * offerings
 * persons
 
-## required ooapi attributes
+## required OEAPI attributes
 
-These are the required ooapi attributes per resource.
+These are the required OEAPI attributes per resource.
 
 | resource | required attributes |
 | --- | --- |
@@ -150,7 +150,7 @@ An alliance is a partnership between two or more institutions that agreed to exc
 
 To refer to partners in an alliance a list of partner codes is specified.
 
-Some attributes in OOAPI can have multiple values. It is recommended that all participants within an alliance agree on the use of these values. This results in an unambiguous list on the frontend for the students.
+Some attributes in OEAPI can have multiple values. It is recommended that all participants within an alliance agree on the use of these values. This results in an unambiguous list on the frontend for the students.
 
 ## EWUU Alliance 
 
@@ -212,7 +212,7 @@ Participants agreed to use these themes in the theme attribute of the consumer o
 
 ### modeOfDelivery
 
-The mode of delivery the participants agreed to use differ from the standard modeOfDelivery options in OOAPI. Therefore these modeOfDelivery values need to be specified in the consumer attribute. 
+The mode of delivery the participants agreed to use differ from the standard modeOfDelivery options in OEAPI. Therefore these modeOfDelivery values need to be specified in the consumer attribute. 
 
 Participants agreed to use:
 * `"Online - at a specific time"`
@@ -222,7 +222,7 @@ Participants agreed to use:
 
 ### level
 
-For the level attribute of a course the participants agreed to use these standard OOAPI options that need to be specified in the consumer attribute:
+For the level attribute of a course the participants agreed to use these standard OEAPI options that need to be specified in the consumer attribute:
 - `"Bachelor"`
 - `"Master"`
 - `"Doctoral"`
@@ -272,7 +272,7 @@ Attributes regarding joint programs.
   * `source` (v2.0): an optional object with a reference to the source of a Course or Program. In case of a joint program one of the institutions could act as overall coordinator and specifies the program and underlying courses. Underlying courses could be given at one of the other institutions. In this source object the course at the other institution can be specified. Use these attributes:
     * `shortName` (v2.0): the partner id of the institution to identify the source institution. An example for the `lde` alliance is: `"21PE"`
     * `primaryCode` (v2.0): a string value with the primaryCode of the course to identify the source course.
-    * `uuid` (v2.0): the uuid of the course to reference the OOAPI endpoint of the source course.
+    * `uuid` (v2.0): the uuid of the course to reference the OEAPI endpoint of the source course.
 
 ### Example
 
@@ -434,7 +434,7 @@ To be compatible with the registering process of the `broker` after the 'registe
 
 The `remoteState` field contains the intial state of the Guest institution. The logic for this is as follows: the Guest institution is sending a request to the Home institution to create an association. From the perspective of the Home institution, the state of the Guest is the remoteState. 
 
-The `state` field is mandatory in OOAPI. However, during when sending the initial POST, the Guest cannot know what the state of the Home will be. Therefore the state should just be set to `associated` but it doesn’t have a real meaning at this stage. The Home institution will respond to the request with their initial `state` in the HTTP response.
+The `state` field is mandatory in OEAPI. However, during when sending the initial POST, the Guest cannot know what the state of the Home will be. Therefore the state should just be set to `associated` but it doesn’t have a real meaning at this stage. The Home institution will respond to the request with their initial `state` in the HTTP response.
 
 type of states: 
 * pending (proces is waiting on the status of the institution)
@@ -445,9 +445,9 @@ type of states:
 
 # And more
 
-## Changes since OOAPI v4
+## Changes since OEAPI v4
 
-In OOAPI version 5.0 the following changes were made that are relevant for eduXchange. Some of the highlights:
+In OEAPI version 5.0 the following changes were made that are relevant for eduXchange. Some of the highlights:
 
 1. Some attributes were added to the Program object.
 2. Some attributes were added to the Course object.

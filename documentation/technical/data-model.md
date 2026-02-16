@@ -1,12 +1,12 @@
 # Data model
 
-![OOAPI objects and their relationships in a schema](https://open-education-api.github.io/specification/v5/OOAPIv5_model.png)
+![OEAPI objects and their relationships in a schema](https://open-education-api.github.io/specification/v5/OEAPIv5_model.png)
 
 
 ## Entity definitions
 
 ### Service
-The service entity describes metadata relating to the OOAPI endpoint, such as who to contact about questions regarding this endpoint, links to documentation, etc.
+The service entity describes metadata relating to the OEAPI endpoint, such as who to contact about questions regarding this endpoint, links to documentation, etc.
 
 ### EducationSpecification
 An EducationSpecification provides information about what a learner is expected to gain from Educations derived from the EducationSpecification. It is also used to aggregate Educations from the supplying institution.
@@ -24,7 +24,7 @@ A Programme describes a coherent collection of courses leading to a certain outc
 A Course describes an educational activity that can result in credits being awarded to the learner once the learner successfully completes an Offering of said Course. A Course is the smallest educational unit that a learner can pass or fail.
 
 #### Component
-A Component is a template for the most concrete learning activities the OOAPI describes. Examples include workgroups, lectures and tests.
+A Component is a template for the most concrete learning activities the OEAPI describes. Examples include workgroups, lectures and tests.
 
 ### AcademicSession
 An AcademicSession is a named period in time. AcademicSessions can be nested in multiple hierarchical trees. The highest possible level of such a tree should be an AcademicSession describing an (academic) year. AcademicSessions can have relations to Offerings to indicate that those Offerings take place within the period described by the AcademicSession.

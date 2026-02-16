@@ -18,7 +18,7 @@ The Community consists of members (representatives) of educational institutions 
 The Working group is a subgroup of the Community and consists of a number of members that meet on a regular basis. See [Working group](community/workinggroup.md)
 
 ### Who can join the working group?
-* Participation is not limited to higher educational institutions, and is open to anyone who can represent the interests of the OOAPI. Suppliers can therefore also join the working group.
+* Participation is not limited to higher educational institutions, and is open to anyone who can represent the interests of the OEAPI. Suppliers can therefore also join the working group.
 * The ratio between institutions affiliated with SURF and organisations not affiliated with SURF must be at least 3:1.
 
 ### List of affiliated institutions
@@ -39,7 +39,7 @@ The Working group is a subgroup of the Community and consists of a number of mem
 ### Rights and obligations
 The working group member:
 
-* represents their employer, an organisation that promotes the interests of the Open Education API. This organisation has the intention to implement the OOAPI within 2 years.
+* represents their employer, an organisation that promotes the interests of the Open Education API. This organisation has the intention to implement the OEAPI within 2 years.
 * actively contributes to developing the Open Education API and promotes its use. He or she must invest at least 60 hours a year to achieve the working group's objectives.
 * must visit at least 3 working group meetings a year. Only institutions affiliated with SURF and 1 representative for each institution affiliated with SURF have voting rights.
 
@@ -63,13 +63,13 @@ Collaboration within Edustandaard takes place within:
 
 To achieve their goals the bureau also maintains contact with other (national and international) standards organisations.
 
-### Edustandaard and the OOAPI
+### Edustandaard and the OEAPI
 For the Open Education API, Edustandaard:
 
-* gives advice on and manage the standardisation of the OOAPI.
-* ensure that the OOAPI conforms to other standards in the context of ROSA by means of a ROSA scan.
-* inform the Community about updates and changes to the OOAPI.
-* publish all relevant information concerning the OOAPI on the [Edustandaard website](https://www.edustandaard.nl/), including the OOAPI specification, updates and changes to the OOAPI, and formal documentation.
+* gives advice on and manage the standardisation of the OEAPI.
+* ensure that the OEAPI conforms to other standards in the context of ROSA by means of a ROSA scan.
+* inform the Community about updates and changes to the OEAPI.
+* publish all relevant information concerning the OEAPI on the [Edustandaard website](https://www.edustandaard.nl/), including the OEAPI specification, updates and changes to the OEAPI, and formal documentation.
 
 ## Decisions within GitHub
 For issues that affect the GitHub environment ([https://github.com/open-education-api](https://github.com/open-education-api "https://github.com/open-education-api")), the following applies:

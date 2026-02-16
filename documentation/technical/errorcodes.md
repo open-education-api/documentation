@@ -1,13 +1,13 @@
 # Error codes
 
-This page describes all error responses that MAY be returned by OOAPI
+This page describes all error responses that MAY be returned by OEAPI
 endpoints.
 
 All errors are returned using the `application/problem+json` media type,
 conforming to [RFC 7807 – Problem Details for HTTP APIs].
 
 Each error code is described with:
-- its intended usage within OOAPI
+- its intended usage within OEAPI
 - behavioural rules
 - concrete JSON examples
 
@@ -19,7 +19,7 @@ All error responses MUST conform to the Problem Details format.
 
 ### Common fields
 
-All OOAPI error responses MUST include the following required Problem Details
+All OEAPI error responses MUST include the following required Problem Details
 fields:
 
 - `type`
@@ -166,9 +166,9 @@ Servers SHOULD return an `Allow` header indicating supported methods.
 ## 406 Not Acceptable (Version negotiation)
 
 Returned when the server cannot provide a representation for the requested
-OOAPI or consumer version.
+OEAPI or consumer version.
 
-OOAPI uses explicit version negotiation rather than HTTP `Accept` headers.
+OEAPI uses explicit version negotiation rather than HTTP `Accept` headers.
 If neither the requested version nor a lower compatible minor version is
 supported, a `406` response MUST be returned.
 
@@ -177,14 +177,14 @@ This behaviour intentionally deviates from strict HTTP semantics to:
 - improve interoperability
 - improve logging and diagnostics
 
-### Example – unsupported OOAPI version
+### Example – unsupported OEAPI version
 
 ```json
 {
   "type": "https://api.example.org/problems/version-not-acceptable",
   "title": "Version not acceptable",
   "status": 406,
-  "detail": "The requested OOAPI version '5.0' cannot be served.",
+  "detail": "The requested OEAPI version '5.0' cannot be served.",
   "requestedVersion": "5.0",
   "supportedVersions": ["6.1", "6.0"],
   "instance": "https://api.example.org/courses"
