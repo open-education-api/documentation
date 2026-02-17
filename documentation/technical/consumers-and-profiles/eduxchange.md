@@ -152,14 +152,14 @@ To refer to partners in an alliance a list of partner codes is specified.
 
 Some attributes in OEAPI can have multiple values. It is recommended that all participants within an alliance agree on the use of these values. This results in an unambiguous list on the frontend for the students.
 
-## EWUU Alliance 
+## EWUU Alliance
 
 ### partner codes
 * uu
 * wur
 * tue
 
-## LDE Alliance 
+## LDE Alliance
 
 ### partner codes
 * 21PE (Erasmus)
@@ -179,7 +179,7 @@ Participants agreed to use croho themes in the theme attribute of the consumer o
 *  18: `"Language and culture"`
 *  19: `"Technology"`
 
-## EuroTeq Alliance 
+## EuroTeq Alliance
 The additional parameter `alliances.name=euroteq` is effective.
 
 ### partner codes
@@ -212,7 +212,7 @@ Participants agreed to use these themes in the theme attribute of the consumer o
 
 ### modeOfDelivery
 
-The mode of delivery the participants agreed to use differ from the standard modeOfDelivery options in OEAPI. Therefore these modeOfDelivery values need to be specified in the consumer attribute. 
+The mode of delivery the participants agreed to use differ from the standard modeOfDelivery options in OEAPI. Therefore these modeOfDelivery values need to be specified in the consumer attribute.
 
 Participants agreed to use:
 * `"Online - at a specific time"`
@@ -244,35 +244,35 @@ Also the eduxchange consumer object should be added to the array of consumer obj
 
 General attributes
 
-  * `name` (v2.0): (required) the name of the alliance, allowed values are the current alliances using eduxchange, for example: `"ewuu"`, `"lde"` or `"euroteq"`
-  * `theme` (v2.0, deprecated): the theme of the Program or Course within the alliance
-  * `themes` (v2.1): an array of themes of the Program or Course within the alliance, `["theme 1", "theme 2"]`. If the themes attribute is present for a particular course or program, theme is ignored. If theme is avaiable, but themes is not, the theme attribute is used. If both are missing, the course or program has no themes.
-  * `selection` (v2.0): boolean value (`true` or `false`) indicating whether this Program or Course is selective, e.g. whether student need to pass extra requirements before being allowed to enroll.
-  * `type` (v2.0): a string indicating whether a Program or Course is broadening or deepening. Allowed values are: `"broadening"` and `"deepening"`.
-  * `instructorNames` (v2.1): an array with names of all instructors, `["instructor name", "instructor name"]`
-  * `contactHours` (v2.1): a float with the amount of contact hours, `3.5` for example.
-  * `activities` (v2.1): a string that mentions the activities that take place in the course, `"lectures and practises"` for example.
-  * `microcredential` (v2.2): specifies if the program or course is rewarded with a stackable or standalone microcredential, values `["stackable"|"standalone"]`. If not speficied, no microcredential is rewarded.
+* `name` (v2.0): (required) the name of the alliance, allowed values are the current alliances using eduxchange, for example: `"ewuu"`, `"lde"` or `"euroteq"`
+* `theme` (v2.0, deprecated): the theme of the Program or Course within the alliance
+* `themes` (v2.1): an array of themes of the Program or Course within the alliance, `["theme 1", "theme 2"]`. If the themes attribute is present for a particular course or program, theme is ignored. If theme is avaiable, but themes is not, the theme attribute is used. If both are missing, the course or program has no themes.
+* `selection` (v2.0): boolean value (`true` or `false`) indicating whether this Program or Course is selective, e.g. whether student need to pass extra requirements before being allowed to enroll.
+* `type` (v2.0): a string indicating whether a Program or Course is broadening or deepening. Allowed values are: `"broadening"` and `"deepening"`.
+* `instructorNames` (v2.1): an array with names of all instructors, `["instructor name", "instructor name"]`
+* `contactHours` (v2.1): a float with the amount of contact hours, `3.5` for example.
+* `activities` (v2.1): a string that mentions the activities that take place in the course, `"lectures and practises"` for example.
+* `microcredential` (v2.2): specifies if the program or course is rewarded with a stackable or standalone microcredential, values `["stackable"|"standalone"]`. If not speficied, no microcredential is rewarded.
 
 Attributes regarding visibility and enrollment of different types of users. Eduxchange can be used by students and professionals. Please note, there are three types of students. (1) Students from the alliance partner institutions,  (2) students from the own institution and (3) guest students from institutions outside the alliance.
 
-  * `targetGroup` (v2.2): specifies if the program or course is a program or course for students or for professionals, values `["forStudents"|"forProfessionals"]`. If not specified, the course or program is supposed to be intended for students.
-  * `visibleForOwnStudents` (v2.0): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students of the offering institution. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for own students.*
-  * `enrollmentForOwnStudents` (v2.0): a string indicating which enrollments process should be followed for students of the offering institution. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForOwnStudents` is set to `true`. 
-    * If `"url"` is chosen the attribute `enrollmentUrl` **in the consumer object of an offering** is mandatory.
-  * `visibleForGuests` (v2.1): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students outside the partner institutions. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for students outside the partner institutions.*
-  * `enrollmentForGuests` (v2.1): a string indicating which enrollments process should be followed for students outside the partner institutions. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForGuests` is set to `true`. 
-    * If `"url"` is chosen the attribute `enrollmentUrlForGuests` **in the consumer object of an offering** is mandatory.
-  * `enrollmentForProfessionals` (v2.2): a string indicating which enrollments process should be followed for professionals. Allowed values are `"broker"` or `"url"`. This attribute is only used if `targetGroup` is set to `forProfessionals`. 
-    * If `"url"` is chosen the attribute `enrollmentUrlForProfessionals` **in the consumer object of an offering** is mandatory.
+* `targetGroup` (v2.2): specifies if the program or course is a program or course for students or for professionals, values `["forStudents"|"forProfessionals"]`. If not specified, the course or program is supposed to be intended for students.
+* `visibleForOwnStudents` (v2.0): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students of the offering institution. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for own students.*
+* `enrollmentForOwnStudents` (v2.0): a string indicating which enrollments process should be followed for students of the offering institution. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForOwnStudents` is set to `true`.
+  * If `"url"` is chosen the attribute `enrollmentUrl` **in the consumer object of an offering** is mandatory.
+* `visibleForGuests` (v2.1): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students outside the partner institutions. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for students outside the partner institutions.*
+* `enrollmentForGuests` (v2.1): a string indicating which enrollments process should be followed for students outside the partner institutions. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForGuests` is set to `true`.
+  * If `"url"` is chosen the attribute `enrollmentUrlForGuests` **in the consumer object of an offering** is mandatory.
+* `enrollmentForProfessionals` (v2.2): a string indicating which enrollments process should be followed for professionals. Allowed values are `"broker"` or `"url"`. This attribute is only used if `targetGroup` is set to `forProfessionals`.
+  * If `"url"` is chosen the attribute `enrollmentUrlForProfessionals` **in the consumer object of an offering** is mandatory.
 
 Attributes regarding joint programs.
 
-  * `jointPartnerCodes` (v2.1): an array of partners of the Program. This is used to identify the partners in case of a joint program. The agreed partner codes are used here. For example in the `lde` alliance: `["21PF", "21PB"]`.
-  * `source` (v2.0): an optional object with a reference to the source of a Course or Program. In case of a joint program one of the institutions could act as overall coordinator and specifies the program and underlying courses. Underlying courses could be given at one of the other institutions. In this source object the course at the other institution can be specified. Use these attributes:
-    * `shortName` (v2.0): the partner id of the institution to identify the source institution. An example for the `lde` alliance is: `"21PE"`
-    * `primaryCode` (v2.0): a string value with the primaryCode of the course to identify the source course.
-    * `uuid` (v2.0): the uuid of the course to reference the OEAPI endpoint of the source course.
+* `jointPartnerCodes` (v2.1): an array of partners of the Program. This is used to identify the partners in case of a joint program. The agreed partner codes are used here. For example in the `lde` alliance: `["21PF", "21PB"]`.
+* `source` (v2.0): an optional object with a reference to the source of a Course or Program. In case of a joint program one of the institutions could act as overall coordinator and specifies the program and underlying courses. Underlying courses could be given at one of the other institutions. In this source object the course at the other institution can be specified. Use these attributes:
+  * `shortName` (v2.0): the partner id of the institution to identify the source institution. An example for the `lde` alliance is: `"21PE"`
+  * `primaryCode` (v2.0): a string value with the primaryCode of the course to identify the source course.
+  * `uuid` (v2.0): the uuid of the course to reference the OEAPI endpoint of the source course.
 
 ### Example
 
@@ -326,26 +326,26 @@ The outline of the consumer object for offerings is the same as specified above 
 
 This consumer object is used to specify the `enrollmentUrl` and `enrollmentUrlForGuests` per offering. These attributes are associated with the corresponding attributes in the consumer object of the program or course.
 
-  * `enrollmentUrl` (v2.0): a string formatted as an URL to which own students will be redirected if `enrollmentForOwnStudents` **in the program/course consumer object** is set to `"url"`.
-  * `enrollmentUrlForGuests` (v2.1): a string formatted as an URL to which guest students will be redirected if `enrollmentForGuests` **in the program/course consumer object** is set to `"url"`.
-  * `enrollmentUrlForProfessionals` (v2.2): a string formatted as an URL to which professionals will be redirected if `enrollmentForProfessioanals` **in the program/course consumer object** is set to `"url"`.
+* `enrollmentUrl` (v2.0): a string formatted as an URL to which own students will be redirected if `enrollmentForOwnStudents` **in the program/course consumer object** is set to `"url"`.
+* `enrollmentUrlForGuests` (v2.1): a string formatted as an URL to which guest students will be redirected if `enrollmentForGuests` **in the program/course consumer object** is set to `"url"`.
+* `enrollmentUrlForProfessionals` (v2.2): a string formatted as an URL to which professionals will be redirected if `enrollmentForProfessioanals` **in the program/course consumer object** is set to `"url"`.
 
 In addition the `enrollStartTime` and `enrollEndTime` of an offering can be added. This time is more specific then the enrollStartDate and enrollEndDate of an offering. This makes it possible to start on enrollStartDate at enrollStartTime and end at enrollEndDate at enrollEndTime.
 
-  * `enrollStartTime` (v2.0): the time of the start of the enrollment for the offering, for example "13:00". The default is 00:00.
-  * `enrollEndTime` (v2.0): the time of the end of the enrollment for the offering, for example "20:00". The default is 23:59.
-  * `dateComment` (v2.1): a string with additional date information, for example `"The course takes place on monday morning"`
+* `enrollStartTime` (v2.0): the time of the start of the enrollment for the offering, for example "13:00". The default is 00:00.
+* `enrollEndTime` (v2.0): the time of the end of the enrollment for the offering, for example "20:00". The default is 23:59.
+* `dateComment` (v2.1): a string with additional date information, for example `"The course takes place on monday morning"`
 
 When a waitlist is used for enrolment, the attributes below can be used to communicate this in the offering. There is a possibility to have an unlimited queue, in which case `hasStudentQueue` needs to be `true`. Or a limited queue, in which case `maxQueuedNumberStudents > 0` and the length of the remaining queue is determined by `maxQueuedNumberStudents - queuedNumberStudents`. *Note: the  queue only comes into effect when there are no regular available places.*
 
-  * `queuedNumberStudents` (v2.2): This is an integer >=0. The number of students that have a queued enrolment state for this offering.
-  * `maxQueuedNumberStudents` (v2.2): This is an integer >=0. The maximum number of students allowed in the queue for this offering.
-  * `hasStudentQueue` (v2.2): a boolean value (`true` or `false`) indicating whether enrolment is queued.
+* `queuedNumberStudents` (v2.2): This is an integer >=0. The number of students that have a queued enrolment state for this offering.
+* `maxQueuedNumberStudents` (v2.2): This is an integer >=0. The maximum number of students allowed in the queue for this offering.
+* `hasStudentQueue` (v2.2): a boolean value (`true` or `false`) indicating whether enrolment is queued.
 
 
 ### Example
 
-This is an example of the consumer object for eduXchange offerings. 
+This is an example of the consumer object for eduXchange offerings.
 
 ```json
 {
@@ -391,7 +391,7 @@ Continu reading below for eduXchange.NL alliances. For eduXchange.EU specific en
 
 ## Eduxchange consumer object for Persons
 
-To be compatible with the registering process of the `broker` after the 'register' button is pressed in the eduxchange frontend, an implementation needs to implement the following consumer object and attributes on the Persons object. 
+To be compatible with the registering process of the `broker` after the 'register' button is pressed in the eduxchange frontend, an implementation needs to implement the following consumer object and attributes on the Persons object.
 
 * `consumerKey` (v2.0), should always have the value `"eduxchange"`
 * `enrollments` (v2.0), an array with all the CROHO enrollments for this person. Each enrollment is an object with the following attributes:
@@ -432,14 +432,14 @@ To be compatible with the registering process of the `broker` after the 'registe
 
 ### State and RemoteState
 
-The `remoteState` field contains the intial state of the Guest institution. The logic for this is as follows: the Guest institution is sending a request to the Home institution to create an association. From the perspective of the Home institution, the state of the Guest is the remoteState. 
+The `remoteState` field contains the intial state of the Guest institution. The logic for this is as follows: the Guest institution is sending a request to the Home institution to create an association. From the perspective of the Home institution, the state of the Guest is the remoteState.
 
 The `state` field is mandatory in OEAPI. However, during when sending the initial POST, the Guest cannot know what the state of the Home will be. Therefore the state should just be set to `associated` but it doesn’t have a real meaning at this stage. The Home institution will respond to the request with their initial `state` in the HTTP response.
 
-type of states: 
+type of states:
 * pending (proces is waiting on the status of the institution)
-* associated (the student is enrolled in the learning activity) 
-* canceled (by student) 
+* associated (the student is enrolled in the learning activity)
+* canceled (by student)
 * denied (either learning activity is stopped or student is not allowed)
 * queued (student is put on a waiting list)
 

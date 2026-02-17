@@ -38,7 +38,7 @@ domains:
 For future use, the OEAPI has also been mapped to the
 [MORA](https://mbodigitaal.nl/mora/) information model:
 
-![OEAPI, ROSA, MORA Information model](../_media/ooapi_v50_rosa_mora_information_model.png) 
+![OEAPI, ROSA, MORA Information model](../_media/ooapi_v50_rosa_mora_information_model.png)
 
 Where the OEAPI maps to:
 

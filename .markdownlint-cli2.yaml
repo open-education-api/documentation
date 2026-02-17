@@ -35,3 +35,8 @@ config:
 
   # Line length
   MD013: false   # Line length is not enforced
+
+ignores:
+  - "**/_media/**"
+  - "**/.DS*"
+
