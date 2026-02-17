@@ -24,7 +24,7 @@ Application Programming Interface (API) is required.
 
 Of course, each school, college or university can develop its own APIs,
 but this is a time-consuming and costly process. That is why the Open
-Education API, known in Dutch as the Open Onderwijs API OEAPI, was
+Education API was
 created. The OEAPI conforms to the design principles of REST
 Representational State Transfer, a flexible, lightweight way of
 integrating applications.

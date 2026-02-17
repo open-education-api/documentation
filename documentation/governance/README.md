@@ -82,4 +82,4 @@ For issues that affect the GitHub environment ([https://github.com/open-educatio
 * Any follow-up action is taken depending on the outcome of the vote.
 
 ## By-laws and code of conduct
-In addition to this governance document, there are also the [Bylaws](governance/bylaws.md) and a [Code of conduct](governance/code-of-conduct.md)
+In addition to this governance document, there are also the [By-laws](governance/by-laws.md) and a [Code of conduct](governance/code-of-conduct.md)
