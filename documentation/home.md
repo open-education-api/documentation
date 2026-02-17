@@ -32,7 +32,7 @@ integrating applications.
 This open API is the result of a collaboration between several
 educational institutions and suppliers in the Netherlands and is
 facilitated by SURF, known collectively as the Community. Within the
-Working Group of the Community, the OEAPI is constantly defined and
+Technical Working Group of the Community, the OEAPI is constantly defined and
 developed so that new and existing education data can be processed
 efficiently.
 

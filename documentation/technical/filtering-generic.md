@@ -13,7 +13,7 @@
   allowing flexibility in technical realisation.
 - Filtering can complement **[data minimisation](technical/data-minimisation.md)** principles, as it allows clients to
   request only relevant data subsets.
-- Consumers or working groups that wish to apply **generic filtering mechanisms** are
+- Consumers or Technical Working Groups that wish to apply **generic filtering mechanisms** are
   encouraged to use this approach for the sake of consistency across implementations.
 - The structure is **extensible**. New operations or fields can be introduced if they
   follow the same serialisation pattern.

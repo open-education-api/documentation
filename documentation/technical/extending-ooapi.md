@@ -2,7 +2,7 @@
 
 Implementations can extend OEAPI by adding extra attributes to the `ext` object that is defined in the specification for most resources. Extending OEAPI can also be done by specifying a specific consumer, this is a mechanism that allows specifying an extension that can be more easily reused across several implementations. See [Specific consumers](consumers.md) for more information.
 
-All users of the OEAPI are encouraged to feed their extensions back to the OEAPI working group so this information can be used as feedback for future versions of the OEAPI.
+All users of the OEAPI are encouraged to feed their extensions back to the OEAPI Technical Working Group so this information can be used as feedback for future versions of the OEAPI.
 
 ## When to use `ext` and when to use `consumer`?
 

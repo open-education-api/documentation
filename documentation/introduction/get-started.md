@@ -10,7 +10,7 @@ The OEAPI repository provides insights into the data model and the
 proposed endpoints. Most of these endpoints are based on GET methods,
 as this is currently the method used in most use cases. If you would
 like to add new methods or propose additional attributes, please feel
-free to contact the OEAPI Working Group.
+free to contact the OEAPI Technical Working Group.
 
 This page provides four steps that you can take to start implementing
 your own OEAPI endpoint.

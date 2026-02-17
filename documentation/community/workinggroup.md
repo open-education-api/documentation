@@ -1,6 +1,6 @@
-# Working group
+# Technical Working Group
 
-The working group is a subgroup of the Community and consists of a number of members who meet on a regular basis. The [Working group members](#working-group-members) are responsible for topics such as:
+The Technical Working Group is a subgroup of the Community and consists of a number of members who meet on a regular basis. The [Technical Working Group members](#working-group-members) are responsible for topics such as:
 
 * the project roadmap.
 * the design and future development of the Open Education API specification (the development has an annual cycle consisting of a minor and a major release).
@@ -10,21 +10,21 @@ The working group is a subgroup of the Community and consists of a number of mem
 * promotion of the OEAPI.
 * the Community.
 
-The working group "way of working" is defined in the [Governance](governance/) model, which includes detailed information such as:
+The Technical Working Group "way of working" is defined in the [Governance](governance/) model, which includes detailed information such as:
 
-* who can join the working group.
+* who can join the Technical Working Group.
 * a list of affiliated institutions.
-* how to become a member of the working group.
-* how to terminate membership of the working group.
-* rights and obligations of a working group member.
+* how to become a member of the Technical Working Group.
+* how to terminate membership of the Technical Working Group.
+* rights and obligations of a Technical Working Group member.
 
 For more information on the Governance model, please access the [Governance](governance/) link.
 
-To register for the working group and become an active part of the Community, please e-mail us at info@openonderwijsapi.nl
+To register for the Technical Working Group and become an active part of the Community, please e-mail us at info@openonderwijsapi.nl
 
-## Working group members
+## Technical Working Group members
 
-The Working group consists of the following members:
+The Technical Working Group consists of the following members:
 
 | Member                     | Representative(s)              |
 | -------------------------- | ------------------------------ |
@@ -37,9 +37,9 @@ The Working group consists of the following members:
 | Hogeschool Arnhem Nijmegen | Niels Kregting                 |
 | Haagse Hogeschool          | Danny Klootwijk                |
 
-## Working group and community meetings
+## Technical Working Group and community meetings
 
-The (online) working group and community meetings take place on the following dates:
+The (online) Technical Working Group and community meetings take place on the following dates:
 
 2023:
 * Tuesday 17 Jan. 14.00-16.00

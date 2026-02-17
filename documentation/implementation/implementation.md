@@ -1,6 +1,6 @@
 # Steps to implement an OEAPI endpoint
 
-The OEAPI itself is not an API that can be used out of the box. There are several implementations of the API, but the OEAPI in itself, as is in the github repostory is not a queryable API. It is merely a starting point on your journey to expose your institutional information to other parties. The OEAPI repository provides you with insights on the data model and proposed endpoints. Most of these endpoints are based on GET methods, as this is currently the method that is being used in most use cases. If you would like to add new methods or would like to propose additional attributes please feel free to contact the OEAPI working group.
+The OEAPI itself is not an API that can be used out of the box. There are several implementations of the API, but the OEAPI in itself, as is in the github repostory is not a queryable API. It is merely a starting point on your journey to expose your institutional information to other parties. The OEAPI repository provides you with insights on the data model and proposed endpoints. Most of these endpoints are based on GET methods, as this is currently the method that is being used in most use cases. If you would like to add new methods or would like to propose additional attributes please feel free to contact the OEAPI Technical Working Group.
 
 This page provides you, the reader with 4 steps which you could take to start implementing your own OEAPI endpoint.
 
