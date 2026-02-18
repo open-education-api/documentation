@@ -5,6 +5,7 @@ on:
     branches:
       - release/6.0
       - main
+    push:
   workflow_dispatch:
 
 jobs:
