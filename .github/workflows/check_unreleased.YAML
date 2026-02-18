@@ -1,4 +1,4 @@
-name: Skip if UNRELEASED exists
+name: FAIL if UNRELEASED exists
 
 on:
   pull_request:
@@ -10,10 +10,16 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    if: hashFiles('UNRELEASED') != ''
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check for UNRELEASED file
+      - name: Fail if UNRELEASED exists
         run: |
-          exit 1
+          if [ -f UNRELEASED ]; then
+            echo "UNRELEASED file present — PR not allowed."
+            exit 1
+          fi
+
+      - name: Continue
+        run: echo "No UNRELEASED file found."

@@ -3,16 +3,20 @@ name: Publish current documentation to open-education-api.github.io (unreleased)
 on:
   push:
     branches: ["**"]
+    paths:
+      - "documentation/**"
+      - "UNRELEASED"
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Run only if UNRELEASED file exists in repo root
-    if: hashFiles('UNRELEASED') != ''
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Abort if UNRELEASED is missing
+        run: test -f UNRELEASED
 
       - name: Create GitHub App installation token
         id: app-token
