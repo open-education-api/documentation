@@ -1,85 +1,140 @@
 # Governance
-*Governance document 1 January 2019, Version: 3*
+*Governance document 1 January 2019, Version 3*
 
-The governance model describes the decision-making process and the role of various members of the [Community](#community-governance), [Technical Working Group](#working-group-governance), and [Edustandaard](#edustandaard-governance). It also outlines the strategic goals and procedures within the project, and provides an understanding of how the Open Education API is governed. In addition to these bodies, the Steering Committee serves as the final decision-making authority. It ensures alignment with sector-wide objectives, approves major changes to the specification, and validates recommendations from the Technical Working Group and Edustandaard before they are formally adopted.
+The governance model describes the decision-making process and the roles of various
+members of the [Community](#community-governance), [Working group](#working-group-governance),
+and [Edustandaard](#edustandaard-governance). It also outlines the strategic goals and
+procedures within the project, and provides insight into how the Open Education API is
+governed. In addition to these bodies, the Steering Committee serves as the final
+decision-making authority. It ensures alignment with sector-wide objectives, approves
+major changes to the specification, and validates recommendations from the Working Group
+and Edustandaard before they are formally adopted.
 
 The shared goals of the governance model are:
 
 * **Sustainability**: ensure the sustainability and health of the project and the Community.
-* **Structure**: provide structure to the organisation so that the decision-making process is clear.
-* **Transparency**: provide transparency to the Community about the participation in and decision-making within the project;
-* **Growth**: provide a structure that can develop according to the needs of new adopters and developers, and that can support the Community.
+* **Structure**: provide structure to the organisation so that the decision-making
+  process is clear.
+* **Transparency**: provide transparency to the Community about participation in and
+  decision-making within the project.
+* **Growth**: provide a structure that can develop according to the needs of new adopters
+  and developers, and that can support the Community.
 * **Development**: support effective development and maintenance of the Open Education API.
 
 ## Community (governance)
-The Community consists of members (representatives) of educational institutions and suppliers that work closely with SURF to further define and develop the Open Education API. See [Community](community/) for more information.
 
-## Technical Working Group (governance)
-The Technical Working Group is a subgroup of the Community and consists of a number of members that meet on a regular basis. See [Technical Working Group](community/workinggroup.md)
+The Community consists of members (representatives) of educational institutions and
+suppliers who work closely with SURF to further define and develop the Open Education API.
+See [Community](community/) for more information.
 
-### Who can join the Technical Working Group?
-* Participation is not limited to higher educational institutions, and is open to anyone who can represent the interests of the OEAPI. Suppliers can therefore also join the Technical Working Group.
-* The ratio between institutions affiliated with SURF and organisations not affiliated with SURF must be at least 3:1.
+## Working group (governance)
+
+The Working group is a subgroup of the Community and consists of a number of members who
+meet on a regular basis. See [Working group](community/workinggroup.md)
+
+### Who can join the working group?
+
+* Participation is not limited to higher education institutions and is open to anyone
+  who can represent the interests of the OOAPI. Suppliers may therefore also join the
+  working group.
+* The ratio between institutions affiliated with SURF and organisations not affiliated
+  with SURF must be at least 3:1.
 
 ### List of affiliated institutions
-* A member of the Technical Working Group may represent up to one higher educational institution or organisation.
-* The Technical Working Group may have more than one member from the same institution, but if there are more than 20 members in the Technical Working Group, the maximum number of members per institution is limited to one. If a member of the Technical Working Group is unable to attend a meeting, an alternate member may be appointed.
 
-### Becoming a member of the Technical Working Group
-* Prospective members can enlist by posting a motivation message on the community site or sending an email to info@openonderwijsapi.nl, with a brief motivation.
-* A prospective member may also be nominated by a member of the Technical Working Group.
-* The Technical Working Group votes on membership of an organisation not affiliated with SURF.
-* Any new member of the Technical Working Group must have an authorised signatory of the institution or organisation they work for is required to sign a letter of intent in which they agree to the rights and obligations of the Technical Working Group member.
+* A member of the working group may represent up to one higher education institution or
+  organisation.
+* The working group may have more than one member from the same institution, but if there
+  are more than 20 members in the working group, the maximum number of members per
+  institution is limited to one. If a member of the working group is unable to attend a
+  meeting, an alternate member may be appointed.
 
-### Terminating membership of the Technical Working Group
-* A Technical Working Group member can terminate their membership through the mailing list.
-* The Technical Working Group may terminate the membership of a member who fails to meet their obligations.
-* Former Technical Working Group members can be kept informed of developments, if desired, but lose their voting rights.
+### Becoming a member of the working group
+
+* Prospective members may apply by posting a motivation message on the community site or
+  sending an email to info@openonderwijsapi.nl, including a brief motivation.
+* A prospective member may also be nominated by a member of the working group.
+* The working group votes on membership of organisations not affiliated with SURF.
+* Any new working group member must have an authorised signatory from their institution
+  or organisation sign a letter of intent agreeing to the rights and obligations of
+  working group membership.
+
+### Terminating membership of the working group
+
+* A working group member may terminate their membership via the mailing list.
+* The working group may terminate the membership of a member who fails to meet their
+  obligations.
+* Former working group members may remain informed of developments if desired, but lose
+  their voting rights.
 
 ### Rights and obligations
-The Technical Working Group member:
 
-* represents their employer, an organisation that promotes the interests of the Open Education API. This organisation has the intention to implement the OEAPI within 2 years.
-* actively contributes to developing the Open Education API and promotes its use. He or she must invest at least 60 hours a year to achieve the Technical Working Group's objectives.
-* must visit at least 3 Technical Working Group meetings a year. Only institutions affiliated with SURF and 1 representative for each institution affiliated with SURF have voting rights.
+The working group member:
+
+* represents their employer, an organisation that promotes the interests of the Open
+  Education API and intends to implement the OOAPI within two years.
+* actively contributes to developing the Open Education API and promotes its use. They
+  must invest at least 60 hours per year to achieve the working group’s objectives.
+* must attend at least three working group meetings per year. Only institutions
+  affiliated with SURF, and one representative per affiliated institution, have voting
+  rights.
 
 ## Edustandaard (governance)
-[Edustandaard](https://www.edustandaard.nl/) is a platform where public and private parties in the research and educational fields in the Netherlands collaborate to make agreements on important matters. These agreements, for example, include how to use recognised concepts to find digital learning material, or transfer education data from one system to another.
 
-The Edustandaard platform ensures knowledge sharing, communication and interaction between services, systems, and organisations, which in turn improves the digital online experience of pupils, students and researchers alike.
+[Edustandaard](https://www.edustandaard.nl/) is a platform where public and private parties
+in the research and education fields in the Netherlands collaborate to make agreements on
+important matters. These agreements include, for example, how to use recognised concepts
+to find digital learning material, or how to transfer education data from one system to
+another.
+
+The Edustandaard platform ensures knowledge sharing, communication and interaction
+between services, systems and organisations, which in turn improves the digital online
+experience of pupils, students and researchers.
 
 Amongst others, Edustandaard:
 
-* gives advice on specific standards for the research and educational sectors.
-* manages agreements, architectures, and standards.
-* manages the chain reference architecture [ROSA](https://rosa.wikixl.nl/) for the entire education domain.
-* safeguards the agreed standards.
+* advises on specific standards for the research and education sectors.
+* manages agreements, architectures and standards.
+* manages the chain reference architecture [ROSA](https://rosa.wikixl.nl/) for the entire
+  education domain.
+* safeguards agreed standards.
 
 Collaboration within Edustandaard takes place within:
 
-* the **Standardisation council** (a council consisting of directors of educational institutions, public and private organisations),
+* the **Standardisation council** (a council consisting of directors of educational
+  institutions and public and private organisations),
 * the **Architecture council**, and
-* the **Edustandaard Technical Working Groups**.
+* the **Edustandaard working groups**.
 
-To achieve their goals the bureau also maintains contact with other (national and international) standards organisations.
+To achieve its goals, the bureau also maintains contact with other national and
+international standards organisations.
 
-### Edustandaard and the OEAPI
+### Edustandaard and the OOAPI
+
 For the Open Education API, Edustandaard:
 
-* gives advice on and manage the standardisation of the OEAPI.
-* ensure that the OEAPI conforms to other standards in the context of ROSA by means of a ROSA scan.
-* inform the Community about updates and changes to the OEAPI.
-* publish all relevant information concerning the OEAPI on the [Edustandaard website](https://www.edustandaard.nl/), including the OEAPI specification, updates and changes to the OEAPI, and formal documentation.
+* advises on and manages standardisation of the OOAPI.
+* ensures that the OOAPI conforms to other standards in the context of ROSA by means of a
+  ROSA scan.
+* informs the Community about updates and changes to the OOAPI.
+* publishes all relevant information concerning the OOAPI on the
+  [Edustandaard website](https://www.edustandaard.nl/), including the OOAPI specification,
+  updates and changes, and formal documentation.
 
 ## Decisions within GitHub
-For issues that affect the GitHub environment ([https://github.com/open-education-api](https://github.com/open-education-api "https://github.com/open-education-api")), the following applies:
 
-* The issue should be submitted to the master committer.
-* The master committer then has 5 days to reach a decision.
-* The decision is recorded within the GitHub environment.
-* The voting procedure is started within these 5 days so that the decision can be voted on.
+For issues that affect the GitHub environment
+(https://github.com/open-education-api), the following applies:
+
+* Issues should be submitted to the master committer.
+* The master committer then has five days to reach a decision.
+* The decision is recorded within GitHub.
+* The voting procedure is started within these five days.
 * The outcome of the vote is recorded.
-* Any follow-up action is taken depending on the outcome of the vote.
+* Any follow-up action is taken depending on the outcome.
 
-## By-laws and code of conduct
-In addition to this governance document, there are also the [By-laws](governance/by-laws.md) and a [Code of conduct](governance/code-of-conduct.md)
+## Bylaws and code of conduct
+
+In addition to this governance document, there are also the
+[Bylaws](governance/bylaws.md) and a
+[Code of conduct](governance/code-of-conduct.md)

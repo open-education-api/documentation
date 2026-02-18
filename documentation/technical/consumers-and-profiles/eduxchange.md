@@ -10,7 +10,7 @@ In this documentation of the eduxchange consumer object you will find
 
 ## Versions
 
-- last update: June 26th, 2025
+- last update: 26 June 2025
 - current alliances using eduxchange.NL:
   - ewuu
   - lde
@@ -20,20 +20,20 @@ In this documentation of the eduxchange consumer object you will find
 We will use v2.x throughout this document to identify the requirements of consumer attributes for different versions. Below a short history of versions.
 
 ### Version 2.2
-In 2025 we are, and will be, working on version 2.2 with new features for the dutch and european alliances. We expect to add more alliances and courses for professionals.
+In 2025 we are, and will be, working on version 2.2 with new features for the Dutch and European alliances. We expect to add more alliances and courses for professionals.
 
 ### Version 2.1
-In 2023 and 2024 we were working on version 2.1 with new features for the dutch alliances. In this version also international alliances will be using eduxchange on eduxchange.eu, starting with EuroTeq. This also required changes.
+In 2023 and 2024 we were working on version 2.1 with new features for the Dutch alliances. In this version also international alliances will be using eduxchange on eduxchange.eu, starting with EuroTeq. This also required changes.
 
 ### Version 2.0
-Version 2.0 has been worked on in 2021 and 2022 and is the current live version on eduxchange.nl. This version was build for the dutch alliances EWUU and LDE.
+Version 2.0 has been worked on in 2021 and 2022 and is the current live version on eduxchange.nl. This version was built for the Dutch alliances EWUU and LDE.
 
 Before version 2.0 we started eduXchange with the EWUU alliance.
 
 # Required OEAPI resources
 
 The subset of OEAPI Resources that is used in eduXchange is described in the picture below.
-* The white resources are used in the orientation proces.
+* The white resources are used in the orientation process.
   * The dashed lines are resources that are only accessed by another resource through the expand parameter.
 * The grey resources are used in the enrolment and grade transmission processes.
 
@@ -45,7 +45,7 @@ Orientation
 * `GET /organizations`
 * `GET /organizations?organizationType=root`
 * GET /organizations/{organizationId}
-* GET /organizations/{organizationId}/programs?programType=minor
+* GET /organizations/{organizationId}/programmes?programType=minor
 * GET /organizations/{organizationId}/courses
 * `GET /programs?programType=minor`
 * `GET /programs/{programId}`
@@ -70,12 +70,12 @@ Enrolment
 * `GET /associations/{associationId}`
 * `PATCH /associations/{associationId}`
 
-!> For `/organizations` the `organizationType=root` parameter must be supported and for all calls returning programs the `programType=minor` parameter will be set and must be supported.
+!> For `/organizations` the `organizationType=root` parameter must be supported and for all calls returning programmes the `programType=minor` parameter will be set and must be supported.
 
 !> To select educational information meant for eduXchange, eduXchange will always append the query parameter `consumer=eduxchange` to every call. To select information meant for a particular alliance, eduXchange can append an additional parameter `alliances.name=ALLIANCE_NAME` for an alliance.
 
-To be compatible with the [eduXchange catalogue website](https://www.eduxchange.nl), an implementation needs to implement the eduXchange consumer object and query parameter for three different kind of objects.
-* programs & courses
+To be compatible with the [eduXchange catalogue website](https://www.eduxchange.nl), an implementation needs to implement the eduXchange consumer object and query parameter for three different kinds of objects.
+* programmes & courses
 * offerings
 * persons
 
@@ -86,9 +86,9 @@ These are the required OEAPI attributes per resource.
 | resource | required attributes |
 | --- | --- |
 | /organizations <br/>/organizations?organizationType=root | organizationId <br/>primaryCode <br/>organizationType <br/>name <br/>shortName <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
-| /programs?programType=minor <br/>/programs/{programId} | programId <br/>programType (=minor) <br/>primaryCode <br/>name <br/>abbreviation <br/>description <br/>teachingLanguage <br/>level <br/>studyLoad <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
-| /programs/{programId}/courses <br/>/courses <br/>/courses/{courseId} | courseId <br/>primaryCode <br/>name <br/>abbreviation <br/>description <br/>teachingLanguage <br/>level <br/>studyLoad <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
-| /programs/{programId}/offerings <br/>/courses/{courseId}/offerings <br/>/offerings/{offeringId} | offeringId <br/>primaryCode <br/>offeringType <br/>name <br/>description <br/>teachinglanguage <br/>resultExpected <br/>startDate <br/>endDate <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
+| /programmes?programType=minor <br/>/programmes/{programId} | programId <br/>programType (=minor) <br/>primaryCode <br/>name <br/>abbreviation <br/>description <br/>teachingLanguage <br/>level <br/>studyLoad <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
+| /programmes/{programId}/courses <br/>/courses <br/>/courses/{courseId} | courseId <br/>primaryCode <br/>name <br/>abbreviation <br/>description <br/>teachingLanguage <br/>level <br/>studyLoad <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
+| /programmes/{programId}/offerings <br/>/courses/{courseId}/offerings <br/>/offerings/{offeringId} | offeringId <br/>primaryCode <br/>offeringType <br/>name <br/>description <br/>teachinglanguage <br/>resultExpected <br/>startDate <br/>endDate <br/>consumers.consumerKey:eduxchange <br/>consumers.alliances[x].name:ALLIANCE_NAME |
 
 # Agreements per eduxchange instance
 
@@ -105,8 +105,8 @@ This instance is running version 2.1.
 Below are the filters, those `highlighted` are in use by the instance:
 
 - `Search box`, free text search box
-- `First application period`, selection of open courses or programs
-- `Education type`, programs or courses selection
+- `First application period`, selection of open courses or programmes
+- `Education type`, programmes or courses selection
 - `Academic year`, academic year selection
 - `Starts in`, starting month selection
 - `Institution`, offering institution selection
@@ -115,8 +115,8 @@ Below are the filters, those `highlighted` are in use by the instance:
 - Level, level selection
 - `Selection minor`, selection minor indication
 - `Language`, language of the offering selection
-- `Study load (ECTS)`, study load of programs or courses in ects selection
-- Study load (Hours), study load of programs or courses in hours selection
+- `Study load (ECTS)`, study load of programmes or courses in ects selection
+- Study load (Hours), study load of programmes or courses in hours selection
 - Mode of study, mode of study selection
 - Mode of delivery, mode of delivery selection
 
@@ -129,8 +129,8 @@ This instance is running version 2.1.
 Below are the filters, those `highlighted` are in use by the instance:
 
 - `Search box`, free text search box
-- `First application period`, selection of open courses or programs
-- Education type, programs or courses selection
+- `First application period`, selection of open courses or programmes
+- Education type, programmes or courses selection
 - `Academic year`, academic year selection
 - `Starts in`, starting month selection
 - `Institution`, offering institution selection
@@ -139,8 +139,8 @@ Below are the filters, those `highlighted` are in use by the instance:
 - `Level`, level selection
 - Selection minor, selection minor indication
 - Language, language of the offering selection
-- `Study load (ECTS)`, study load of programs or courses in ects selection
-- `Study load (Hours)`, study load of programs or courses in hours selection
+- `Study load (ECTS)`, study load of programmes or courses in ects selection
+- `Study load (Hours)`, study load of programmes or courses in hours selection
 - Mode of study, mode of study selection
 - `Mode of delivery`, mode of delivery selection
 
@@ -231,45 +231,45 @@ For the level attribute of a course the participants agreed to use these standar
 
 The documentation below is essential for the orientation part.
 
-## Eduxchange consumer object and query parameter for Programs and Courses
+## eduXchange consumer object and query parameter for Programmes and Courses
 
 To be compatible with the [eduXchange catalogue website](https://www.eduxchange.nl), an implementation needs to implement the eduXchange consumer object and query parameter. See [specific consumers](consumers.md) for more information:
 
-!> When a client requests programs or courses and the query parameter `consumer` is set to `eduxchange`, only Programs and Courses meant for eduxchange should be returned.
+!> When a client requests programmes or courses and the query parameter `consumer` is set to `eduxchange`, only Programmes and Courses meant for eduxchange should be returned.
 
-Also the eduxchange consumer object should be added to the array of consumer objects when returning Programs and Courses. The consumer object for eduXchange has the following attributes:
+Also the eduxchange consumer object should be added to the array of consumer objects when returning Programmes and Courses. The consumer object for eduXchange has the following attributes:
 
 * `consumerKey`, should always have the value `"eduxchange"`
-* `alliances`, an array with all the alliances this Program or Course is offered for. Each alliance is an object with the following attributes:
+* `alliances`, an array with all the alliances this Programme or Course is offered for. Each alliance is an object with the following attributes:
 
 General attributes
 
 * `name` (v2.0): (required) the name of the alliance, allowed values are the current alliances using eduxchange, for example: `"ewuu"`, `"lde"` or `"euroteq"`
-* `theme` (v2.0, deprecated): the theme of the Program or Course within the alliance
-* `themes` (v2.1): an array of themes of the Program or Course within the alliance, `["theme 1", "theme 2"]`. If the themes attribute is present for a particular course or program, theme is ignored. If theme is avaiable, but themes is not, the theme attribute is used. If both are missing, the course or program has no themes.
-* `selection` (v2.0): boolean value (`true` or `false`) indicating whether this Program or Course is selective, e.g. whether student need to pass extra requirements before being allowed to enroll.
-* `type` (v2.0): a string indicating whether a Program or Course is broadening or deepening. Allowed values are: `"broadening"` and `"deepening"`.
+* `theme` (v2.0, deprecated): the theme of the Programme or Course within the alliance
+* `themes` (v2.1): an array of themes of the Programme or Course within the alliance, `["theme 1", "theme 2"]`. If the themes attribute is present for a particular course or programme, theme is ignored. If theme is available, but themes is not, the theme attribute is used. If both are missing, the course or programme has no themes.
+* `selection` (v2.0): boolean value (`true` or `false`) indicating whether this Programme or Course is selective, e.g. whether student need to pass extra requirements before being allowed to enroll.
+* `type` (v2.0): a string indicating whether a Programme or Course is broadening or deepening. Allowed values are: `"broadening"` and `"deepening"`.
 * `instructorNames` (v2.1): an array with names of all instructors, `["instructor name", "instructor name"]`
 * `contactHours` (v2.1): a float with the amount of contact hours, `3.5` for example.
 * `activities` (v2.1): a string that mentions the activities that take place in the course, `"lectures and practises"` for example.
-* `microcredential` (v2.2): specifies if the program or course is rewarded with a stackable or standalone microcredential, values `["stackable"|"standalone"]`. If not speficied, no microcredential is rewarded.
+* `microcredential` (v2.2): specifies if the programme or course is rewarded with a stackable or standalone microcredential, values `["stackable"|"standalone"]`. If not specified, no microcredential is rewarded.
 
-Attributes regarding visibility and enrollment of different types of users. Eduxchange can be used by students and professionals. Please note, there are three types of students. (1) Students from the alliance partner institutions,  (2) students from the own institution and (3) guest students from institutions outside the alliance.
+Attributes regarding visibility and enrollment of different types of users. eduXchange can be used by students and professionals. Please note, there are three types of students. (1) Students from the alliance partner institutions,  (2) students from the own institution and (3) guest students from institutions outside the alliance.
 
-* `targetGroup` (v2.2): specifies if the program or course is a program or course for students or for professionals, values `["forStudents"|"forProfessionals"]`. If not specified, the course or program is supposed to be intended for students.
-* `visibleForOwnStudents` (v2.0): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students of the offering institution. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for own students.*
+* `targetGroup` (v2.2): specifies if the programme or course is a programme or course for students or for professionals, values `["forStudents"|"forProfessionals"]`. If not specified, the course or programme is supposed to be intended for students.
+* `visibleForOwnStudents` (v2.0): a boolean value (`true` or `false`) indicating whether enrollment of a Programme or Course should be visible for students of the offering institution. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programmes and courses themselves are visible for own students.*
 * `enrollmentForOwnStudents` (v2.0): a string indicating which enrollments process should be followed for students of the offering institution. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForOwnStudents` is set to `true`.
   * If `"url"` is chosen the attribute `enrollmentUrl` **in the consumer object of an offering** is mandatory.
-* `visibleForGuests` (v2.1): a boolean value (`true` or `false`) indicating whether enrollment of a Program or Course should be visible for students outside the partner institutions. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programs and courses themselves are visible for students outside the partner institutions.*
+* `visibleForGuests` (v2.1): a boolean value (`true` or `false`) indicating whether enrollment of a Programme or Course should be visible for students outside the partner institutions. *Note: in the eduxchange frontend a higher level institution setting is set to indicate that programmes and courses themselves are visible for students outside the partner institutions.*
 * `enrollmentForGuests` (v2.1): a string indicating which enrollments process should be followed for students outside the partner institutions. Allowed values are `"broker"` or `"url"`. This attribute is only used if `visibleForGuests` is set to `true`.
   * If `"url"` is chosen the attribute `enrollmentUrlForGuests` **in the consumer object of an offering** is mandatory.
 * `enrollmentForProfessionals` (v2.2): a string indicating which enrollments process should be followed for professionals. Allowed values are `"broker"` or `"url"`. This attribute is only used if `targetGroup` is set to `forProfessionals`.
   * If `"url"` is chosen the attribute `enrollmentUrlForProfessionals` **in the consumer object of an offering** is mandatory.
 
-Attributes regarding joint programs.
+Attributes regarding joint programmes.
 
-* `jointPartnerCodes` (v2.1): an array of partners of the Program. This is used to identify the partners in case of a joint program. The agreed partner codes are used here. For example in the `lde` alliance: `["21PF", "21PB"]`.
-* `source` (v2.0): an optional object with a reference to the source of a Course or Program. In case of a joint program one of the institutions could act as overall coordinator and specifies the program and underlying courses. Underlying courses could be given at one of the other institutions. In this source object the course at the other institution can be specified. Use these attributes:
+* `jointPartnerCodes` (v2.1): an array of partners of the Programme. This is used to identify the partners in case of a joint programme. The agreed partner codes are used here. For example in the `lde` alliance: `["21PF", "21PB"]`.
+* `source` (v2.0): an optional object with a reference to the source of a Course or Programme. In case of a joint programme one of the institutions could act as overall coordinator and specifies the programme and underlying courses. Underlying courses could be given at one of the other institutions. In this source object the course at the other institution can be specified. Use these attributes:
   * `shortName` (v2.0): the partner id of the institution to identify the source institution. An example for the `lde` alliance is: `"21PE"`
   * `primaryCode` (v2.0): a string value with the primaryCode of the course to identify the source course.
   * `uuid` (v2.0): the uuid of the course to reference the OEAPI endpoint of the source course.
@@ -320,15 +320,15 @@ This is an example of the consumer object for eduXchange. The example reflects t
     }
 ```
 
-## Eduxchange consumer object for Offerings
+## eduXchange consumer object for Offerings
 
-The outline of the consumer object for offerings is the same as specified above for the programs and courses. There should always be a `consumerKey` attribute and an `alliances` array in the consumer object.
+The outline of the consumer object for offerings is the same as specified above for the programmes and courses. There should always be a `consumerKey` attribute and an `alliances` array in the consumer object.
 
-This consumer object is used to specify the `enrollmentUrl` and `enrollmentUrlForGuests` per offering. These attributes are associated with the corresponding attributes in the consumer object of the program or course.
+This consumer object is used to specify the `enrollmentUrl` and `enrollmentUrlForGuests` per offering. These attributes are associated with the corresponding attributes in the consumer object of the programme or course.
 
-* `enrollmentUrl` (v2.0): a string formatted as an URL to which own students will be redirected if `enrollmentForOwnStudents` **in the program/course consumer object** is set to `"url"`.
-* `enrollmentUrlForGuests` (v2.1): a string formatted as an URL to which guest students will be redirected if `enrollmentForGuests` **in the program/course consumer object** is set to `"url"`.
-* `enrollmentUrlForProfessionals` (v2.2): a string formatted as an URL to which professionals will be redirected if `enrollmentForProfessioanals` **in the program/course consumer object** is set to `"url"`.
+* `enrollmentUrl` (v2.0): a string formatted as an URL to which own students will be redirected if `enrollmentForOwnStudents` **in the programme/course consumer object** is set to `"url"`.
+* `enrollmentUrlForGuests` (v2.1): a string formatted as an URL to which guest students will be redirected if `enrollmentForGuests` **in the programme/course consumer object** is set to `"url"`.
+* `enrollmentUrlForProfessionals` (v2.2): a string formatted as an URL to which professionals will be redirected if `enrollmentForProfessioanals` **in the programme/course consumer object** is set to `"url"`.
 
 In addition the `enrollStartTime` and `enrollEndTime` of an offering can be added. This time is more specific then the enrollStartDate and enrollEndDate of an offering. This makes it possible to start on enrollStartDate at enrollStartTime and end at enrollEndDate at enrollEndTime.
 
@@ -370,7 +370,7 @@ This is an example of the consumer object for eduXchange offerings.
 
 The documentation below is essential for the registration part.
 
-Continu reading below for eduXchange.NL alliances. For eduXchange.EU specific enrolment information, please visit: [A collection of technical documents for enrolment on eduxchange.eu](https://tech-docs.eduxchange.eu/)
+Continue reading below for eduXchange.NL alliances. For eduXchange.EU specific enrolment information, please visit: [A collection of technical documents for enrolment on eduxchange.eu](https://tech-docs.eduxchange.eu/)
 
 ## About `GET /persons/me`
 
@@ -389,16 +389,16 @@ Continu reading below for eduXchange.NL alliances. For eduXchange.EU specific en
 }
 ```
 
-## Eduxchange consumer object for Persons
+## eduXchange consumer object for Persons
 
 To be compatible with the registering process of the `broker` after the 'register' button is pressed in the eduxchange frontend, an implementation needs to implement the following consumer object and attributes on the Persons object.
 
 * `consumerKey` (v2.0), should always have the value `"eduxchange"`
 * `enrollments` (v2.0), an array with all the CROHO enrollments for this person. Each enrollment is an object with the following attributes:
-  * `crohoCreboCode` (v2.0): (required) the crohoCreboCode for this program. This should be a five character string, e.g. "34401".
-  * `name` (v2.0): (required) the name of the program this enrollment is for.
-  * `phase` (v2.0): the phase of the program for this enrollment. Allowed values are `"bachelor"` or `"master"`.
-  * `modeOfStudy` (v2.0): the modeOfStudy of the program for this enrollment. Allowed values are `"full-time"`, `"part-time"`, `"dual training"` or `"self-paced"`.
+  * `crohoCreboCode` (v2.0): (required) the crohoCreboCode for this programme. This should be a five character string, e.g. "34401".
+  * `name` (v2.0): (required) the name of the programme this enrollment is for.
+  * `phase` (v2.0): the phase of the programme for this enrollment. Allowed values are `"bachelor"` or `"master"`.
+  * `modeOfStudy` (v2.0): the modeOfStudy of the programme for this enrollment. Allowed values are `"full-time"`, `"part-time"`, `"dual training"` or `"self-paced"`.
   * `startDate` (v2.0): the start date for this enrollment. Should be a string formatted as an RFC3099 full-date.
   * `endDate` (v2.0): end start date for this enrollment. Should be a string formatted as an RFC3099 full-date.
 * `institutionBRINCode` (v2.0), the BRIN code of the institution. Should consist of two digits and two capital letters.
@@ -432,14 +432,14 @@ To be compatible with the registering process of the `broker` after the 'registe
 
 ### State and RemoteState
 
-The `remoteState` field contains the intial state of the Guest institution. The logic for this is as follows: the Guest institution is sending a request to the Home institution to create an association. From the perspective of the Home institution, the state of the Guest is the remoteState.
+The `remoteState` field contains the initial state of the Guest institution. The logic for this is as follows: the Guest institution is sending a request to the Home institution to create an association. From the perspective of the Home institution, the state of the Guest is the remoteState.
 
 The `state` field is mandatory in OEAPI. However, during when sending the initial POST, the Guest cannot know what the state of the Home will be. Therefore the state should just be set to `associated` but it doesn’t have a real meaning at this stage. The Home institution will respond to the request with their initial `state` in the HTTP response.
 
 type of states:
-* pending (proces is waiting on the status of the institution)
+* pending (process is waiting on the status of the institution)
 * associated (the student is enrolled in the learning activity)
-* canceled (by student)
+* cancelled (by student)
 * denied (either learning activity is stopped or student is not allowed)
 * queued (student is put on a waiting list)
 
@@ -449,7 +449,7 @@ type of states:
 
 In OEAPI version 5.0 the following changes were made that are relevant for eduXchange. Some of the highlights:
 
-1. Some attributes were added to the Program object.
+1. Some attributes were added to the Programme object.
 2. Some attributes were added to the Course object.
 3. Some attributes were added to the Association object or updated. For example: `state` has been expanded with a `queued` value and the `result` object has been expanded with a new attribute `pass`.
 4. Some of the attributes we specified in the `ext` object or the nested `targetGroup` object have been moved to the consumer object.
