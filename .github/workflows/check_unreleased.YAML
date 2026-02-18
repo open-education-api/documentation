@@ -1,0 +1,19 @@
+name: Skip if UNRELEASED exists
+
+on:
+  pull_request:
+    branches:
+      - release/6.0
+      - main
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: hashFiles('UNRELEASED') != ''
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for UNRELEASED file
+        run: |
+          exit 1
