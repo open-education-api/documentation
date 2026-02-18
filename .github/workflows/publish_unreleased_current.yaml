@@ -3,9 +3,6 @@ name: Publish current documentation to open-education-api.github.io (unreleased)
 on:
   push:
     branches: ["**"]
-    paths:
-      - "documentation/**"
-      - "UNRELEASED"
   workflow_dispatch:
 
 jobs:
