@@ -46,7 +46,7 @@
   * [Data minimisation](technical/data-minimisation.md#start)
   * [Formatting text](technical/formatting-text.md#start)
   * [Supplementary Information](technical/supplementary-information.md#start)
-  * [versioning](technical/versioning.md) 
+  * [versioning](technical/versioning.md)
   * [Historic and future data](technical/historical-and-future-data.md#start)
   * [Error codes](technical/errorcodes.md)
     * [400](technical/errorcodes.md#_400-bad-request)
