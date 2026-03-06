@@ -14,13 +14,13 @@ The shared goals of the governance model are:
 
 OEAPI management is the final decision-making body of the OEAPI, where the education sector is in charge of the further development and future of the OEAPI standard. It ensures alignment with sector-wide objectives, approves major changes to the specification, and validates recommendations from the Working Group and Edustandaard before they are formally adopted.
 
-The three dutch education sectors – vocational education, higher professional education and university education – each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
+The three Dutch education sectors (vocational education, higher professional education and university education) each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
 MBO (vocational education): Gertjan Flinterman (Deltion College)
 HBO (higher professional education): Rene Schenk (Avans University of Applied Sciences)
 WO (university education): Jan-Willem Brock (Leiden University); chair of the OEAPI management
 Chair of the OEAPI technical working group: Patrick vd Veer (SURF)
 
-Besides these four dutch national seats within OEAPI management there are international seats available for (representation of) European public education institutions.
+Besides these four Dutch national seats within OEAPI management there are international seats available for (representation of) European public education institutions.
 
 ## Technical Working Group (governance)
 
@@ -35,7 +35,7 @@ The technical working group is the implementing body for the standard. Its techn
 
 ## Community (governance)
 
-The OEAPI community consists of all interested in OEAPI, wants to stay informed and/or wants to be involved in its further development. Meetings are organised within the community to discuss developments in OEAPI and to exchange ideas and experiences with other education institutions. The community can also provide input in the form of wishes and requirements with regard to the standard. These wishes and requirements may lead to a new amendment proposal for the OEAPI.
+The OEAPI community consists of all those interested in the OEAPI who wish to stay informed and/or be involved in its further development. Meetings are organised within the community to discuss developments in OEAPI and to exchange ideas and experiences with other education institutions. The community can also provide input in the form of wishes and requirements with regard to the standard. These wishes and requirements may lead to a new amendment proposal for the OEAPI.
 
 ### Who can join the OEAPI community?
 
@@ -69,9 +69,9 @@ To achieve their goals the bureau also maintains contact with other (national an
 
 ### Edustandaard and the OEAPI
 
-The Open Education API is registered at Edustandard. For the Open Education API, Edustandaard:
+The Open Education API is registered at Edustandaard. For the Open Education API, Edustandaard:
 
-* gives advice on and manage the standardisation of the OEAPI.
+* gives advice on the standardisation of the OEAPI.
 * ensure that the OEAPI conforms to other standards in the context of ROSA by means of a ROSA scan.
 * inform the Community about updates and changes to the OEAPI.
 * publish all relevant information concerning the OEAPI on the [Edustandaard website](https://www.edustandaard.nl/).
