@@ -20,3 +20,9 @@ $RECYCLE.BIN/
 # Tool-specific
 # =========================
 *.drawio.bkp
+
+# =========================
+# Vale-specific
+# =========================
+.vale.ini
+styles/
