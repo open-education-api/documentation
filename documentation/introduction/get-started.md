@@ -18,7 +18,7 @@ your own OEAPI endpoint.
 1. Data modelling locating authoritative sources and determining the
    scope of the OEAPI endpoint, mainly at the level of entities.  
 
-The first step is to determine which OEAPI endpoints you would like to
+  The first step is to determine which OEAPI endpoints you would like to
 expose. This determines the data sources that need to be identified.
 Once this choice has been made, the source or sources that can act as
 the authoritative source for the specific data can be identified and a
