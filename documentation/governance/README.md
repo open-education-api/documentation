@@ -14,11 +14,11 @@ The shared goals of the governance model are:
 
 OEAPI management is the final decision-making body of the OEAPI, where the education sector is in charge of the further development and future of the OEAPI standard. It ensures alignment with sector-wide objectives, approves major changes to the specification, and validates recommendations from the Working Group and Edustandaard before they are formally adopted.
 
-The three Dutch education sectors (vocational education, higher professional education and university education) each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
-MBO (vocational education): Gertjan Flinterman (Deltion College)
-HBO (higher professional education): Rene Schenk (Avans University of Applied Sciences)
-WO (university education): Jan-Willem Brock (Leiden University); chair of the OEAPI management
-Chair of the OEAPI technical working group: Patrick vd Veer (SURF)
+The three Dutch education sectors each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
+* MBO (vocational education): Gertjan Flinterman (Deltion College)
+* HBO (higher professional education): Rene Schenk (Avans University of Applied Sciences)
+* WO (university education): Jan-Willem Brock (Leiden University); chair of the OEAPI management
+* Chair of the OEAPI technical working group: Patrick vd Veer (SURF)
 
 Besides these four Dutch national seats within OEAPI management there are international seats available for (representation of) European public education institutions.
 
