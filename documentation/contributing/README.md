@@ -47,7 +47,7 @@ Before opening an issue, please ensure that:
 
 ## Versioning and Branching Strategy
 
-This chapter describes how versioning and branching are handled for the OOAPI
+This chapter describes how versioning and branching are handled for the OEAPI
 specification repository.
 
 ### `main` as the single integration branch

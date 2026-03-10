@@ -1,7 +1,7 @@
-# Timetabling in the OOAPI Model
+# Timetabling in the OEAPI Model
 
 ## Overview
-This chapter explains how timetabling is implemented using the **OOAPI** model. It focuses on the relationships between **Programmes**, **Courses**, **Learning Components**, and their corresponding **Offerings**. It also demonstrates how multiple course instances (offerings) can exist within one academic year.
+This chapter explains how timetabling is implemented using the **OEAPI** model. It focuses on the relationships between **Programmes**, **Courses**, **Learning Components**, and their corresponding **Offerings**. It also demonstrates how multiple course instances (offerings) can exist within one academic year.
 
 ![Timetabling overview](../_media/timetabling-overview.png "Relations between programme, course, learning components, test components and offerings")
 
@@ -10,7 +10,7 @@ This chapter explains how timetabling is implemented using the **OOAPI** model. 
 ---
 
 ## 1. Conceptual Foundation
-In the OOAPI model, the structure for teaching and scheduling is separated into two domains:
+In the OEAPI model, the structure for teaching and scheduling is separated into two domains:
 
 - **educationSpecifications** – defines *what* is being taught.
 - **offerings** – defines *when, where, and how* it is taught.
@@ -49,7 +49,7 @@ Each Offering refers to its conceptual parent (e.g. `course`, `learningComponent
 
 ## 3. Hierarchical Relationships
 
-The OOAPI model distinguishes between **educational specifications** and their
+The OEAPI model distinguishes between **educational specifications** and their
 **offerings**, while also supporting hierarchical structuring within each of these
 domains. This chapter focuses on the hierarchical aspect of the model and describes
 how programmes, courses, learning components, and test components can be organised,
@@ -85,7 +85,7 @@ In practice, associations such as enrolment, grouping, or participation are mode
 explicitly through association endpoints rather than through hierarchy.
 
 The hierarchy shown above should therefore be understood as a structural aid, not as
-a complete or normative model of all relationships within OOAPI. A relational,
+a complete or normative model of all relationships within OEAPI. A relational,
 left-to-right view of the associations between educational specifications, offerings,
 and related entities would require a different form of representation, such as a
 class diagram or an entity–relationship diagram (ERD).
@@ -93,7 +93,7 @@ class diagram or an entity–relationship diagram (ERD).
 ---
 
 ## 4. Example: Course Offered Twice in a Year
-This example follows the OOAPI v6 schemas for `ProgrammeOffering`, `CourseOffering`, `LearningComponentOffering` and `TestComponentOffering`. Objects are shown as separate resources, as they would be returned by their own endpoints.
+This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOffering`, `LearningComponentOffering` and `TestComponentOffering`. Objects are shown as separate resources, as they would be returned by their own endpoints.
 
 ### Conceptual Definition
 **Course:** *Introduction to Data Science*
@@ -216,7 +216,7 @@ In this example:
 - **ProgrammeOfferings** group all courses and their sessions within a defined academic period.
 - **CourseOfferings** can exist multiple times per year (e.g. re-runs in different semesters) but always link back to the same conceptual **Course**.
 - **LearningComponentOfferings** and **TestComponentOfferings** are the primary sources for generating time–room–group based timetables.
-- The `programmeOfferings` and `courseOfferings` arrays implement the many-to-many relations between programmes, courses and components as modelled in OOAPI.
+- The `programmeOfferings` and `courseOfferings` arrays implement the many-to-many relations between programmes, courses and components as modelled in OEAPI.
 - **AcademicSessions** allow filtering events by semester, term, or block.
 - **Organisation** and **Room** references (not shown in the JSON above) allow for integration with facility management and scheduling systems.
 
@@ -227,6 +227,6 @@ In this example:
 - **Offerings** define *when and where* teaching happens.
 - A Course can have multiple Offerings in the same academic year, each with its own timetable.
 - **LearningComponentOfferings** and **TestComponentOfferings** are the actual time-based entities for timetabling.
-- Arrays like `programmeOfferings` and `courseOfferings` connect these objects according to the OOAPI v6 specification.
+- Arrays like `programmeOfferings` and `courseOfferings` connect these objects according to the OEAPI v6 specification.
 
 This model enables consistent, standardised integration of academic structure and scheduling, ensuring interoperability across timetabling, enrolment, and learning management systems.
