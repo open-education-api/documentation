@@ -1,15 +1,29 @@
 # Expanding responses
 
-The OOAPI is based on resources that are represented as objects in the object model. The objects themselves are identified through unique UUIDs. This allows for referencing the object for retrieval, updates and information on the creation of the object. The objects can also refer to each other through these UUIDs. For example the course object has a coordinator this coordinator is identified as the UUID of the person filling the coordination role for this course.
+The OEAPI is based on resources that are represented as objects in the object
+model. The objects themselves are identified through unique UUIDs. This allows
+for referencing the object for retrieval, updates and information on the
+creation of the object. The objects can also refer to each other through these
+UUIDs. For example, the course object has a coordinator. This coordinator is
+identified as the UUID of the person filling the coordination role for this
+course.
 
-If you would like to get the complete information from a linked object you could do this by calling the UUID of this linked object. This then would require two API requests. If more than one object is linked to the object this would even require more requests. To reduce the number of requests the expand mechanism is introduced.
+If you would like to get the complete information from a linked object, you
+could do this by calling the UUID of this linked object. This would require two
+API requests. If more than one object is linked to the object, this would
+require even more requests. To reduce the number of requests, the expand
+mechanism is introduced.
 
-This is why the expand mechanism is introduced. This mechanism allows you to retrieve the linked objects in a single call by replacing the object ID of the linked object with all its properties.
-The expand mechanism works by adding an expand parameter and the name of the linked object you would like to expand. For example if you would like to see the details of the person in an association this is done by
+This is why the expand mechanism is introduced. This mechanism allows you to
+retrieve the linked objects in a single call by replacing the object ID of the
+linked object with all its properties. The expand mechanism works by adding an
+`expand` parameter and the name of the linked object you would like to expand.
+For example, if you would like to see the details of the person in an
+association, this is done by
 `GET association/{associationID}?expand=person`
 
 ## Endpoints which are expandable
-The current list of objects that allow for expansion of the related objects are:
+The current list of objects that allow for expansion of the related objects is:
 * academic-session
 * association
 * component
@@ -58,7 +72,10 @@ The current list of objects that allow for expansion of the related objects are:
 }
 ```
 
-To complete this information a person request and an offering request is needed. this would then result in three different requests to complete all the data. To reduce the amount of requests we can also use the aforementioned expand functionality.
+To complete this information, a person request and an offering request are
+needed. This would then result in three different requests to complete all the
+data. To reduce the number of requests, we can also use the aforementioned
+expand functionality.
 
 `GET association/{associationID}?expand=person,offering` will provide
 
@@ -177,7 +194,7 @@ To complete this information a person request and an offering request is needed.
         "description": [
             {
             "language": "en-GB",
-            "value": "'Prove in writing knowledge of research methods, including:\nAcquire knowledge of HCI research paradigms\nAble to design suitable research studies (e.g., choose between within and between subject designs)\nDefine/apply/design metrics and scales\nDefine/produce materials (e.g., stimuli and questionnaires)\nDefine protocols for research studies\nUnderstands and take in account concepts of reliability and validity\nAnalyse and improve methods and analysis of published scientific articles\nAble to deliver scientific reports\nProve in writing knowledge of ­­­statistics, including:\nHandle hypothesis testing with complex designs (e.g., including , dependent, independent, and co variates)\nData preparation (e.g., coding and feature selection)\nReason towards adequate techniques to ensure valid outcomes (e.g., be aware of type I, type II errors)\nSelect an appropriate sampling method (e.g., stratified)\nPerform parametric tests (e.g., repeated measures (M)ANOVA)\nPerform non-parametric tests (e.g., Chi-square, Mann-Whitney, and Kruskal-Wallis)'\n"
+            "value": "'Prove in writing knowledge of research methods, including:\nAcquire knowledge of HCI research paradigms\nAble to design suitable research studies (e.g., choose between within and between subject designs)\nDefine/apply/design metrics and scales\nDefine/produce materials (e.g., stimuli and questionnaires)\nDefine protocols for research studies\nUnderstands and takes into account concepts of reliability and validity\nAnalyse and improve methods and analysis of published scientific articles\nAble to deliver scientific reports\nProve in writing knowledge of statistics, including:\nHandle hypothesis testing with complex designs (e.g., including dependent, independent, and covariates)\nData preparation (e.g., coding and feature selection)\nReason towards adequate techniques to ensure valid outcomes (e.g., be aware of type I and type II errors)\nSelect an appropriate sampling method (e.g., stratified)\nPerform parametric tests (e.g., repeated measures (M)ANOVA)\nPerform non-parametric tests (e.g., Chi-square, Mann-Whitney, and Kruskal-Wallis)'\n"
             }
         ],
         "teachingLanguage": "nld",
@@ -260,6 +277,5 @@ To complete this information a person request and an offering request is needed.
 }
 ```
 
-
-The expand functionality is inspired on the stripe examples
+The expand functionality is inspired by the Stripe examples
 See also https://stripe.com/docs/expand

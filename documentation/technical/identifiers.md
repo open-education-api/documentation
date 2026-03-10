@@ -1,15 +1,29 @@
 # About identifiers
 
 ## UUIDs
-Each resource specified in OOAPI has an identifier in the form of a [UUID (Universally unique identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier), the attribute name for this identifier is `Id` prefixed with the name of the resource, e.g. `programmeId`. Using UUIDs guarantees that all identifiers are globally unique. The id's for resources should be stable.
+Each resource specified in OEAPI has an identifier in the form of a
+[UUID (Universally unique identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier),
+the attribute name for this identifier is `Id` prefixed with the name of the
+resource, e.g. `programmeId`. Using UUIDs guarantees that all identifiers are
+globally unique. The identifiers for resources should be stable.
 
-OOAPI recommends using version 4 UUIDs (random). We strongly advise institutions and suppliers implementing OOAPI to make sure their UUIDs are properly generated  using enough randomness.
+OEAPI recommends using version 4 UUIDs (random). We strongly advise
+institutions and suppliers implementing OEAPI to make sure their UUIDs are
+properly generated using enough randomness.
 
 ## Primary codes
-Most institutions already have their own unique, often human-readable, identifiers or codes for resources. Such codes can be communicated using the `primaryCode` attribute. If no primary code is available for a resource, the `primaryCode` attribute can be filled with the UUID used as the resource id.
+Most institutions already have their own unique, often human-readable,
+identifiers or codes for resources. Such codes can be communicated using the
+`primaryCode` attribute. If no primary code is available for a resource, the
+`primaryCode` attribute can be filled with the UUID used as the resource
+identifier.
 
 ## Other codes
-Besides the identifier and primary code, resources or entities may also be known by other codes. These codes can be communicated using the `otherCodes` attribute, which is an array of "Identifier Entries". Each entry consists of a `codeType`, which indicates what kind of code it is and a `code` containing the actual code.
+Besides the identifier and primary code, resources or entities may also be
+known by other codes. These codes can be communicated using the `otherCodes`
+attribute, which is an array of "Identifier Entries". Each entry consists of a
+`codeType`, which indicates the kind of code, and a `code` containing the
+actual code.
 
 The following `codeTypes` are available:
 
@@ -63,4 +77,5 @@ The following `codeTypes` are available:
 | `username`                | User login name.                                                  |
 | `uuid`                    | Universally unique identifier.                                    |
 
-Since `codeType` is an extensible enumeration, implementations may add their own `codeTypes`, as long as they are prefixed with "x-".
+Since `codeType` is an extensible enumeration, implementations may add their
+own `codeTypes`, as long as they are prefixed with "x-".

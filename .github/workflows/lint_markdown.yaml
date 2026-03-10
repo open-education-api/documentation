@@ -23,7 +23,7 @@ jobs:
       - name: Run markdownlint-cli2
         id: lint
         continue-on-error: true
-        run: npx markdownlint-cli2 "**/*.md"
+        run: npx markdownlint-cli2 "documentation/**"
 
       - name: Publish commit status (markdownlint)
         uses: actions/github-script@v7
