@@ -14,7 +14,7 @@ information between institutions using the API. This enables developers
 of future applications to work with well-defined endpoints, thereby
 making system integration easier.
 
-The current use case for OEAPI v5.0 is depicted in the figure below:
+The original use case for OEAPI v5.0 is depicted in the figure below:
 
 ![OEAPI purpose and use case]
 (../_media/ooapi_v50_components_use_cases.png)
@@ -45,8 +45,7 @@ arrangements of the Technical Working Group would need to be revised.
 
 There is currently interest from intermediate vocational education
 institutions in using the specification. See the
-[programme OKE]
-(https://github.com/NetwerkExamineringDigitalisering/NED-OEAPI).
+[programme OKE](https://github.com/NetwerkExamineringDigitalisering/NED-OEAPI).
 
 ## OEAPI scope
 
@@ -111,14 +110,14 @@ Further information can be found [here](technical/consumers-and-profiles/rio).
 ## OEAPI (data) ownership
 
 The OEAPI Specification is a set of definitions that enable institutions
-to make their internal data accessible. The specification itself is
-owned by the workgroup. Changes to the specification can be made
+to make their internal data accessible. The specification is
+maintained by the working group. Changes to the specification can be made
 according to the [governance by-laws](governance/).
 
 Institutions that wish to provide access to their internal data through
 the OEAPI specification do so under their own responsibility. The OEAPI
-workgroup has provided an overview of the classification of the
-different endpoints. The data institutions provide is owned by the
+working group has provided an overview of the classification of the
+different endpoints. The data provided by institutions is owned by the
 institutions or ownership is delegated on behalf of students. In the
 latter case, students agree to have their data processed by the
 institution.
