@@ -1,0 +1,21 @@
+# Equivalent of: --include-fragments
+include_fragments = true
+
+# Equivalent of: -v (choose log level)
+verbose = "error"          # Possible values: "error", "warn", "info", "debug", "trace"
+
+# Equivalent of: -p ./lychee-preprocess.sh
+preprocess = { command = "./lychee-preprocess.sh" }
+
+# Example: exclude specific directories using regex patterns
+exclude_path = [
+  "(^|/)technical/consumers-and-profiles",    # Skip the entire directory
+  "(^|/)_media/",                             # Skip the entire directory
+  "(^|/)_old/",                               # Skip the entire directory
+]
+
+# Exclude specific domains or URL patterns
+exclude = [
+  "^https?://([^/]*\\.)?example\\.com",
+  "^https?://([^/]*\\.)?example-.*"
+]
