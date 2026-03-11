@@ -1,19 +1,20 @@
-# equivalent van: --include-fragments
-include_fragments = true   # :contentReference[oaicite:1]{index=1}
+# Equivalent of: --include-fragments
+include_fragments = true
 
-# equivalent van: -v (kies loglevel)
-verbose = "error"          # "error"|"warn"|"info"|"debug"|"trace" :contentReference[oaicite:2]{index=2}
+# Equivalent of: -v (choose log level)
+verbose = "error"          # Possible values: "error", "warn", "info", "debug", "trace"
 
-# equivalent van: -p ./lychee-preprocess.sh
-preprocess = { command = "./lychee-preprocess.sh" }  # :contentReference[oaicite:3]{index=3}
+# Equivalent of: -p ./lychee-preprocess.sh
+preprocess = { command = "./lychee-preprocess.sh" }
 
-# voorbeeld: exclude een paar mappen (paths), regex
+# Example: exclude specific directories using regex patterns
 exclude_path = [
-  "(^|/)technical/consumers-and-profiles",    # hele map skippen
-  "(^|/)_media/",          # hele map skippen
-  "(^|/)_old/",          # hele map skippen
-]                          # :contentReference[oaicite:4]{index=4}
+  "(^|/)technical/consumers-and-profiles",    # Skip the entire directory
+  "(^|/)_media/",                             # Skip the entire directory
+  "(^|/)_old/",                               # Skip the entire directory
+]
 
+# Exclude specific domains or URL patterns
 exclude = [
   "^https?://([^/]*\\.)?example\\.com",
   "^https?://([^/]*\\.)?example-.*"
