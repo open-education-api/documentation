@@ -78,4 +78,4 @@ The Open Education API is registered at Edustandaard. For the Open Education API
 
 ## By-laws and code of conduct
 
-In addition to this governance document, there are also the [Bylaws](governance/bylaws.md) and a [Code of conduct](governance/code-of-conduct.md)
+In addition to this governance document, there are also the [Bylaws](../governance/by-laws.md) and a [Code of conduct](../governance/code-of-conduct.md)

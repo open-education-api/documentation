@@ -11,4 +11,5 @@ preprocess = { command = "./lychee-preprocess.sh" }  # :contentReference[oaicite
 exclude_path = [
   "(^|/)technical/consumers-and-profiles",    # hele map skippen
   "(^|/)_media/",          # hele map skippen
+  "(^|/)_old/",          # hele map skippen
 ]                          # :contentReference[oaicite:4]{index=4}

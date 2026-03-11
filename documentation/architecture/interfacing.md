@@ -35,14 +35,14 @@ These matches are:
 
 * Implementation of the ECTS guidelines and mapping of these elements
   can be found
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/ooapiv50_ECTS_course_catalogue_elementen.xlsx?raw=true)
+  [here](../_media/ooapiv50_ECTS_course_catalogue_elementen.xlsx?raw=true)
 * Comparisons between HOVI v2 and OEAPI v4 can be found
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/Vergelijking_HOVI_API_v2_OEAPIv50.docx?raw=true)
+  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50.docx?raw=true)
   and
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/Vergelijking_HOVI_API_v2_OEAPIv50_veldniveau.xlsx?raw=true)
+  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50_veldniveau.xlsx?raw=true)
 * A comparison between RIO and HO is part of the current consumer
   information and can be found
-  [here](technical/consumers-and-profiles/rio)
+  [here](../technical/consumers-and-profiles/rio.md)
 
 ## Link with policies and other standards
 
