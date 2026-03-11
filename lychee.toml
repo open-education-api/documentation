@@ -13,3 +13,8 @@ exclude_path = [
   "(^|/)_media/",          # hele map skippen
   "(^|/)_old/",          # hele map skippen
 ]                          # :contentReference[oaicite:4]{index=4}
+
+exclude = [
+  "^https?://([^/]*\\.)?example\\.com",
+  "^https?://([^/]*\\.)?example-.*"
+]

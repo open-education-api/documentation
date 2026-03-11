@@ -84,7 +84,7 @@ measures, such as firewalls, whitelisting for specific endpoints or
 Access Control Lists.
 
 In the OEAPI IAA efforts, we conform to the
-[IAA vision of SURF](https://www.surf.nl/visie-iaa-belangrijkste-trends-identiteitsstelsels).
+[IAA vision of SURF](https://www.surf.nl/files/2019-02/visiedocument_iaa_surfnet.pdf).
 
 In the eduXchange project, the OAuth token of the student is used to
 exchange information on their behalf.

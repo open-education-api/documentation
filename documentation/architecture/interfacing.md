@@ -53,8 +53,8 @@ For the development, ["Digikoppeling"](https://www.logius.nl/diensten/digikoppel
 has been used as a guideline. For the development, the following elements
 were taken into account:
 
-* [Digikoppeling Restful API Profiel](https://publicatie.centrumvoorstandaarden.nl/dk/restapi/)
-* [REST-API Design Rules (Nederlandse API Strategie IIa) 1.0](https://publicatie.centrumvoorstandaarden.nl/api/adr/)
+* [Digikoppeling Restful API Profiel](https://logius-standaarden.github.io/publicatie/dk/restapi/)
+* [REST-API Design Rules (Nederlandse API Strategie IIa) 1.0](https://logius-standaarden.github.io/publicatie/api/adr/)
   * Deviation: The language of the endpoint (API-04) and the
     documentation (API-017) is UK English. This was chosen because higher
     education institutions operate in an international context, in
