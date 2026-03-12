@@ -45,7 +45,7 @@ institutions and borders. More information about EduXchange and OEAPI can be fou
 Currently the OEAPI is implemented at: universities of applied sciences,
 universities and cross-sectoral. An example of the latter is a tool
 implemented for the acceleration
-[zone flexible education](https://versnellingsplan.nl/english/zones/flexibilisation/).
+[zone flexible education](https://versnellingsplan.nl/en/Kennisbank/flyer-zone-flexible-education/index.html).
 Another example of such cross-sectoral implementations is the current
 development of the RIO adapter and the SURFeduhub.
 

@@ -13,7 +13,7 @@
 - This mechanism is intended to promote **consistency** across
   implementations, while allowing flexibility in technical realisation.
 - Filtering can complement
-  **[data minimisation](technical/data-minimisation.md)** principles, as it
+  **[data minimisation](../technical/data-minimisation.md)** principles, as it
   allows clients to request only relevant data subsets.
 - Consumers or Technical Working Groups that wish to apply
   **generic filtering mechanisms** are encouraged to use this approach for

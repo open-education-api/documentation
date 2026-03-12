@@ -53,7 +53,7 @@ repeated in the timelineOverrides.
    again), the information about the available slots has been dropped and the
    website has changed:
    - name: Example entity
-   - website: https://the-new-website.com
+   - website: https://example-new-website.com
 
 This sequence of changes can be specified in OEAPI as follows:
 
@@ -77,7 +77,7 @@ This sequence of changes can be specified in OEAPI as follows:
             "validFrom": "01-01-2022",
             "entity": {
                 "name": "Example entity",
-                "website": "https://the-new-website.com"
+                "website": "https://example-new-website.com"
             }
         }
     ]
