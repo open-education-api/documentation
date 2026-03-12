@@ -1,17 +1,22 @@
+# This workflow publishes the current documentation from the main branch
+# to the 'unreleased' folder of the open-education-api.github.io repository.
+
 name: Publish documentation to open-education-api.github.io (unreleased)
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout this repository containing the documentation.
       - uses: actions/checkout@v4
 
+      # Create a GitHub App token used to push to the publication repository.
       - name: Create GitHub App installation token
         id: app-token
         uses: actions/create-github-app-token@v2
@@ -22,6 +27,7 @@ jobs:
           repositories: |
             open-education-api.github.io
 
+      # Checkout the documentation website repository.
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
@@ -29,12 +35,14 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           path: target
 
+      # Sync documentation to the 'unreleased' folder.
       - name: Sync documentation to unreleased
         run: |
           set -euo pipefail
           mkdir -p target/unreleased
           rsync -a --delete documentation/ target/unreleased/
 
+      # Commit and push only when the sync introduced changes.
       - name: Commit and push if there are changes
         run: |
           set -euo pipefail
@@ -48,3 +56,4 @@ jobs:
           else
             echo "No changes to publish."
           fi
+          

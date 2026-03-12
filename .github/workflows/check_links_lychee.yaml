@@ -1,3 +1,5 @@
+# This workflow checks all links in the documentation using Lychee.
+
 name: Lychee
 
 on:
@@ -11,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository.
       - uses: actions/checkout@v4
 
+      # Check documentation links with Lychee.
       - uses: lycheeverse/lychee-action@v1
         with:
           args: --include-fragments -p ./lychee-preprocess.sh documentation
+          
