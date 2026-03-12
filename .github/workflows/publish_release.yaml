@@ -1,3 +1,6 @@
+# This workflow publishes documentation for a release branch to the
+# open-education-api.github.io repository under the corresponding version folder.
+
 name: Publish documentation to open-education-api.github.io (release branches)
 
 on:
@@ -10,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout this repository containing the documentation.
       - uses: actions/checkout@v4
 
+      # Extract the version from the branch name (release/x.y → x.y).
       - name: Determine release version
         id: release
         run: |
@@ -19,6 +24,7 @@ jobs:
           VERSION="${GITHUB_REF_NAME#release/}"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
+      # Create a GitHub App token used to push to the publication repository.
       - name: Create GitHub App installation token
         id: app-token
         uses: actions/create-github-app-token@v2
@@ -29,6 +35,7 @@ jobs:
           repositories: |
             open-education-api.github.io
 
+      # Checkout the documentation website repository.
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
@@ -36,12 +43,14 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           path: target
 
+      # Copy documentation to the versioned folder of the website repository.
       - name: Sync documentation to versioned folder
         run: |
           set -euo pipefail
           mkdir -p "target/v${{ steps.release.outputs.version }}"
           rsync -a --delete documentation/ "target/v${{ steps.release.outputs.version }}/"
 
+      # Commit and push only when the sync introduced changes.
       - name: Commit and push if there are changes
         run: |
           set -euo pipefail
@@ -55,3 +64,4 @@ jobs:
           else
             echo "No changes to publish."
           fi
+          
