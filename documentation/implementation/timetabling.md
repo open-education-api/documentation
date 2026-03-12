@@ -20,10 +20,10 @@ This separation makes it possible to offer the same course multiple times (for i
 ### Educational Specifications
 | Entity | Description | Relation |
 |---------|--------------|-----------|
-| **Programme** | A collection of courses forming a study path or degree. | `hasPart` → multiple **Courses** |
-| **Course** | A defined subject or unit of study. | `hasPart` → multiple **LearningComponents** and/or **TestComponents** |
-| **LearningComponent** | A defined activity type such as a lecture, seminar, or lab. | Can related more than one course and may include other learning components. |
-| **TestComponent** | A defined assessment, exam, or test. | Can related more than one course and may include other test components. |
+| **Programme** | A collection of courses forming a study path or degree. | `hasPart` → multiple **Courses**. |
+| **Course** | A defined subject or unit of study. | `hasPart` → one or multiple **LearningComponents** and/or **TestComponents**. |
+| **LearningComponent** | A defined activity type such as a lecture, seminar, or lab. | Can be related more than one course and may include other learning components. |
+| **TestComponent** | A defined assessment, exam, or test. | Can be related to more than one course and may include other test components. |
 
 Each of these has references to:
 - `organisation` – the responsible institution or department.
@@ -38,10 +38,10 @@ Each of these has references to:
 
 | Entity | Description | Relation |
 |---------|--------------|-----------|
-| **ProgrammeOffering** | The scheduled delivery of a **Programme**. |  Linked to its **Programme** and to multiple **CourseOfferings**. |
-| **CourseOffering** | The scheduled delivery of a **Course**. | Linked to its **Course** and to one or more **ProgrammeOfferings**. |
+| **ProgrammeOffering** | The scheduled delivery of a **Programme**. |  Linked to its **Programme** and to (one or) multiple **CourseOfferings**. |
+| **CourseOffering** | The scheduled delivery of a **Course**. | Linked to its **Course**, to one or more **ProgrammeOfferings** and to one or more **LearningComponentOffering** and/or **TestComponentOffering**. |
 | **LearningComponentOffering** | A scheduled instance of a **LearningComponent**. | Linked to its **LearningComponent** and to one or more **CourseOfferings**. |
-| **TestComponentOffering** | A scheduled instance of a **TestComponent**. |  Linked to its **TestComponent** and  to one or more **CourseOfferings**. |
+| **TestComponentOffering** | A scheduled instance of a **TestComponent**. |  Linked to its **TestComponent** and to one or more **CourseOfferings**. |
 
 Each Offering refers to its conceptual parent (e.g. `course`, `learningComponent`) and connects to a specific `academicSession` (such as a semester or block).
 
@@ -97,6 +97,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
 
 ### Conceptual Definition
 **Course:** *Introduction to Data Science*
+
 **LearningComponents:**
 - *Lecture Series*
 - *Lab Sessions*
