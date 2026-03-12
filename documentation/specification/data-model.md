@@ -1,6 +1,6 @@
 # Data model
 
-![OEAPI objects and their relationships in a schema](https://open-education-api.github.io/specification/v6.0/ooapi_v6.png)
+![OEAPI objects and their relationships in a schema](https://openonderwijsapi.nl/specification/v6.0/source/ooapi_v6.png)
 
 ## Entity definitions
 

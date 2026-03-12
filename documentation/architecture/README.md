@@ -29,7 +29,7 @@ institutions, software suppliers to these members, as well as sector
 bodies such as
 [VH](https://www.vereniginghogescholen.nl/) and
 [Universities of the Netherlands]
-(https://www.universiteitenvannederland.nl/en_GB).
+(https://www.universiteitenvannederland.nl/en).
 
 ### Target audience
 
@@ -45,7 +45,7 @@ arrangements of the Technical Working Group would need to be revised.
 
 There is currently interest from intermediate vocational education
 institutions in using the specification. See the
-[programme OKE](https://github.com/NetwerkExamineringDigitalisering/NED-OEAPI).
+[programme OKE](https://github.com/NetwerkExamineringDigitalisering/NED-OOAPI).
 
 ## OEAPI scope
 
@@ -105,14 +105,14 @@ MBO, HBO and WO).
 
 Work has been undertaken to map OEAPI v5 to the RIO data model. This
 mapping has resulted in additional objects and consumer elements.
-Further information can be found [here](technical/consumers-and-profiles/rio).
+Further information can be found [here](../technical/consumers-and-profiles/rio.md).
 
 ## OEAPI (data) ownership
 
 The OEAPI Specification is a set of definitions that enable institutions
 to make their internal data accessible. The specification is
 maintained by the working group. Changes to the specification can be made
-according to the [governance by-laws](governance/).
+according to the [governance by-laws](../governance/).
 
 Institutions that wish to provide access to their internal data through
 the OEAPI specification do so under their own responsibility. The OEAPI

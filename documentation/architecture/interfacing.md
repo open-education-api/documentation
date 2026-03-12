@@ -35,14 +35,14 @@ These matches are:
 
 * Implementation of the ECTS guidelines and mapping of these elements
   can be found
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/ooapiv50_ECTS_course_catalogue_elementen.xlsx?raw=true)
+  [here](../_media/ooapiv50_ECTS_course_catalogue_elementen.xlsx?raw=true)
 * Comparisons between HOVI v2 and OEAPI v4 can be found
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/Vergelijking_HOVI_API_v2_OEAPIv50.docx?raw=true)
+  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50.docx?raw=true)
   and
-  [here](https://github.com/open-education-api/specification/blob/master/docs/_media/Vergelijking_HOVI_API_v2_OEAPIv50_veldniveau.xlsx?raw=true)
+  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50_veldniveau.xlsx?raw=true)
 * A comparison between RIO and HO is part of the current consumer
   information and can be found
-  [here](technical/consumers-and-profiles/rio)
+  [here](../technical/consumers-and-profiles/rio.md)
 
 ## Link with policies and other standards
 
@@ -53,8 +53,8 @@ For the development, ["Digikoppeling"](https://www.logius.nl/diensten/digikoppel
 has been used as a guideline. For the development, the following elements
 were taken into account:
 
-* [Digikoppeling Restful API Profiel](https://publicatie.centrumvoorstandaarden.nl/dk/restapi/)
-* [REST-API Design Rules (Nederlandse API Strategie IIa) 1.0](https://publicatie.centrumvoorstandaarden.nl/api/adr/)
+* [Digikoppeling Restful API Profiel](https://logius-standaarden.github.io/publicatie/dk/restapi/)
+* [REST-API Design Rules (Nederlandse API Strategie IIa) 1.0](https://logius-standaarden.github.io/publicatie/api/adr/)
   * Deviation: The language of the endpoint (API-04) and the
     documentation (API-017) is UK English. This was chosen because higher
     education institutions operate in an international context, in
