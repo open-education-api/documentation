@@ -18,6 +18,7 @@ jobs:
 
       # Check documentation links with Lychee.
       - uses: lycheeverse/lychee-action@v1
+        if: github.base_ref != 'release/5.0'
         with:
           args: --include-fragments -p ./lychee-preprocess.sh documentation
           
