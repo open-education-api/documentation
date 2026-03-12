@@ -3,8 +3,8 @@ name: Markdown lint
 on:
   pull_request:
     branches:
-      - release/6.0
       - main
+      - release/*
 
 jobs:
   markdownlint:
