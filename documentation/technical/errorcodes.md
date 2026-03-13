@@ -179,29 +179,65 @@ This behaviour intentionally deviates from strict HTTP semantics to:
 
 ### Example – unsupported OEAPI version
 
+Client:
+
+```http
+POST /enrolments
+Content-Type: application/vnd.oeapi+json;version=7.0
+```
+
+Server:
+
+```http
+HTTP/1.1 406 Not Acceptable
+```
+
+Response body:
+
 ```json
 {
   "type": "https://api.example.org/problems/version-not-acceptable",
   "title": "Version not acceptable",
   "status": 406,
-  "detail": "The requested OEAPI version '5.0' cannot be served.",
-  "requestedVersion": "5.0",
-  "supportedVersions": ["6.1", "6.0"],
+  "detail": "The requested OEAPI version '7.0' cannot be served.",
+  "requestedVersion": "7.0",
+  "supportedVersions": ["5.0", "6.1"],
   "instance": "https://api.example.org/courses"
 }
 ```
 
 ### Example – unsupported consumer version
 
+Client:
+
+```http
+POST /enrolments
+Content-Type: application/vnd.oeapi+json;version=6.0
+
+OEAPI-Consumer-Name: mbo-oke-roster-service
+OEAPI-Consumer-Version: 7.0
+```
+
+Server:
+
+```http
+HTTP/1.1 406 Not Acceptable
+```
+
+Response body:
+
 ```json
 {
   "type": "https://api.example.org/problems/version-not-acceptable",
-  "title": "Consumer version not acceptable",
+  "title": "Version not acceptable",
   "status": 406,
-  "detail": "The consumer version '2.0' is not supported.",
-  "requestedVersion": "2.0",
-  "supportedVersions": ["1.0", "0.94"],
-  "instance": "https://api.example.org/enrolments"
+  "detail": "The requested consumer version '7.0' cannot be served.",
+  "consumer": {
+    "consumerKey": "mbo-oke-roster-service"
+  },
+  "requestedVersion": "7.0",
+  "supportedVersions": ["0.95", "1.0", "6.1"],
+  "instance": "https://api.example.org/courses"
 }
 ```
 
