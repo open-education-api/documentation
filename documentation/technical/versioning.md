@@ -37,20 +37,14 @@ Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.OEAPI+json;version=6.1
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 1.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.OEAPI+json;version=6.1
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 1.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 The requested OEAPI and consumer versions are fully supported.  
@@ -64,20 +58,14 @@ Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.OEAPI+json;version=6.1
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 6.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.OEAPI+json;version=6.0
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 6.0
+Content-Type: application/vnd.oeapi+json;version=6.0
 ```
 
 Because both versions share the same major (6), the server falls back to the highest compatible minor and explicitly reports the versions used.
@@ -90,10 +78,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.OEAPI+json;version=7.0
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 7.0
+Content-Type: application/vnd.oeapi+json;version=7.0
 ```
 
 Server:
@@ -109,7 +94,7 @@ Response body:
   "type": "https://api.example.org/problems/version-not-acceptable",
   "title": "Version not acceptable",
   "status": 406,
-  "detail": "The requested OOAPI version '7.0' cannot be served.",
+  "detail": "The requested OEAPI version '7.0' cannot be served.",
   "requestedVersion": "7.0",
   "supportedVersions": ["5.0", "6.1"],
   "instance": "https://api.example.org/courses"
@@ -127,7 +112,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.OEAPI+json;version=6.0
+Content-Type: application/vnd.oeapi+json;version=6.0
 
 OEAPI-Consumer-Name: mbo-oke-roster-service
 OEAPI-Consumer-Version: 7.0
