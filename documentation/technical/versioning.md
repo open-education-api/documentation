@@ -37,20 +37,14 @@ Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.OEAPI.v6.1+json
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 1.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.OEAPI.v6.1+json
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 1.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 The requested OEAPI and consumer versions are fully supported.  
@@ -64,35 +58,27 @@ Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.OEAPI.v6.1+json
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 1.0
+Content-Type: application/vnd.oeapi+json;version=6.1
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.OEAPI.v6.0+json
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 0.94
+Content-Type: application/vnd.oeapi+json;version=6.0
 ```
 
 Because both versions share the same major (6), the server falls back to the highest compatible minor and explicitly reports the versions used.
 
 ---
 
-### Example 3: unsupported version
+### Example 3: unsupported OEAPI version
 
 Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.OEAPI.v7.0+json
-
-OEAPI-Consumer-Version: 2.0
+Content-Type: application/vnd.oeapi+json;version=7.0
 ```
 
 Server:
@@ -105,11 +91,55 @@ Response body:
 
 ```json
 {
-  "error": "Unsupported OEAPI or consumer version",
-  "requestedVersion": "2.0",
-  "supportedVersions": ["0.94", "1.0"]
+  "type": "https://api.example.org/problems/version-not-acceptable",
+  "title": "Version not acceptable",
+  "status": 406,
+  "detail": "The requested OEAPI version '7.0' cannot be served.",
+  "requestedVersion": "7.0",
+  "supportedVersions": ["5.0", "6.1"],
+  "instance": "https://api.example.org/courses"
 }
 ```
 
 The requested major version is not supported.  
+Fallback is not permitted and the request is rejected.
+
+---
+
+### Example 4: unsupported consumer version
+
+Client:
+
+```http
+POST /enrolments
+Content-Type: application/vnd.oeapi+json;version=6.0
+
+OEAPI-Consumer-Name: mbo-oke-roster-service
+OEAPI-Consumer-Version: 7.0
+```
+
+Server:
+
+```http
+HTTP/1.1 406 Not Acceptable
+```
+
+Response body:
+
+```json
+{
+  "type": "https://api.example.org/problems/version-not-acceptable",
+  "title": "Version not acceptable",
+  "status": 406,
+  "detail": "The requested consumer version '7.0' cannot be served.",
+  "consumer": {
+    "consumerKey": "mbo-oke-roster-service"
+  },
+  "requestedVersion": "7.0",
+  "supportedVersions": ["0.95", "1.0", "6.1"],
+  "instance": "https://api.example.org/courses"
+}
+```
+
+The requested consumer version is not supported.  
 Fallback is not permitted and the request is rejected.
