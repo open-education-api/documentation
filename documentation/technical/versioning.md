@@ -8,7 +8,7 @@ This is referred to as the *closed* versioning approach.
 
 In practice this means:
 
-- the client sends one explicit OEAPI version via `Content-Type`
+- the client sends one explicit OEAPI version via `Accept`
 - the client sends one explicit consumer version via `OEAPI-Consumer-Version`
 - the server either accepts that version, or falls back to a lower compatible minor version within the same major
 - if no compatible version exists, the server rejects the request
@@ -21,7 +21,7 @@ If the requested version cannot be satisfied (and no compatible minor version is
 
 OEAPI deliberately does not use:
 
-- HTTP `Accept` negotiation
+- HTTP standard `Accept` negotiation
 - query parameters for versioning
 - version attributes in the request body
 
