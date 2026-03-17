@@ -28,7 +28,7 @@
   * [Data exchange and relationships with other specifications](architecture/interfacing.md#start)
   * [Supply chain](architecture/supply-chain.md#start)
 * [Data model](specification/data-model.md)
-  * [Data model](specification/data-model.md#data-model)
+  * [Implement OEAPI](specification/data-model.md#data-model)
   * [Entities](specification/data-model.md#entity-definitions)
 * [The specification](specification/specification.html)
 * [Implementation guidelines](implementation/)
