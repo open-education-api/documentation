@@ -16,8 +16,7 @@ making system integration easier.
 
 The current use case for OEAPI v5.0 is depicted in the figure below:
 
-![OEAPI purpose and use case]
-(../_media/ooapi_v50_components_use_cases.png)
+![OEAPI purpose and use case](../_media/ooapi_v50_components_use_cases.png)
 
 In the future, additional integration projects may be developed based
 on the OEAPI information model.
@@ -28,15 +27,13 @@ The OEAPI Technical Working Group consists of members from educational
 institutions, software suppliers to these members, as well as sector
 bodies such as
 [VH](https://www.vereniginghogescholen.nl/) and
-[Universities of the Netherlands]
-(https://www.universiteitenvannederland.nl/en).
+[Universities of the Netherlands](https://www.universiteitenvannederland.nl/en).
 
 ### Target audience
 
 The Technical Working Group is open to members from other educational sectors.
 
-![OEAPI positioning in sectoral domains]
-(../_media/ooapi.png)
+![OEAPI positioning in sectoral domains](../_media/ooapi.png)
 
 Owing to the scope of SURF, these sectors are currently limited to
 intermediate vocational education and higher education
@@ -45,8 +42,7 @@ arrangements of the Technical Working Group would need to be revised.
 
 There is currently interest from intermediate vocational education
 institutions in using the specification. See the
-[programme OKE]
-(https://github.com/NetwerkExamineringDigitalisering/NED-OOAPI).
+[programme OKE](https://github.com/NetwerkExamineringDigitalisering/NED-OOAPI).
 
 ## OEAPI scope
 
