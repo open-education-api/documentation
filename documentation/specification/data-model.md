@@ -35,7 +35,7 @@ a learner can pass or fail.
 
 #### Component
 A Component is a template for the most concrete learning activities the
-OEAPI describes. Examples include workgroups, lectures and tests.
+OEAPI describes. Examples include working groups, lectures and tests.
 
 ### AcademicSession
 An AcademicSession is a named period in time. AcademicSessions can be
