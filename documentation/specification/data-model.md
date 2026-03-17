@@ -48,6 +48,7 @@ AcademicSession.
 
 Offerings are concrete instances of Educations, taking place at a
 certain time. Offerings come in three forms:
+
 * ProgrammeOfferings
 * CourseOfferings
 * LearningComponentOfferings
