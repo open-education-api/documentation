@@ -1,4 +1,4 @@
-## Dutch roots
+# Dutch roots
 
 The Open Education API (OEAPI) has its roots in the Netherlands and was
 created to support a more flexible educational application landscape.

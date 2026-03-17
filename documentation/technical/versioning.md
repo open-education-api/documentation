@@ -1,4 +1,4 @@
-## Versioning: how it works
+# Versioning: how it works
 
 OEAPI uses an explicit, single-choice versioning model.
 
