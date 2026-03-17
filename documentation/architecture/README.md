@@ -33,7 +33,7 @@ bodies such as
 
 The Technical Working Group is open to members from other educational sectors.
 
-![OEAPI positioning in sectoral domains](../_media/ooapi.png)
+![OEAPI positioning in sectoral domains](../_media/ooapi_sector_mapping.png)
 
 Owing to the scope of SURF, these sectors are currently limited to
 intermediate vocational education and higher education
