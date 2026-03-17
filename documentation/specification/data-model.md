@@ -81,7 +81,7 @@ TestComponentOfferingAssociation.
 ### Associations
 
 An Association represents the relationship between a person and an
-offering. It captures the context of that relationship, such as participation, 
+offering. It captures the context of that relationship, such as participation,
 enrolment, or involvement, and may include role and state information.
 
 #### ProgrammeOfferingAssociation
