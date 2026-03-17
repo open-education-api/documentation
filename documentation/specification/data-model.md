@@ -31,7 +31,7 @@ groups and lectures.
 
 #### TestComponent
 
-A TestComponent is a component, part of a course, containing test activities 
+A TestComponent is a component, part of a course, containing test activities
 the OEAPI describes.
 
 ### AcademicSession
@@ -49,7 +49,8 @@ Offerings are concrete instances of Educations, taking place at a
 certain time. Offerings come in three forms:
 * ProgrammeOfferings
 * CourseOfferings
-* ComponentOfferings
+* LearningComponentOfferings
+* TestComponentOfferings
 
 #### ProgrammeOffering
 
