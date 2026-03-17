@@ -16,6 +16,7 @@ to documentation, etc.
 A Programme describes a coherent collection of courses leading to a
 certain outcome. Programmes can be repeatedly offered to learners
 through ProgrammeOfferings.
+
 #### Course
 
 A Course describes an educational activity that can result in credits
@@ -82,28 +83,28 @@ An Association represents the relationship between a person and an
 offering. It captures the context of that relationship, such as participation, 
 enrolment, or involvement, and may include role and state information.
 
-### ProgrammeOfferingAssociation
+#### ProgrammeOfferingAssociation
 
 A ProgrammeOfferingAssociation provides information about the
 association between a ProgrammeOffering and a person, such as a
 student or lecturer.
 
-### CourseOfferingAssociation
+#### CourseOfferingAssociation
 
 A CourseOfferingAssociation provides information about the association
 between a CourseOffering and a person, such as a student or lecturer.
 
-### LearningComponentOfferingAssociation
+#### LearningComponentOfferingAssociation
 
 A LearningComponentOfferingAssociation provides information about the
 association between a LearningComponentOffering and a person.
 
-### TestComponentOfferingAssociation
+#### TestComponentOfferingAssociation
 
 A TestComponentOfferingAssociation provides information about the
 association between a TestComponentOffering and a person.
 
-### TestComponentOfferingAssociationAttempt
+#### TestComponentOfferingAssociationAttempt
 
 Planning and execution information on an attempt belong to a
 TestComponentOfferingAssociation. Result on the attempt is only
@@ -126,7 +127,7 @@ internships, or facilities.
 A Group provides information about groups related to organisations,
 persons, and offerings.
 
-### Membership
+#### Membership
 
 A Membership contains the information on a membership of a person for a
 specific group.
@@ -142,7 +143,7 @@ knowledge, skills, and responsibility and autonomy.
 A Building provides information about a building currently used by the
 organisation.
 
-### Room
+#### Room
 
 A Room provides information about the part of a building where an
 activity can take place.
