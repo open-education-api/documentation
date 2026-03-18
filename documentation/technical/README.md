@@ -12,7 +12,7 @@ Since OEAPI describes the information of an institution as resources, each insti
 ## The specification
 The actual OEAPI specification is specified using the [OpenAPI Specification](https://www.openapis.org/), a standard that specifies how to specify (among other things) REST APIs. The detailed OEAPI specifications can be found here:
 
-* [OEAPI v6](https://open-education-api.github.io/specification/v6/docs.html) (Current version)
+* [OEAPI v6](https://openonderwijsapi.nl/specification/v6.0/) (Current version - fully supported)
 
 These are the previous versions:
 
