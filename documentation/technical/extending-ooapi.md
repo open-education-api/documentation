@@ -14,11 +14,13 @@ for future versions of the OEAPI.
 ## When to use `ext` and when to use `consumer`?
 
 Use `ext` when:
+
 - You only need a few extra attributes that will only be used by a limited
   set of clients or consuming systems.
 - The attributes are specific to your own institution.
 
 Use `consumers` when:
+
 - You need a set of extra attributes to supply a system that will be used by
   more than one institution.
 - You would like to promote the use of this extension.

@@ -5,6 +5,7 @@
 ## Entity definitions
 
 ### Service
+
 The Service entity describes metadata relating to the OEAPI endpoint,
 such as who to contact regarding questions about this endpoint, links
 to documentation, etc.

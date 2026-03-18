@@ -1,7 +1,12 @@
+<!-- markdownlint-disable MD004 -->
+<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD032 -->
+<!-- markdownlint-disable MD033 -->
 # eduXchange
 
 In this documentation of the eduxchange consumer object you will find
-- [Required OEAPI resources](#required-OEAPI-resources)
+- [Required OEAPI resources](#required-oeapi-resources)
 - [Agreements per eduxchange instance](#agreements-per-eduxchange-instance)
 - [Agreements per alliance](#agreements-per-alliance)
 - [The student orientation consumer objects](#the-student-orientation-consumer-objects)
@@ -20,12 +25,15 @@ In this documentation of the eduxchange consumer object you will find
 We will use v2.x throughout this document to identify the requirements of consumer attributes for different versions. Below a short history of versions.
 
 ### Version 2.2
+
 In 2025 we are, and will be, working on version 2.2 with new features for the Dutch and European alliances. We expect to add more alliances and courses for professionals.
 
 ### Version 2.1
+
 In 2023 and 2024 we were working on version 2.1 with new features for the Dutch alliances. In this version also international alliances will be using eduxchange on eduxchange.eu, starting with EuroTeq. This also required changes.
 
 ### Version 2.0
+
 Version 2.0 has been worked on in 2021 and 2022 and is the current live version on eduxchange.nl. This version was built for the Dutch alliances EWUU and LDE.
 
 Before version 2.0 we started eduXchange with the EWUU alliance.
@@ -155,6 +163,7 @@ Some attributes in OEAPI can have multiple values. It is recommended that all pa
 ## EWUU Alliance
 
 ### partner codes
+
 * uu
 * wur
 * tue
@@ -162,11 +171,13 @@ Some attributes in OEAPI can have multiple values. It is recommended that all pa
 ## LDE Alliance
 
 ### partner codes
+
 * 21PE (Erasmus)
 * 21PF (Delft)
 * 21PB (Leiden)
 
 ### themes
+
 Participants agreed to use croho themes in the theme attribute of the consumer object. These themes are specified by a number:
 
 * 10: `"Interdisciplinary"`
@@ -181,9 +192,11 @@ Participants agreed to use croho themes in the theme attribute of the consumer o
 * 19: `"Technology"`
 
 ## EuroTeq Alliance
+
 The additional parameter `alliances.name=euroteq` is effective.
 
 ### partner codes
+
 * tue
 * taltech
 * dtu
@@ -194,6 +207,7 @@ The additional parameter `alliances.name=euroteq` is effective.
 * epfl
 
 ### themes
+
 Participants agreed to use these themes in the theme attribute of the consumer object.
 * `"Architecture and Construction"`
 * `"Business and Economics"`

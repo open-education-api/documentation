@@ -23,7 +23,9 @@ association, this is done by
 `GET association/{associationID}?expand=person`
 
 ## Endpoints which are expandable
+
 The current list of objects that allow for expansion of the related objects is:
+
 * academic-session
 * association
 * component
@@ -278,4 +280,4 @@ expand functionality.
 ```
 
 The expand functionality is inspired by the Stripe examples
-See also https://stripe.com/docs/expand
+See also [https://stripe.com/docs/expand](https://stripe.com/docs/expand)
