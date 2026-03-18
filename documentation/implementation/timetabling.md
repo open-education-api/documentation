@@ -83,7 +83,7 @@ self-contained educational specification.
 
 The conceptual hierarchy and the hierarchy of offerings can be represented as follows:
 
-```
+```text
 Programme
  └── Course
       ├── LearningComponent (Lecture, Lab, Seminar)
