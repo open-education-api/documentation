@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 # Open Education API 6.0 for interoperability
 
 For a brief introduction to the OEAPI, please take a look at the short
@@ -41,10 +42,9 @@ efficiently.
 Via the Dutch Npuls programme, MBO, HBO and WO institutions have
 embraced the OEAPI standard. Implementation of the standard is needed
 to be future-ready. Dutch, but also international institutions, are
-working with the OEAPI standard. Check out the Npuls programme
-https://npuls.nl/en/ and specifically more information about Technology
-Infrastructure at
-https://npuls.nl/en/technology-infrastructure/.
+working with the OEAPI standard. Check out the
+[Npuls programme](https://npuls.nl/en/) and specifically more information
+about [Technology Infrastructure](https://npuls.nl/en/technology-infrastructure/).
 
 Not only Dutch educational institutions, but also international
 institutions find their way to OEAPI. Increasingly, there are

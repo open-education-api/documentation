@@ -59,7 +59,7 @@ at the educational institutions.
 
 ![HORA business objects and their relationships in a schema](https://github.com/open-education-api/specification/wiki/HORA2_onderwijsobjecten_wiki.png)
 
-## CIA and BIV
+## CIA (BIV)
 
 CIA (or BIV) is a triad of
 
@@ -99,6 +99,6 @@ These three elements of the triad are then classified into 4 different levels:
 | room                               | Room: "Ruimte"                                                                                                                                                    | MLM       | MLM      |
 | building                           | Building: "Gebouw"                                                                                                                                                | LMM       | MML      |
 
-* When an OEAPI object maps to more than one HORA object the CIA classification is based on the highest values of the joint objects, e.g. if CIA for object one is LLH and for object two is HLL, the combined CIA classification results in HLH.
+- When an OEAPI object maps to more than one HORA object the CIA classification is based on the highest values of the joint objects, e.g. if CIA for object one is LLH and for object two is HLL, the combined CIA classification results in HLH.
 
-* Unit of Study. (Unit) means a component of a higher education course of study with a designated unit code, title and credit point allocation in which students enrol and undertake assessment tasks in order to achieve specified learning outcomes (based on [Law Insider](https://www.lawinsider.com/dictionary/unit-of-study)).
+- Unit of Study. (Unit) means a component of a higher education course of study with a designated unit code, title and credit point allocation in which students enrol and undertake assessment tasks in order to achieve specified learning outcomes (based on [Law Insider](https://www.lawinsider.com/dictionary/unit-of-study)).

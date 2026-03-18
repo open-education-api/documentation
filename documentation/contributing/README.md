@@ -12,8 +12,8 @@ Our [issue tracker](https://github.com/open-education-api/specification/issues) 
 
 Before opening an issue, please ensure that:
 
-* The issue is not a duplicate of an existing issue..
-* The issue is relevant to the specification.
+- The issue is not a duplicate of an existing issue..
+- The issue is relevant to the specification.
 
 ## Formatting / naming conventions
 
@@ -60,6 +60,7 @@ For example, when version 7.0 is the highest working version, there is **no
 directly on `main`.
 
 `main` therefore always represents:
+
 - the latest in-development specification, and
 - the next intended major or minor release.
 
@@ -69,6 +70,7 @@ The latest stable release is defined by the **most recent Git tag** (for example
 `v6.0.0` or `v6.1.0`), not by a branch.
 
 This means it is expected that `main` is both:
+
 - actively being worked on, and
 - the place where the next release is assembled.
 
@@ -80,6 +82,7 @@ Release branches are created **only** for versions that require maintenance afte
 a newer version has become active.
 
 A release branch:
+
 - is named `release/<major>.<minor>` (for example `release/6.0`);
 - contains the specification source in a single, generic `/source/` directory;
 - is used exclusively for bug fixes and clarifications within that version line.
@@ -89,6 +92,7 @@ Release branches are **not** used for feature development or breaking changes.
 **Patch releases are the exception, not the rule:**
 In principle, the specification does **not** publish patch releases (for example
 `v6.0.1`). Patch releases are only created under **special circumstances**, such as:
+
 - a serious error in a published tag that must be corrected,
 - an urgent clarification needed to prevent incorrect implementations,
 - a critical backwards-compatible fix required by the community.
@@ -130,6 +134,7 @@ Semantic versions are defined **exclusively by Git tags**, not by branches or
 directory structures.
 
 Examples:
+
 - `v6.1.0`
 - `v6.1.1`
 - `v7.0.0`

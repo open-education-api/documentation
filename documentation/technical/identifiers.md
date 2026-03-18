@@ -1,6 +1,7 @@
 # About identifiers
 
 ## UUIDs
+
 Each resource specified in OEAPI has an identifier in the form of a
 [UUID (Universally unique identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier),
 the attribute name for this identifier is `Id` prefixed with the name of the
@@ -12,6 +13,7 @@ institutions and suppliers implementing OEAPI to make sure their UUIDs are
 properly generated using enough randomness.
 
 ## Primary codes
+
 Most institutions already have their own unique, often human-readable,
 identifiers or codes for resources. Such codes can be communicated using the
 `primaryCode` attribute. If no primary code is available for a resource, the
@@ -19,6 +21,7 @@ identifiers or codes for resources. Such codes can be communicated using the
 identifier.
 
 ## Other codes
+
 Besides the identifier and primary code, resources or entities may also be
 known by other codes. These codes can be communicated using the `otherCodes`
 attribute, which is an array of "Identifier Entries". Each entry consists of a

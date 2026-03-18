@@ -39,9 +39,9 @@ the front end.
 
 For the level attribute of a course, the participants agreed to use:
 
-- Bachelor
-- Master
-- Doctoral
+* Bachelor
+* Master
+* Doctoral
 
 ## Extension objects
 
