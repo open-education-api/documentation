@@ -102,7 +102,7 @@ MBO, HBO and WO).
 
 Work has been undertaken to map OEAPI v5 to the RIO data model. This
 mapping has resulted in additional objects and consumer elements.
-Further information can be found [here](../technical/consumers-and-profiles/rio.md).
+Further information on [RIO](../technical/consumers-and-profiles/rio.md).
 
 ## OEAPI (data) ownership
 

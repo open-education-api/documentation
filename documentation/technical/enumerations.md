@@ -9,6 +9,5 @@ While we prefer to use clearly defined enumerations in the specification for sta
 ## Extensible enumerations based on external vocabulary disclaimer
 For enumerations that use an external vocabulary, we strongly discourage extending the enumeration and recommend using only the values defined by the referenced external vocabulary. The rationale for this recommendation: the use of extensible enumerations would be conflicting with adherence to the original vocabulary and reduce interoperability. However, support for extensible enumerations is supported in those cases where an addition is based on planned extensions to the external vocabulary that are not yet officially supported.
 
-
 ## Extending an enumeration
 If an enumeration is extended these additional values must be prefixed with  `x-`. This helps to distinguish custom values from the standard ones, ensuring clarity and reducing the risk of conflicts.

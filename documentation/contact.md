@@ -5,4 +5,3 @@ The members of the Technical Working Group are subscribed to the mailing list, w
 
 ## Slack
 A Slack channel is available at: openonderwijsapi.slack.com Since access is on an invitation basis, send an email to info@openonderwijsapi.nl and you will receive an invitation if you would like to participate on this Open education API slack channel.
-

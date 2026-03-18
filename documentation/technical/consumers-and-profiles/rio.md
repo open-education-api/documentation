@@ -92,7 +92,6 @@ RIO enforces the following constraints when dealing with Perioden:
 
 *Note that `eindDatum` will be determined automatically by RIO for Perioden that are not the latest Periode, based on the `beginDatum` from the Periode directly following it. However, since the OEAPI `timelineOverride` mechanism is meant to be more generic and also usable for other use cases, OEAPI allows specifying `validTo` dates explicitely.*
 
-
 <style>
   .colored-table tr:nth-child(odd) > td:nth-child(1) { background: #eef7f9 }
   .colored-table tr:nth-child(even) > td:nth-child(1) { background: #daf0f6; }
@@ -136,7 +135,6 @@ EducationSpecifications can have relations to other EducationSpecifications whic
 | studyload › studyLoadUnit                       | » studielasteenheid [0..1]           | [mapping](#studyloadunit-studielasteenheid)    | De meeteenheid voor de studielast                                                                                                                                                                        | De studielastzwaarte bestaat uit maximaal 5 cijfers                                                                                                                                                                                        |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 ### **HoOnderwijsEenhedenCluster**
@@ -161,7 +159,6 @@ EducationSpecifications can have relations to other EducationSpecifications whic
 | studyload › studyLoadUnit                       | » studielasteenheid [0..1]                 | [mapping](#studyloadunit-studielasteenheid)    | De meeteenheid voor de studielast                                                                                                                                                                       |                                                                                                                                                                                                |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 ### **HoOnderwijsEenheid**
@@ -186,7 +183,6 @@ EducationSpecifications can have relations to other EducationSpecifications whic
 |                                            |                                      |                                                |                                                                                                                                                                                                         |                                                                                                                                                                                                |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 ### **ParticuliereOpleiding**
@@ -213,12 +209,11 @@ EducationSpecifications can have relations to other EducationSpecifications whic
 | studyload › studyLoadUnit                  | » studielasteenheid [0..1]            | [mapping](#studyloadunit-studielasteenheid)    | De meeteenheid voor de studielast                                                                                                                                                                        |                                                                                                                                                                                                |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <!-- tabs:end -->
 
-> ### RIO field constraints ###
+> ### RIO field constraints
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](https://unesdoc.unesco.org/ark:/48223/pf0000228085.locale=en) \
@@ -286,7 +281,6 @@ Notes:
 |                                            |                                              |                                                              |                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 ### **AangebodenHoOpleidingsonderdeel**
@@ -323,7 +317,6 @@ Notes:
 | link                                       | » website [0..1]                                |                                                              | De locatie op het World Wide Web waar documenten en andere objecten kunnen worden gevonden                                                                            |                                                                                                                                                                                                                                                                                                                                       |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 ### **AangebodenParticuliereOpleiding**
@@ -358,18 +351,16 @@ Notes:
 | link                                       | » website [0..1]                                |                                                              | De locatie op het World Wide Web waar documenten en andere objecten kunnen worden gevonden                                                                            |                                                                                                                                                                                                                                                                                                                                       |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <!-- tabs:end -->
 <div id="rio-field-constraints-2" style="height: 0px;overflow:hidden">&nbsp;</div>
 
-> ### RIO field constraints ###
+> ### RIO field constraints
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](https://unesdoc.unesco.org/ark:/48223/pf0000228085.locale=en) \
 > [4] 3 cijfers, de hoofdletter A en drie cijfers.
-
 
 </div>
 
@@ -406,17 +397,15 @@ Notes:
 | link                                       | » website [0..1]                                |                                                              | De locatie op het World Wide Web waar documenten en andere objecten kunnen worden gevonden                                                                            |                                                                                                                                                                                                                                                                                                                                     |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <div id="rio-field-constraints-3" style="height: 0px;overflow:hidden">&nbsp;</div>
 
-> ### RIO field constraints ###
+> ### RIO field constraints
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](https://unesdoc.unesco.org/ark:/48223/pf0000228085.locale=en) \
 > [4] 3 cijfers, de hoofdletter A en drie cijfers.
-
 
 </div>
 
@@ -447,18 +436,15 @@ Notes:
 | flexibleEntryPeriodEndDateTime                           | » (flexibel) eindeInstroomperiode [0..1] |                                                                             | De laatste dag dat een student kan beginnen in een cohort van een aangeboden opleiding met een flexibele instroom.                                                    | Studenten kunnen niet later dan deze datum aan dit cohort van deze aangeboden opleiding beginnen.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <div id="rio-field-constraints-4" style="height: 0px;overflow:hidden">&nbsp;</div>
 
-> ### RIO field constraints ###
+> ### RIO field constraints
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](https://unesdoc.unesco.org/ark:/48223/pf0000228085.locale=en) \
 > [4] 3 cijfers, de hoofdletter A en drie cijfers.
-
-
 
 </div>
 
@@ -507,7 +493,6 @@ The following level cannot be mapped from OEAPI to RIO:
 |                   | LEZING               | To be mapped through **consumers > RIO > modeOfDelivery** (see below) |
 |                   | ZELFSTUDIE           |  To be mapped through **consumers > RIO > modeOfDelivery** (see below) |
 |                   | COACHING             |  To be mapped through **consumers > RIO > modeOfDelivery** (see below) |
-
 
 Note: When present, the value of the RIO consumer: consumers › RIO › modeOfDelivery will override the value of modeOfDelivery (see below)
 
@@ -655,6 +640,7 @@ See also [this overview of language tags](https://www.loc.gov/standards/iso639-2
 | total costs   | TOTALE_VERPLICHTE_KOSTEN   |
 
 ### category › categorie
+
 | category                                 | categorie                      |
 | ---------------------------------------- | ------------------------------ |
 | business_and_project_support             | BEDRIJFS_PROJECTONDERSTEUNING  |

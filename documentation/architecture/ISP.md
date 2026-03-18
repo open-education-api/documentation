@@ -5,8 +5,7 @@
 CIA (or, in Dutch, BIV) classifications help institutions choose proper
 measures to secure and optimise systems that have been classified. CIA is
 an acronym for Confidentiality, Integrity and Availability. More
-information on CIA/BIV can be found
-[here](https://nl.wikipedia.org/wiki/BIV-classificatie).
+information on [CIA/BIV classificatie](https://nl.wikipedia.org/wiki/BIV-classificatie).
 
 ## Institutions in the lead
 
