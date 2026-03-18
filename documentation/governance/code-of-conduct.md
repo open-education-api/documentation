@@ -1,3 +1,7 @@
+<!-- markdownlint-disable MD022 -->
+<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD032 -->
+<!-- markdownlint-disable MD034 -->
 # The Open Education API 'by-laws'
 
 ## a.k.a. the Communication guidelines

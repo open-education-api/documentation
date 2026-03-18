@@ -23,10 +23,10 @@
 |                                  | and private organisations.                                                                 |
 | Community                        | The OOAPI community consists of parties interested in OOAPI developments. Community members|
 |                                  | are known by name and email address, and register with the community site themselves.      |
-| Slack                            | A Slack channel is available at: openonderwijsapi.slack.com. Since access is on an invite  |
-|                                  | basis, send an email to info@openonderwijsapi.nl and you will receive an invitation if you |
+| Slack                            | A Slack channel is available at: [openonderwijsapi.slack.com](https://openonderwijsapi.slack.com). Since access is on an invite  |
+|                                  | basis, send an email to [info@openonderwijsapi.nl](mailto:info@openonderwijsapi.nl) and you will receive an invitation if you |
 |                                  | would like to participate in this Open Education API Slack channel.                        |
-| Project site                     | The website at https://openonderwijsapi.nl/. This website is used mainly to provide        |
+| Project site                     | The website at [https://openonderwijsapi.nl/](https://openonderwijsapi.nl/). This website is used mainly to provide        |
 |                                  | clarification about the project to interested parties.                                     |
 |                                  | The site also provides access to the reference API, online documentation and the code      |
 |                                  | repository.                                                                                |
@@ -34,9 +34,9 @@
 |                                  | information about the specification, how it is connected to other standards in the context |
 |                                  | of HORA and ROSA, usage and implementations and documentation.                             |
 | Code repository                  | The GitHub code repository where the specification of the Open Education API can be found. |
-|                                  | https://github.com/open-education-api                                                      |
+|                                  | [https://github.com/open-education-api](https://github.com/open-education-api)              |
 | Specification repository         | The OOAPI specification and its various versions are maintained in the GitHub specification|
-|                                  | repository: https://github.com/open-education-api/specification                            |
+|                                  | repository: [https://github.com/open-education-api/specification](https://github.com/open-education-api/specification) |
 | Mailing list                     | The members of the working group are subscribed to the mailing list, which is intended for |
 |                                  | members of the working group to communicate with each other. Users can subscribe at:       |
-|                                  | https://list.surf.nl/postorius/lists/openonderwijsapi.list.surf.nl                         |
+|                                  | [https://list.surf.nl/postorius/lists/openonderwijsapi.list.surf.nl](https://list.surf.nl/postorius/lists/openonderwijsapi.list.surf.nl) |

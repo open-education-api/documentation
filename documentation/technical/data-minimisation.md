@@ -1,9 +1,11 @@
 # Data minimisation and security
+
 The API follows the principle of data minimisation, a key privacy requirement, ensuring that only the minimum necessary (personal) data is shared with each API client. This approach protects sensitive information. This allows users of the specification to retain control over which information they share with API clients. Within the standard there are two reasons for applying data minimisation:
 A. Security & privacy reasons: In this case the client of the API should not have access to all or specific data within the API. This is API security and requires 'server-controlled access enforcement'.
 B. Data-usage-optimisation: In this case the API client has access to all data within the API, but is not interested in all information with every API call and it is not necessary to transmit all the data. This can be solved via Field selection.
 
-# A. Server-controlled access enforcement
+## A. Server-controlled access enforcement
+
 All data access is centrally controlled and enforced by the server. This means:
 •  The server always retains full authority over what data is exposed to which clients.
 •  Access to data is explicitly authorised and scoped per client.
@@ -16,7 +18,8 @@ Most of the data that is handled in the API is public data. Nevertheless, the se
 
 This principle of data minimisation must be enforced through the API’s implementation, rather than in the specification itself and is not further detailed in the specification itself.
 
-# B. Data minimisation (/data-usage-optimisation) via field selection
+## B. Data minimisation (/data-usage-optimisation) via field selection
+
 Data minimisation is a core principle: the API should provide only the data necessary for a given request. This reduces the risk of exposing sensitive information and supports best practice in privacy and security.
 To support both data minimisation and performance optimisation, the API can optionally allow clients to indicate which fields they are interested in. This mechanism can help reduce payload size and unnecessary data transmission.
 This can be implemented and supported using the `fields` query parameter. Through this approach, a client can express field preferences that the client wants the server to return in the response. Use and support of this functionality is a new feature with v6 and is optional. It is not a 'must have' feature. A server can indicate the support and use of the `fields` parameter via the service endpoint. If an endpoint does not support the `fields` parameter and a request is made using the `fields` query parameter the server needs to return an error message.

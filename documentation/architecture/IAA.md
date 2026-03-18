@@ -43,22 +43,21 @@ use of a security standard are crucial. Choosing an open and widely
 used standard ensures broad support from vendors and/or the availability
 of sufficient libraries for correct implementation, ultimately
 achieving the main goal: secure data exchange. The Dutch 'Forum
-Standaardisatie' (https://www.forumstandaardisatie.nl/) is a valuable
+Standaardisatie' [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/) is a valuable
 resource for consulting advice on the use of open standards.
 
 Based on the above, we recommend the OAuth2 protocol, an open standard
 developed and maintained within the IETF.
 
 For machine-to-machine (M2M) data exchange (where user authorisation is
-not required), we recommend, as a best practice, using the OAuth2
+not required), we recommend, as a best practice, using the
+[OAuth2](https://oauth.net/2/grant-types/client-credentials)
 client credentials grant type for authenticating and authorising the
-client to access the data:
-https://oauth.net/2/grant-types/client-credentials
+client to access the data.
 
 For an implementation requiring delegated user access to approve data
 processing, we recommend using the OpenID Connect flow, based on the
-OAuth2 authorisation code flow:
-https://openid.net/developers/how-connect-works
+[OAuth2 authorisation code flow](https://openid.net/developers/how-connect-works)
 
 For both flows, we recommend supporting both JWT and reference tokens
 for access tokens.

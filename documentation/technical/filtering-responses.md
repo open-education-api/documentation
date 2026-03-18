@@ -8,11 +8,13 @@ be filtered using the following query parameters.
 This can be done using the query parameter `q`, e.g. `q=text`.
 
 This parameter filters items by matching on the following attributes:
+
 * `name`
 * `abbreviation`
 * `description`
 
 or for persons:
+
 * `givenName`
 * `surnamePrefix`
 * `surname`

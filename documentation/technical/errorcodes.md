@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD024 -->
 # Error codes
 
 This page describes all error responses that MAY be returned by OEAPI
@@ -7,6 +8,7 @@ All errors are returned using the `application/problem+json` media type,
 conforming to [RFC 7807 – Problem Details for HTTP APIs].
 
 Each error code is described with:
+
 - its intended usage within OEAPI
 - behavioural rules
 - concrete JSON examples
@@ -45,6 +47,7 @@ Some error responses MAY define additional fields.
 Returned when the request is syntactically valid but semantically invalid.
 
 Typical causes:
+
 - Invalid query parameter values
 - Invalid request body structure
 - Unsupported enum values
@@ -112,6 +115,7 @@ This indicates a permission issue, not an authentication issue.
 Returned only when a specific resource instance cannot be located.
 
 Rules:
+
 - Instance endpoints MAY return `404`
 - Collection endpoints MUST NOT return `404` for empty results
 - Empty collections MUST return `200` with an empty array
@@ -172,6 +176,7 @@ If neither the requested version nor a lower compatible minor version is
 supported, a `406` response MUST be returned.
 
 This behaviour intentionally deviates from strict HTTP semantics to:
+
 - make version mismatches explicit
 - improve interoperability
 - improve logging and diagnostics

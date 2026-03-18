@@ -1,3 +1,8 @@
+<!-- markdownlint-disable MD022 -->
+<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD030 -->
+<!-- markdownlint-disable MD032 -->
+<!-- markdownlint-disable MD034 -->
 # The Open Education API by-laws
 
 ## a.k.a. the Communication guidelines
@@ -47,4 +52,3 @@ This section describes how an institution or supplier can demonstrate that they 
 
 # Appendix A: Code of Conduct (COC)
 The Open Education API project applies the following [code of conduct](code-of-conduct.md)
-

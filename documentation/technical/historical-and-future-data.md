@@ -47,13 +47,13 @@ repeated in the timelineOverrides.
    moment), the Example entity has a website, and the number of available
    slots has grown to 23:
    - name: Example entity
-   - website: https://www.example-entity.com
+   - website: [https://www.example-entity.com](https://www.example-entity.com)
    - availableSlots: 23
 3. From 01-01-2022 onwards (it is not yet known when the state will change
    again), the information about the available slots has been dropped and the
    website has changed:
    - name: Example entity
-   - website: https://example-new-website.com
+   - website: [https://example-new-website.com](https://example-new-website.com)
 
 This sequence of changes can be specified in OEAPI as follows:
 
