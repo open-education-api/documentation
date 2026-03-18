@@ -84,7 +84,7 @@ This sequence of changes can be specified in OEAPI as follows:
 }
 ```
 
-### Later in time...
+### Later in time
 
 Without changing the underlying data, let us look at the result at a later
 point in time:

@@ -1,4 +1,4 @@
-## Change management
+# Change management
 
 Changes to the OEAPI API specification follow a clear and structured
 process. Each change moves through defined steps before becoming part

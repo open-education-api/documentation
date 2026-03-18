@@ -39,7 +39,7 @@ Example 3: Use of the `fields` query parameter together with `expand`
 
 `GET persons/me` will provide:
 
-```
+```json
 {
     "personId": "123e4567-e89b-12d3-a456-426614174000",
     "primaryCode":
@@ -156,7 +156,7 @@ Example 3: Use of the `fields` query parameter together with `expand`
 If not all returned information is required or desired by the client. The fields query parameter can be used to reduce the information returned by the server, for example the request:
 `GET persons/me?fields=(alternateName,surnamePrefix,preferredName,assignedNeeds(code,description))` will return all required fields and the specified fields; the affiliations and the assignedNeeds object with its code field. This limits the amount of data being shared:
 
-```
+```json
 {
     "personId": "123e4567-e89b-12d3-a456-426614174000",
     "primaryCode": {
@@ -192,7 +192,7 @@ If not all returned information is required or desired by the client. The fields
 
 If the client wants to only retrieve the most minimal set of attributes (i.e., only the required attributes) from the server this can be achieved by using a required element in the fields parameter. For example the `GET persons/me?fields=mail` will only return the required attributes:
 
-```
+```json
 {
     "personId": "123e4567-e89b-12d3-a456-426614174000",
     "primaryCode": {
@@ -216,7 +216,7 @@ Clients can also minimise the amount of information returned from the server if 
 
 `GET /test-component-offering-associations/{testComponentOfferingAssociationId}?expand=person` will provide
 
-```
+```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
     "role": "student",
@@ -393,7 +393,7 @@ Clients can also minimise the amount of information returned from the server if 
 
 To minimise the response for this request the `fields` query parameter can also be used. An example to limit the data is the following call: `GET /test-component-offering-associations/{testComponentOfferingAssociationId}?expand=person&fields=(remoteState,documents(documentName),ext,email,secondaryEmail,person(ext))`. This will return the mandatory fields and the specified fields and reduces the response data:
 
-```
+```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
     "role": "student",

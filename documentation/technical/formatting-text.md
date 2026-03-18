@@ -1,4 +1,4 @@
-### Formatting text
+# Formatting text
 
 Most resources include attributes intended to convey longer texts, such as
 `description`. These fields can be formatted to improve readability by using
@@ -7,7 +7,7 @@ a subset of Markdown. OEAPI supports the
 but only a restricted set of elements is permitted to ensure consistent
 rendering across tools and documentation systems.
 
-#### Supported Markdown elements
+## Supported Markdown elements
 
 The following Markdown features are supported within OEAPI fields:
 
@@ -21,7 +21,7 @@ The following Markdown features are supported within OEAPI fields:
 - Horizontal rules
 - Tables (using standard GitHub Flavoured Markdown syntax)
 
-#### Unsupported Markdown elements
+## Unsupported Markdown elements
 
 To ensure optimal interoperability, Markdown-formatted text in OEAPI should
 not use:
