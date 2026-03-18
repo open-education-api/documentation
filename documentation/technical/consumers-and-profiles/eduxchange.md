@@ -168,16 +168,17 @@ Some attributes in OEAPI can have multiple values. It is recommended that all pa
 
 ### themes
 Participants agreed to use croho themes in the theme attribute of the consumer object. These themes are specified by a number:
-*  10: `"Interdisciplinary"`
-*  11: `"Economics"`
-*  12: `"Behaviour and society"`
-*  13: `"Health care"`
-*  14: `"Agriculture and natural environment"`
-*  15: `"Nature"`
-*  16: `"Educations"`
-*  17: `"Law"`
-*  18: `"Language and culture"`
-*  19: `"Technology"`
+
+* 10: `"Interdisciplinary"`
+* 11: `"Economics"`
+* 12: `"Behaviour and society"`
+* 13: `"Health care"`
+* 14: `"Agriculture and natural environment"`
+* 15: `"Nature"`
+* 16: `"Educations"`
+* 17: `"Law"`
+* 18: `"Language and culture"`
+* 19: `"Technology"`
 
 ## EuroTeq Alliance
 The additional parameter `alliances.name=euroteq` is effective.
@@ -341,7 +342,6 @@ When a waitlist is used for enrolment, the attributes below can be used to commu
 * `queuedNumberStudents` (v2.2): This is an integer >=0. The number of students that have a queued enrolment state for this offering.
 * `maxQueuedNumberStudents` (v2.2): This is an integer >=0. The maximum number of students allowed in the queue for this offering.
 * `hasStudentQueue` (v2.2): a boolean value (`true` or `false`) indicating whether enrolment is queued.
-
 
 ### Example
 

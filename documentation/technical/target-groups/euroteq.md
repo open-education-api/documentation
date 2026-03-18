@@ -88,7 +88,6 @@ The ext object for eduXchange courses has the following attributes:
     for example `"lectures and practices"`
 
 **Example**
-
 This is an example of the extension object for eduXchange courses.
 
 ```json

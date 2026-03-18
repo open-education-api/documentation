@@ -33,16 +33,14 @@ Where possible, a match has been made.
 
 These matches are:
 
-* Implementation of the ECTS guidelines and mapping of these elements
-  can be found
-  [here](../_media/ooapiv50_ECTS_course_catalogue_elementen.xlsx?raw=true)
-* Comparisons between HOVI v2 and OEAPI v4 can be found
-  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50.docx?raw=true)
+* Implementation of the
+  [ECTS guidelines and mapping of these elements](../_media/OOAPIv50_ECTS_course_catalogue_elementen.xlsx)
+* Comparisons between
+  [HOVI v2 and OEAPI v5](../_media/Vergelijking_HOVI_API_v2_OOAPIv50.docx)
   and
-  [here](../_media/Vergelijking_HOVI_API_v2_OOAPIv50_veldniveau.xlsx?raw=true)
-* A comparison between RIO and HO is part of the current consumer
-  information and can be found
-  [here](../technical/consumers-and-profiles/rio.md)
+  [HOVI v2 and OEAPI v5 field level](../_media/Vergelijking_HOVI_API_v2_OOAPIv50_veldniveau.xlsx?raw=true)
+* A comparison between
+  [RIO and HO is part of the current consumer information](../technical/consumers-and-profiles/rio.md)
 
 ## Link with policies and other standards
 

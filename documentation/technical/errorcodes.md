@@ -36,7 +36,6 @@ Other Problem Details fields are optional unless explicitly stated otherwise.
 | `detail` | MAY | A human-readable explanation |
 | `instance` | MAY | A URI identifying the specific request instance |
 
-
 Some error responses MAY define additional fields.
 
 ---

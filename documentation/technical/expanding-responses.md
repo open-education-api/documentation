@@ -40,7 +40,7 @@ The current list of objects that allow for expansion of the related objects is:
 
 `GET association/{associationID}` will provide
 
-```
+```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
     "associationType": "componentOfferingAssociation",
@@ -79,7 +79,7 @@ expand functionality.
 
 `GET association/{associationID}?expand=person,offering` will provide
 
-```
+```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
     "associationType": "componentOfferingAssociation",

@@ -1,49 +1,69 @@
 # Timetabling in the OEAPI Model
 
 ## Overview
+
 This chapter explains how timetabling is implemented using the **OEAPI** model. It focuses on the relationships between **Programmes**, **Courses**, **Learning Components**, and their corresponding **Offerings**. It also demonstrates how multiple course instances (offerings) can exist within one academic year.
+
+In addition to describing *what* (education structure) and *when/where* (offerings),
+this chapter also describes *who* (students and teachers) and the process flow
+used for timetabling across systems.
 
 ![Timetabling overview](../_media/timetabling-overview.png "Relations between programme, course, learning components, test components and offerings")
 
-*Figure 1 – Relationship between education specifications (Programme, Course, Learning Component and Test Component) and their Offerings, including associations with AcademicSession, Room & Building, Group & Memberschip and Person.*
+*Figure 1: Relationship between education specifications (Programme, Course, Learning Component and Test Component) and their Offerings, including associations with AcademicSession, Room & Building, Group & Memberschip and Person.*
 
 ---
 
 ## 1. Conceptual Foundation
+
 In the OEAPI model, the structure for teaching and scheduling is separated into two domains:
 
-- **educationSpecifications** – defines *what* is being taught.
-- **offerings** – defines *when, where, and how* it is taught.
+* **education specifications** (Programmes, Courses, LearningComponents and TestComponents) defining *what* is taught
+* **offerings** (ProgrammeOfferings, CourseOfferings, LearningComponentOfferings and TestComponentOfferings) defining *when, where and for whom* it is taught
 
 This separation makes it possible to offer the same course multiple times (for instance, in different semesters) without duplicating its definition.
 
 ### Educational Specifications
-| Entity | Description | Relation |
-|---------|--------------|-----------|
-| **Programme** | A collection of courses forming a study path or degree. | `hasPart` → multiple **Courses**. |
-| **Course** | A defined subject or unit of study. | `hasPart` → one or multiple **LearningComponents** and/or **TestComponents**. |
+
+| Entity                | Description                                                 | Relation                                                                       |
+| --------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Programme**         | A collection of courses forming a study path or degree.     | `hasPart` → multiple **Courses**.                                              |
+| **Course**            | A defined subject or unit of study.                         | `hasPart` → one or multiple **LearningComponents** and/or **TestComponents**.  |
 | **LearningComponent** | A defined activity type such as a lecture, seminar, or lab. | Can be related more than one course and may include other learning components. |
-| **TestComponent** | A defined assessment, exam, or test. | Can be related to more than one course and may include other test components. |
+| **TestComponent**     | A defined assessment, exam, or test.                        | Can be related to more than one course and may include other test components.  |
 
 Each of these has references to:
-- `organisation` – the responsible institution or department.
-- `parent` – the hierarchical relationship to the higher-level instance of the same object. For example, a learning component may have a parent learning component.
 
-- `learningOutcome` – the expected outcomes connected to the object.
+* `organisation` (the responsible institution or department).
+* `parent` (the hierarchical relationship to the higher-level instance of the same object). For example, a learning component may have a parent learning component.
+* `learningOutcome` (the expected outcomes connected to the object).
 
 ---
 
 ## 2. Offerings and Their Role in Timetabling
+
 **Offerings** are the practical executions of educational specifications. They describe *when, where,* and *for whom* a course or learning activity takes place.
 
-| Entity | Description | Relation |
-|---------|--------------|-----------|
-| **ProgrammeOffering** | The scheduled delivery of a **Programme**. |  Linked to its **Programme** and to (one or) multiple **CourseOfferings**. |
-| **CourseOffering** | The scheduled delivery of a **Course**. | Linked to its **Course**, to one or more **ProgrammeOfferings** and to one or more **LearningComponentOffering** and/or **TestComponentOffering**. |
-| **LearningComponentOffering** | A scheduled instance of a **LearningComponent**. | Linked to its **LearningComponent** and to one or more **CourseOfferings**. |
-| **TestComponentOffering** | A scheduled instance of a **TestComponent**. |  Linked to its **TestComponent** and to one or more **CourseOfferings**. |
+| Entity                        | Description                                      | Relation                                                                                                                                           |
+| ----------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ProgrammeOffering**         | The scheduled delivery of a **Programme**.       | Linked to its **Programme** and to (one or) multiple **CourseOfferings**.                                                                          |
+| **CourseOffering**            | The scheduled delivery of a **Course**.          | Linked to its **Course**, to one or more **ProgrammeOfferings** and to one or more **LearningComponentOffering** and/or **TestComponentOffering**. |
+| **LearningComponentOffering** | A scheduled instance of a **LearningComponent**. | Linked to its **LearningComponent** and to one or more **CourseOfferings**.                                                                        |
+| **TestComponentOffering**     | A scheduled instance of a **TestComponent**.     | Linked to its **TestComponent** and to one or more **CourseOfferings**.                                                                            |
 
 Each Offering refers to its conceptual parent (e.g. `course`, `learningComponent`) and connects to a specific `academicSession` (such as a semester or block).
+
+### Who (participants)
+
+The *who* is modelled through associations:
+
+* teachers are linked to offerings via associations
+* students are linked to offerings via associations
+
+Participants are not embedded in offerings, but connected via association endpoints.
+
+* teachers are linked to offerings via associations
+* students are linked to offerings via associations
 
 ---
 
@@ -63,7 +83,7 @@ self-contained educational specification.
 
 The conceptual hierarchy and the hierarchy of offerings can be represented as follows:
 
-```
+```text
 Programme
  └── Course
       ├── LearningComponent (Lecture, Lab, Seminar)
@@ -88,22 +108,68 @@ The hierarchy shown above should therefore be understood as a structural aid, no
 a complete or normative model of all relationships within OEAPI. A relational,
 left-to-right view of the associations between educational specifications, offerings,
 and related entities would require a different form of representation, such as a
-class diagram or an entity–relationship diagram (ERD).
+class diagram or an entity-relationship diagram (ERD).
 
 ---
 
-## 4. Example: Course Offered Twice in a Year
+## 4. Timetabling Process Flow (Developer Guide)
+
+The following process describes the intended use of OEAPI in a timetabling
+context.
+
+### Step A Provide input for scheduling
+
+OEAPI provides the educational units that must be scheduled:
+
+* which educational activities must be scheduled (what)
+* optionally which teachers are involved (who)
+
+Students may not yet be known at this stage.
+
+### Step B Scheduling
+
+A timetabling application consumes this input and enriches it with:
+
+* time (when)
+* location (where)
+
+### Step C Publication
+
+The scheduled offerings are published and made available via OEAPI.
+
+### Step D Student enrolment
+
+If students were not known in step A, a final step allows students to enrol
+in the published timetable items via associations.
+
+---
+
+## 5. OEAPI Interactions
+
+To support this flow, the following interactions are relevant:
+
+* existing GET endpoints for retrieving specifications and offerings
+* PUT /offerings/{Id}
+* PUT /associations/{Id}
+
+---
+
+## 6. Example: Course Offered Twice in a Year
+
 This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOffering`, `LearningComponentOffering` and `TestComponentOffering`. Objects are shown as separate resources, as they would be returned by their own endpoints.
 
 ### Conceptual Definition
+
 **Course:** *Introduction to Data Science*
 
 **LearningComponents:**
-- *Lecture Series*
-- *Lab Sessions*
-- *Final Exam*
+
+* *Lecture Series*
+* *Lab Sessions*
+* *Final Exam*
 
 ### Example JSON
+
 ```json
 [
   {
@@ -115,7 +181,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
     "name": [
       {
         "language": "en-GB",
-        "value": "BSc Informatics – 2025 cohort"
+        "value": "BSc Informatics - 2025 cohort"
       }
     ],
     "academicSession": "2025Y",
@@ -205,29 +271,34 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
 ```
 
 In this example:
-- The **ProgrammeOffering** represents the cohort of the Informatics programme in academic year `2025Y`.
-- The **Course** *Introduction to Data Science* is offered twice, as two **CourseOfferings**, in `2025S1` and `2025S2`.
-- Each **CourseOffering** refers back to the same conceptual **Course** via `course`, and to the same **ProgrammeOffering** via `programmeOfferings`.
-- A **LearningComponentOffering** (lecture group A) is linked to the Semester 1 **CourseOffering** via `courseOfferings`.
-- A **TestComponentOffering** (final exam) is also linked to the Semester 1 **CourseOffering** via `courseOfferings`.
+
+* The **ProgrammeOffering** represents the cohort of the Informatics programme in academic year `2025Y`.
+* The **Course** *Introduction to Data Science* is offered twice, as two **CourseOfferings**, in `2025S1` and `2025S2`.
+* Each **CourseOffering** refers back to the same conceptual **Course** via `course`, and to the same **ProgrammeOffering** via `programmeOfferings`.
+* A **LearningComponentOffering** (lecture group A) is linked to the Semester 1 **CourseOffering** via `courseOfferings`.
+* A **TestComponentOffering** (final exam) is also linked to the Semester 1 **CourseOffering** via `courseOfferings`.
 
 ---
 
-## 5. Practical Notes for Implementers
-- **ProgrammeOfferings** group all courses and their sessions within a defined academic period.
-- **CourseOfferings** can exist multiple times per year (e.g. re-runs in different semesters) but always link back to the same conceptual **Course**.
-- **LearningComponentOfferings** and **TestComponentOfferings** are the primary sources for generating time–room–group based timetables.
-- The `programmeOfferings` and `courseOfferings` arrays implement the many-to-many relations between programmes, courses and components as modelled in OEAPI.
-- **AcademicSessions** allow filtering events by semester, term, or block.
-- **Organisation** and **Room** references (not shown in the JSON above) allow for integration with facility management and scheduling systems.
+## 7. Practical Notes for Implementers
+
+* **ProgrammeOfferings** group all courses and their sessions within a defined academic period.
+* **CourseOfferings** can exist multiple times per year (e.g. re-runs in different semesters) but always link back to the same conceptual **Course**.
+* **LearningComponentOfferings** and **TestComponentOfferings** are the primary sources for generating time-room-group based timetables.
+* The `programmeOfferings` and `courseOfferings` arrays implement the many-to-many relations between programmes, courses and components as modelled in OEAPI.
+* **AcademicSessions** allow filtering events by semester, term, or block.
+* **Organisation** and **Room** references (not shown in the JSON above) allow for integration with facility management and scheduling systems.
+* Participants (students and teachers) are linked via associations.
 
 ---
 
-## 6. Summary
-- **Courses** and **Programmes** define *what* is taught.
-- **Offerings** define *when and where* teaching happens.
-- A Course can have multiple Offerings in the same academic year, each with its own timetable.
-- **LearningComponentOfferings** and **TestComponentOfferings** are the actual time-based entities for timetabling.
-- Arrays like `programmeOfferings` and `courseOfferings` connect these objects according to the OEAPI v6 specification.
+## 8. Summary
+
+* **Courses** and **Programmes** define *what* is taught.
+* **Offerings** define *when and where* teaching happens.
+* Participants (*who*) are linked via associations.
+* A Course can have multiple Offerings in the same academic year, each with its own timetable.
+* **LearningComponentOfferings** and **TestComponentOfferings** are the actual time-based entities for timetabling.
+* Arrays like `programmeOfferings` and `courseOfferings` connect these objects according to the OEAPI v6 specification.
 
 This model enables consistent, standardised integration of academic structure and scheduling, ensuring interoperability across timetabling, enrolment, and learning management systems.
