@@ -1,26 +1,34 @@
 ## Versioning: how it works
 
-OEAPI uses an explicit, single-choice versioning model.
+OEAPI uses a header-based, explicit, single-choice versioning model.
 
-For each request, the client specifies exactly one OEAPI version and exactly one consumer version using HTTP headers. The server does not negotiate between alternatives.
+For each request, the client specifies exactly one OEAPI version and
+optionally one consumer with exactly one consumer version using the
+`Accept` header. The server does not negotiate between alternatives.
 
 This is referred to as the *closed* versioning approach.
 
 In practice this means:
 
 - the client sends one explicit OEAPI version via `Accept`
-- the client sends one explicit consumer version via `OEAPI-Consumer-Version`
-- the server either accepts that version, or falls back to a lower compatible minor version within the same major
+- the client can include one consumer and one consumer version via `Accept`
+- the server evaluates whether the requested version or a compatible minor
+  version within the same major can be provided (this may be lower or higher)
+- the same principle applies to the optional consumer version
 - if no compatible version exists, the server rejects the request
 
 Only minor fallback is allowed. Major version fallback is never permitted.
 
-The server MUST always indicate the actual versions used in the response headers.
+The server always indicates the actual versions used in the response via
+the `Content-Type` header.
 
-If the requested version cannot be satisfied (and no compatible minor version is available), the server MUST return `406 Not Acceptable`, including the requested version and the list of supported versions in the response body.
+If the requested version cannot be satisfied (and no compatible minor version
+is available), the server returns `406 Not Acceptable`, including the
+requested version and the list of supported versions in the response body.
 
 OEAPI deliberately does not use:
 
+- multiple alternative versions in the `Accept` header
 - HTTP standard `Accept` negotiation
 - query parameters for versioning
 - version attributes in the request body
@@ -37,14 +45,14 @@ Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.oeapi+json;version=6.1
+Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.oeapi+json;version=6.1
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
 ```
 
 The requested OEAPI and consumer versions are fully supported.  
@@ -52,23 +60,25 @@ The server returns exactly the same versions as requested.
 
 ---
 
-### Example 2: minor fallback
+### Example 2: minor fallback (higher or lower)
 
 Client:
 
 ```http
 GET /courses
-Content-Type: application/vnd.oeapi+json;version=6.1
+Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.oeapi+json;version=6.0
+Content-Type: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=1.1
 ```
 
-Because both versions share the same major (6), the server falls back to the highest compatible minor and explicitly reports the versions used.
+Because the versions share the same major (6), the server may return a
+compatible minor version, higher or lower, and explicitly reports the
+versions used.
 
 ---
 
@@ -78,7 +88,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.oeapi+json;version=7.0
+Accept: application/vnd.oeapi+json;version=7.0;consumer=mbo-oke-roster-service;consumer-version=1.0
 ```
 
 Server:
@@ -112,10 +122,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.oeapi+json;version=6.0
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 7.0
+Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=7.0
 ```
 
 Server:

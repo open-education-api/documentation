@@ -168,9 +168,37 @@ Servers SHOULD return an `Allow` header indicating supported methods.
 Returned when the server cannot provide a representation for the requested
 OEAPI or consumer version.
 
-OEAPI uses explicit version negotiation rather than HTTP `Accept` headers.
-If neither the requested version nor a lower compatible minor version is
-supported, a `406` response MUST be returned.
+OEAPI uses header-based version negotiation with an explicit request for a
+single OEAPI version and, where applicable, a single consumer and consumer version.
+
+Clients MUST request exactly one OEAPI version via the `Accept` header and
+MAY also include exactly one consumer and one consumer version. For example:
+
+```http
+Accept: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=2.0
+```
+
+The server evaluates whether the requested OEAPI version or a compatible
+minor version within the same major version can be provided. The same
+principle applies to the optional consumer version: the server may return
+the requested consumer version or a compatible minor version.
+
+If a compatible combination can be provided, the server returns the response
+using the `Content-Type` header to indicate the actual OEAPI version and
+consumer version used. For example:
+
+```http
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=2.1
+```
+
+If no compatible version is available, a `406 Not Acceptable` response MUST
+be returned.
+
+This behaviour differs from typical HTTP version negotiation:
+
+- exactly one explicit version is requested
+- any compatible minor version may be returned
+- the same principle applies to the optional consumer and consumer version
 
 This behaviour intentionally deviates from strict HTTP semantics to:
 - make version mismatches explicit
