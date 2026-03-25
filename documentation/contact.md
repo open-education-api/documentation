@@ -11,12 +11,3 @@ Only the members of this mailing list may send email to this list. Send an email
 to [openonderwijsapi@list.surf.nl](mailto:openonderwijsapi@list.surf.nl) to
 contact the members of this mailing list. If you need support, contact:
 [info@openonderwijsapi.nl](mailto:info@openonderwijsapi.nl)
-
-## Slack
-
-A Slack channel is available at:
-[openonderwijsapi.slack.com](https://openonderwijsapi.slack.com) Since access is
-on an invitation basis, send an email to
-[info@openonderwijsapi.nl](mailto:info@openonderwijsapi.nl) and you will receive
-an invitation if you would like to participate on this Open education API slack
-channel.
