@@ -211,7 +211,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.oeapi+json;version=7.0
+Accept: application/vnd.oeapi+json;version=7.0;consumer=mbo-oke-roster-service;consumer-version=7.0
 ```
 
 Server:
@@ -240,10 +240,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.oeapi+json;version=6.0
-
-OEAPI-Consumer-Name: mbo-oke-roster-service
-OEAPI-Consumer-Version: 7.0
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=7.0
 ```
 
 Server:

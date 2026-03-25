@@ -45,14 +45,14 @@ Client:
 
 ```http
 GET /courses
-Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
+Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.0
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.0
 ```
 
 The requested OEAPI and consumer versions are fully supported.  
@@ -66,14 +66,14 @@ Client:
 
 ```http
 GET /courses
-Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=1.0
+Accept: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.0
 ```
 
 Server:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=1.1
+Content-Type: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=6.1
 ```
 
 Because the versions share the same major (6), the server may return a
@@ -88,7 +88,7 @@ Client:
 
 ```http
 POST /enrolments
-Accept: application/vnd.oeapi+json;version=7.0;consumer=mbo-oke-roster-service;consumer-version=1.0
+Accept: application/vnd.oeapi+json;version=7.0;consumer=mbo-oke-roster-service;consumer-version=6.0
 ```
 
 Server:
