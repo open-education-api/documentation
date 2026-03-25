@@ -188,7 +188,7 @@ using the `Content-Type` header to indicate the actual OEAPI version and
 consumer version used. For example:
 
 ```http
-Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=2.1
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.1
 ```
 
 If no compatible version is available, a `406 Not Acceptable` response MUST
@@ -240,7 +240,7 @@ Client:
 
 ```http
 POST /enrolments
-Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=7.0
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.1.1
 ```
 
 Server:
@@ -256,11 +256,11 @@ Response body:
   "type": "https://api.example.org/problems/version-not-acceptable",
   "title": "Version not acceptable",
   "status": 406,
-  "detail": "The requested consumer version '7.0' cannot be served.",
+  "detail": "The requested consumer version '6.1.1' cannot be served.",
   "consumer": {
     "consumerKey": "mbo-oke-roster-service"
   },
-  "requestedVersion": "7.0",
+  "requestedVersion": "6.1.1",
   "supportedVersions": ["0.95", "1.0", "6.1"],
   "instance": "https://api.example.org/courses"
 }
