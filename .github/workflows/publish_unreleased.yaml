@@ -14,12 +14,12 @@ jobs:
 
     steps:
       # Checkout this repository containing the documentation.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Create a GitHub App token used to push to the publication repository.
       - name: Create GitHub App installation token
         id: app-token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.OOAPI_APP_PUBLISH_ID }}
           private-key: ${{ secrets.OOAPI_APP_PUBLISH_SECRET }}
@@ -29,7 +29,7 @@ jobs:
 
       # Checkout the documentation website repository.
       - name: Checkout target repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: open-education-api/open-education-api.github.io
           token: ${{ steps.app-token.outputs.token }}
