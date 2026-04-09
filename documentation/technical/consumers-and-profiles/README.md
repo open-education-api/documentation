@@ -16,63 +16,50 @@ specification, this documentation also provides information about which
 requests and responses should be implemented to ensure that specific
 consumers (applications) function correctly.
 
-## Filtering responses for specific consumers
+## Filtering responses for a specific consumer
 
-The first mechanism is the `consumer` query parameter that allows clients to
-request items intended for a specific consumer, e.g.
-`GET /courses?consumer=rio`. When this query parameter is specified, the
-implementation should only return items required for that consumer. The
-allowed values for the query parameter are defined globally in the
-[consumer registry](#consumer-registry). This query parameter is **only**
-defined for requests that return a collection of items, e.g. `GET /courses`
-and `GET /rooms`, **not** for requests returning a single item, e.g.
-`GET /courses/{courseId}`.
+The `consumer` query parameter mechanism allows clients to request items 
+intended for a specific consumer, e.g. `GET /courses?consumer=rio`. 
+When this query parameter is specified, the implementation should only 
+return items required for that specific consumer.
 
-## Extending the specification with extra attributes for specific consumers
+Besides using this query parameter for filtering, the consumer parameter 
+also serves to extend the base specifcation with extra attributes.
 
-This mechanism allows (a group of) users implementing and using OEAPI
-implementations to agree on a set of extra attributes that is necessary to
-fulfil a specific use case. Such a mechanism also removes the necessity of
-providing for each individual use case in the general OEAPI specification.
+## Extending the specification with extra attributes for a specific consumer
 
-Each entity described in OEAPI has a `consumers` attribute, which
+The consumer query parameter mechanism also allows (a group of) users 
+implementing and using OEAPI to agree on a set of extra attributes that is 
+necessary to fulfil a specific use case. Such a mechanism also removes the 
+necessity of providing for each individual use case in the general OEAPI 
+specification.
+
+Each entity described in OEAPI has a `consumer` attribute, which
 implementers can use to add consumer-specific attributes:
 
 ```json
 {
     "...": "...",
-    "consumers": [
-        {
-            "consumerKey": "<the consumer key>",
-            "additional": "custom",
-            "attributes": "here"
-        }
-    ]
+    "consumer": {
+        "consumerKey": "<the consumer key>",
+        "additional": "custom",
+        "attributes": "here"
+    }
 }
 ```
 
-The value of the `consumers` attribute is an array of objects. Since the
-value is an array, an entity can have multiple consumer objects. Each object
+The value of the `consumer` attribute is an object. Each consumer object
 must at minimum contain the attribute `consumerKey`, which specifies the
 consumer for which the extra attributes are defined.
 
-!> Currently, there is no mechanism defined to request only consumer objects
-for a specific consumer (for example, for data minimisation purposes). There
-are, however, several issues ([#296](https://github.com/open-education-api/specification/issues/296),
-[#292](https://github.com/open-education-api/specification/issues/292) and
-[#242](https://github.com/open-education-api/specification/issues/242)) that
-discuss adding such mechanisms.
-
-!> Note that the `consumer` query parameter and the consumer objects are
-related but separate mechanisms. It is perfectly valid to use one without the
-other.
 
 ## Consumer registry
 
 The following table lists which consumer keys are in use by which consumers.
 This list only shows the official and registered consumers of OEAPI that are
-part of the specification and are maintained by OEAPI. Implementations that
-wish to use this mechanism without registering a key should prefix their key
+part of the specification and are maintained by OEAPI. There is no need to 
+register a consumer in order to use it. Implementations that wish to use this 
+mechanism without registering a key should prefix their consumerkey
 with `x-`. The registered consumers are:
 
 | Key           | Description                                                                                                                                         |
