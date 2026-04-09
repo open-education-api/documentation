@@ -18,20 +18,20 @@ consumers (applications) function correctly.
 
 ## Filtering responses for a specific consumer
 
-The `consumer` query parameter mechanism allows clients to request items 
-intended for a specific consumer, e.g. `GET /courses?consumer=rio`. 
-When this query parameter is specified, the implementation should only 
+The `consumer` query parameter mechanism allows clients to request items
+intended for a specific consumer, e.g. `GET /courses?consumer=rio`.
+When this query parameter is specified, the implementation should only
 return items required for that specific consumer.
 
-Besides using this query parameter for filtering, the consumer parameter 
+Besides using this query parameter for filtering, the consumer parameter
 also serves to extend the base specifcation with extra attributes.
 
 ## Extending the specification with extra attributes for a specific consumer
 
-The consumer query parameter mechanism also allows (a group of) users 
-implementing and using OEAPI to agree on a set of extra attributes that is 
-necessary to fulfil a specific use case. Such a mechanism also removes the 
-necessity of providing for each individual use case in the general OEAPI 
+The consumer query parameter mechanism also allows (a group of) users
+implementing and using OEAPI to agree on a set of extra attributes that is
+necessary to fulfil a specific use case. Such a mechanism also removes the
+necessity of providing for each individual use case in the general OEAPI
 specification.
 
 Each entity described in OEAPI has a `consumer` attribute, which
@@ -57,8 +57,8 @@ consumer for which the extra attributes are defined.
 
 The following table lists which consumer keys are in use by which consumers.
 This list only shows the official and registered consumers of OEAPI that are
-part of the specification and are maintained by OEAPI. There is no need to 
-register a consumer in order to use it. Implementations that wish to use this 
+part of the specification and are maintained by OEAPI. There is no need to
+register a consumer in order to use it. Implementations that wish to use this
 mechanism without registering a key should prefix their consumerkey
 with `x-`. The registered consumers are:
 
