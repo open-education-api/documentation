@@ -52,7 +52,6 @@ The value of the `consumer` attribute is an object. Each consumer object
 must at minimum contain the attribute `consumerKey`, which specifies the
 consumer for which the extra attributes are defined.
 
-
 ## Consumer registry
 
 The following table lists which consumer keys are in use by which consumers.
