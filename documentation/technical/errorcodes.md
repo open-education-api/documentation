@@ -171,9 +171,37 @@ Servers SHOULD return an `Allow` header indicating supported methods.
 Returned when the server cannot provide a representation for the requested
 OEAPI or consumer version.
 
-OEAPI uses explicit version negotiation rather than HTTP `Accept` headers.
-If neither the requested version nor a lower compatible minor version is
-supported, a `406` response MUST be returned.
+OEAPI uses header-based version negotiation with an explicit request for a
+single OEAPI version and, where applicable, a single consumer and consumer version.
+
+Clients MUST request exactly one OEAPI version via the `Accept` header and
+MAY also include exactly one consumer and one consumer version. For example:
+
+```http
+Accept: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=2.0
+```
+
+The server evaluates whether the requested OEAPI version or a compatible
+minor version within the same major version can be provided. The same
+principle applies to the optional consumer version: the server may return
+the requested consumer version or a compatible minor version.
+
+If a compatible combination can be provided, the server returns the response
+using the `Content-Type` header to indicate the actual OEAPI version and
+consumer version used. For example:
+
+```http
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.1
+```
+
+If no compatible version is available, a `406 Not Acceptable` response MUST
+be returned.
+
+This behaviour differs from typical HTTP version negotiation:
+
+- exactly one explicit version is requested
+- any compatible minor version may be returned
+- the same principle applies to the optional consumer and consumer version
 
 This behaviour intentionally deviates from strict HTTP semantics to:
 
@@ -183,29 +211,62 @@ This behaviour intentionally deviates from strict HTTP semantics to:
 
 ### Example – unsupported OEAPI version
 
+Client:
+
+```http
+POST /enrolments
+Accept: application/vnd.oeapi+json;version=7.0;consumer=mbo-oke-roster-service;consumer-version=7.0
+```
+
+Server:
+
+```http
+HTTP/1.1 406 Not Acceptable
+```
+
+Response body:
+
 ```json
 {
   "type": "https://api.example.org/problems/version-not-acceptable",
   "title": "Version not acceptable",
   "status": 406,
-  "detail": "The requested OEAPI version '5.0' cannot be served.",
-  "requestedVersion": "5.0",
-  "supportedVersions": ["6.1", "6.0"],
+  "detail": "The requested OEAPI version '7.0' cannot be served.",
+  "requestedVersion": "7.0",
+  "supportedVersions": ["5.0", "6.1"],
   "instance": "https://api.example.org/courses"
 }
 ```
 
 ### Example – unsupported consumer version
 
+Client:
+
+```http
+POST /enrolments
+Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.1.1
+```
+
+Server:
+
+```http
+HTTP/1.1 406 Not Acceptable
+```
+
+Response body:
+
 ```json
 {
   "type": "https://api.example.org/problems/version-not-acceptable",
-  "title": "Consumer version not acceptable",
+  "title": "Version not acceptable",
   "status": 406,
-  "detail": "The consumer version '2.0' is not supported.",
-  "requestedVersion": "2.0",
-  "supportedVersions": ["1.0", "0.94"],
-  "instance": "https://api.example.org/enrolments"
+  "detail": "The requested consumer version '6.1.1' cannot be served.",
+  "consumer": {
+    "consumerKey": "mbo-oke-roster-service"
+  },
+  "requestedVersion": "6.1.1",
+  "supportedVersions": ["0.95", "1.0", "6.1"],
+  "instance": "https://api.example.org/courses"
 }
 ```
 
