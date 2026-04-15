@@ -199,7 +199,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
         "value": "Introduction to Data Science (Semester 1)"
       }
     ],
-    "academicSession": "2025S1",
+    "academicSessionId": "0f8fad5b-d9cb-469f-a165-70867728950e",
     "course": "22222222-2222-2222-2222-222222222222",
     "programmeOfferings": [
       "123e4567-e89b-12d3-a456-426614174000"
@@ -219,7 +219,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
         "value": "Introduction to Data Science (Semester 2)"
       }
     ],
-    "academicSession": "2025S2",
+    "academicSessionId": "0f8fad5b-d9cb-469f-a165-70867728950e",
     "course": "22222222-2222-2222-2222-222222222222",
     "programmeOfferings": [
       "123e4567-e89b-12d3-a456-426614174000"
@@ -239,7 +239,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
         "value": "DS lecture group A (S1)"
       }
     ],
-    "academicSession": "2025S1",
+    "academicSessionId": "0f8fad5b-d9cb-469f-a165-70867728950e",
     "learningComponent": "55555555-5555-5555-5555-555555555555",
     "courseOfferings": [
       "11111111-1111-1111-1111-111111111111"
@@ -259,7 +259,7 @@ This example follows the OEAPI v6 schemas for `ProgrammeOffering`, `CourseOfferi
         "value": "Final exam Introduction to Data Science (S1)"
       }
     ],
-    "academicSession": "2025S1",
+    "academicSessionId": "0f8fad5b-d9cb-469f-a165-70867728950e",
     "testComponent": "77777777-7777-7777-7777-777777777777",
     "courseOfferings": [
       "11111111-1111-1111-1111-111111111111"
