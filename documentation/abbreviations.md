@@ -23,9 +23,6 @@
 |                                  | and private organisations.                                                                 |
 | Community                        | The OOAPI community consists of parties interested in OOAPI developments. Community members|
 |                                  | are known by name and email address, and register with the community site themselves.      |
-| Slack                            | A Slack channel is available at: [openonderwijsapi.slack.com](https://openonderwijsapi.slack.com). Since access is on an invite  |
-|                                  | basis, send an email to [info@openonderwijsapi.nl](mailto:info@openonderwijsapi.nl) and you will receive an invitation if you |
-|                                  | would like to participate in this Open Education API Slack channel.                        |
 | Project site                     | The website at [https://openonderwijsapi.nl/](https://openonderwijsapi.nl/). This website is used mainly to provide        |
 |                                  | clarification about the project to interested parties.                                     |
 |                                  | The site also provides access to the reference API, online documentation and the code      |
