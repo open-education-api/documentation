@@ -62,7 +62,7 @@
   * [Extending OEAPI](technical/extending-ooapi.md#start)
   * [Consumers and profiles](technical/consumers-and-profiles/)
     * [RIO](technical/consumers-and-profiles/rio.md#start)
-    * [eduXchange](technical/consumers-and-profiles/eduxchange.md#start)
+    * [eduXchange](technical/consumers-and-profiles/eduxchange.html)
   * [Target groups (OEAPI v4)](technical/target-groups/)
     * [EuroTeQ](technical/target-groups/euroteq.md#start)
 * [Contributing](contributing/)
