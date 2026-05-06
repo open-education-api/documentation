@@ -47,6 +47,7 @@
     * [Generic](technical/filtering-generic.md#start)
   * [Sorting](technical/sorting-language.md#start)
   * [Data minimisation](technical/data-minimisation.md#start)
+  * [Security](technical/security.md#start)
   * [Formatting text](technical/formatting-text.md#start)
   * [Supplementary Information](technical/supplementary-information.md#start)
   * [versioning](technical/versioning.md#start)
