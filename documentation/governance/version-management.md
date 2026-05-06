@@ -87,13 +87,9 @@ Because of that OEAPI uses ‘release candidates’ first when releasing new ver
 
 This is the selected approach where we do not end up with a continuous stream of major/minor releases to solve breaking changes in the specification.
 
-The rules regarding release candidates:
-* All required corrections within a release candidate (NOT new features) will be implemented in a new release candidate. (we do not want to misuse the release candidates for new features because we have only selected this approach to prevent fixing breaking issues with new major releases).
-* Only the most recent (/release candidate of a) major.minor version will be displayed on the OEAPI website (not all different release candidates for a specific 'major.minor' version).
-* In addition to the documentation on release candidates in the change log, there will be documentation on the separate release candidates of a 'major.minor' release on the website.
-
 Rules for release candidates:
-* Only required corrections (NOT new features) are included in subsequent release candidates.
+
+* Only required corrections (*NOT* new features) are included in subsequent release candidates.
 * Release candidates will not be used to introduce new functionality.
 * Only the most recent release candidate of a given version is displayed on the website.
 * Detailed documentation is provided:
