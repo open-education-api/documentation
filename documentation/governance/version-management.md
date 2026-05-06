@@ -58,7 +58,6 @@ For major releases:
 * Upcoming major versions are announced well in advance (target: one year).
 * Breaking changes may have longer development and delivery timelines.
 
-
 ## Minor version
 
 Minor versions enable the introduction of new (backwards-compatible) features and improvements within an existing major version.
@@ -79,10 +78,12 @@ The original attribute is deprecated and removed in a future major version, foll
 * Extending objects
 Adding a new optional attribute to an existing object is permitted, provided it is not mandatory.
 
-##  Release candidate
+## Release candidate
 
-Bugs and ‘breaking’ issues can continue to occur after a release. Every new release (major.minor) of the specification can contain issues. Most of these issues are detected during the development phase of the specification, but some are only to be found once the specification starts being used for implementations. This is no problem for normal issues (those will be fixed and released with a new minor release), but ‘breaking’ issues cause a problem, because fixing these would require a new major release. This is not desired and thus requires a different approach.
-Because of that OEAPI uses ‘release candidates’ first when releasing new versions. A new release will always be released as a release candidate until the next major.minor version is to be released. From that moment on the previous major.minor release will become final. 
+Bugs and ‘breaking’ issues can continue to occur after a release. Every new release (major.minor) of the specification can contain issues. Most of these issues are detected during the development phase of the specification, but some are only to be found once the specification starts being used for implementations. 
+This is no problem for normal issues (those will be fixed and released with a new minor release), but ‘breaking’ issues cause a problem, because fixing these would require a new major release. This is not desired and thus requires a different approach.
+Because of that OEAPI uses ‘release candidates’ first when releasing new versions. A new release will always be released as a release candidate until the next major.minor version is to be released. From that moment on the previous major.minor release will become final.
+
 This is the selected approach where we do not end up with a continuous stream of major/minor releases to solve breaking changes in the specification.
 
 The rules regarding release candidates: 
@@ -91,14 +92,14 @@ The rules regarding release candidates:
 * In addition to the documentation on release candidates in the change log, there will be documentation on the separate release candidates of a major.minor release on the website.
 
 Rules for release candidates:
-* Only required corrections (*NOT* new features) are included in subsequent release candidates
+* Only required corrections (NOT new features) are included in subsequent release candidates
 * Release candidates will not be used to introduce new functionality
 * Only the most recent release candidate of a given version is displayed on the website
 * Detailed documentation is provided:
   * In the changelog
   * On dedicated pages for each release candidate
 
-# Versioning and syntax specification changes
+## Versioning and syntax specification changes
 
 The standard is specified using the OpenAPI specification (OAS). OpenAPI describes how to define an API. OpenAPI is a ‘syntax’ used to describe APIs. A specification in accordance with OpenAPI consists of a number of components, including:
 • A description of the requests that a client can send to a server.
