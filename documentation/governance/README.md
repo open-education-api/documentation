@@ -77,6 +77,10 @@ The Open Education API is registered at Edustandaard. For the Open Education API
 * inform the Community about updates and changes to the OEAPI.
 * publish all relevant information concerning the OEAPI on the [Edustandaard website](https://www.edustandaard.nl/).
 
+## Version management
+
+How the Open Education API uses versioning of the specifcation is described in the [Version management](../governance/version-management.md)
+
 ## By-laws and code of conduct
 
 In addition to this governance document, there are also the [Bylaws](../governance/by-laws.md) and a [Code of conduct](../governance/code-of-conduct.md)
