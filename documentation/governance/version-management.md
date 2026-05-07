@@ -1,6 +1,6 @@
 # Version Management
 
-The standard evolves continuously based on (amongs others) community feedback submitted via GitHub. Changes to the specification can vary in impact, ranging from minor refinements to substantial updates.
+The standard evolves continuously based on (among others) community feedback submitted via GitHub. Changes to the specification can vary in impact, ranging from minor refinements to substantial updates.
 
 To ensure stability and usability, we avoid introducing breaking changes with every release. Instead, backwards compatibility is guaranteed within each major version.
 
