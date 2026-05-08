@@ -4,8 +4,9 @@
 This page describes all error responses that MAY be returned by OEAPI
 endpoints.
 
-All errors are returned using the `application/problem+json` media type,
-conforming to [RFC 7807 – Problem Details for HTTP APIs].
+All OEAPI-defined error responses are returned using the
+`application/problem+json` media type, conforming to
+[RFC 7807 – Problem Details for HTTP APIs].
 
 Each error code is described with:
 
@@ -17,7 +18,7 @@ Each error code is described with:
 
 ## Error response format
 
-All error responses MUST conform to the Problem Details format.
+All OEAPI error responses MUST conform to the Problem Details format.
 
 ### Common fields
 
@@ -30,13 +31,13 @@ fields:
 
 Other Problem Details fields are optional unless explicitly stated otherwise.
 
-| Field | Required | Description |
-|------|----------|-------------|
-| `type` | MUST | A URI identifying the problem type |
-| `title` | MUST | A short, human-readable summary |
-| `status` | MUST | The HTTP status code |
-| `detail` | MAY | A human-readable explanation |
-| `instance` | MAY | A URI identifying the specific request instance |
+| Field      | Required | Description                             |
+|------------|----------|-----------------------------------------|
+| `type`     | MUST     | A URI identifying the problem type      |
+| `title`    | MUST     | A short, human-readable summary         |
+| `status`   | MUST     | The HTTP status code                    |
+| `detail`   | MAY      | A human-readable explanation            |
+| `instance` | MAY      | A URI identifying the specific request instance |
 
 Some error responses MAY define additional fields.
 
@@ -44,7 +45,7 @@ Some error responses MAY define additional fields.
 
 ## 400 Bad Request
 
-Returned when the request is syntactically valid but semantically invalid.
+Returned when the request cannot be processed due to invalid client input.
 
 Typical causes:
 
@@ -132,18 +133,6 @@ Rules:
 }
 ```
 
-### Example – endpoint not found
-
-```json
-{
-  "type": "https://api.example.org/problems/not-found",
-  "title": "Collection endpoint not found",
-  "status": 404,
-  "detail": "The collection endpoint '/course-offerings' does not exist or is not accessible.",
-  "instance": "https://api.example.org/course-offerings"
-}
-```
-
 ---
 
 ## 405 Method Not Allowed
@@ -169,41 +158,41 @@ Servers SHOULD return an `Allow` header indicating supported methods.
 ## 406 Not Acceptable (Version negotiation)
 
 Returned when the server cannot provide a representation for the requested
-OEAPI or consumer version.
+OEAPI version or consumer version.
 
 OEAPI uses header-based version negotiation with an explicit request for a
-single OEAPI version and, where applicable, a single consumer and consumer version.
+single OEAPI version and, where applicable, a single consumer and consumer
+version.
 
-Clients MUST request exactly one OEAPI version via the `Accept` header and
-MAY also include exactly one consumer and one consumer version. For example:
+Clients MUST request exactly one OEAPI version via the `Accept` header and MAY
+also include exactly one consumer and one consumer version. For example:
 
 ```http
 Accept: application/vnd.oeapi+json;version=6.0;consumer=mbo-oke-roster-service;consumer-version=2.0
 ```
 
-The server evaluates whether the requested OEAPI version or a compatible
-minor version within the same major version can be provided. The same
-principle applies to the optional consumer version: the server may return
-the requested consumer version or a compatible minor version.
+The server evaluates whether the requested OEAPI version or a compatible minor
+version within the same major version can be provided.
 
-If a compatible combination can be provided, the server returns the response
-using the `Content-Type` header to indicate the actual OEAPI version and
-consumer version used. For example:
+If a compatible version can be provided, the server returns the response using
+the `Content-Type` header to indicate the actual OEAPI version and consumer
+version used. For example:
 
 ```http
 Content-Type: application/vnd.oeapi+json;version=6.1;consumer=mbo-oke-roster-service;consumer-version=6.1
 ```
 
-If no compatible version is available, a `406 Not Acceptable` response MUST
-be returned.
+If no compatible version is available, a `406 Not Acceptable` response MUST be
+returned.
 
-This behaviour differs from typical HTTP version negotiation:
+This behaviour differs from traditional HTTP content negotiation semantics:
 
 - exactly one explicit version is requested
 - any compatible minor version may be returned
-- the same principle applies to the optional consumer and consumer version
+- the same principle may apply to the optional consumer type and version
 
-This behaviour intentionally deviates from strict HTTP semantics to:
+This behaviour intentionally differs from traditional HTTP content negotiation
+to:
 
 - make version mismatches explicit
 - improve interoperability
@@ -265,7 +254,7 @@ Response body:
     "consumerKey": "mbo-oke-roster-service"
   },
   "requestedVersion": "6.1.1",
-  "supportedVersions": ["0.95", "1.0", "6.1"],
+  "supportedVersions": ["0.95", "1.0", "2.1"],
   "instance": "https://api.example.org/courses"
 }
 ```
@@ -314,13 +303,13 @@ This indicates a server-side failure.
 
 ## Summary
 
-| Status | Meaning |
-|-------:|--------|
-| 400 | Invalid request |
-| 401 | Authentication failed |
-| 403 | Not authorised |
-| 404 | Resource not found |
-| 405 | Method not allowed |
-| 406 | Version not acceptable |
-| 429 | Rate limit exceeded |
-| 500 | Internal server error |
+| Status | Meaning                |
+|--------|------------------------|
+| 400    | Invalid request        |
+| 401    | Authentication failed  |
+| 403    | Not authorised         |
+| 404    | Resource not found     |
+| 405    | Method not allowed     |
+| 406    | Version not acceptable |
+| 429    | Rate limit exceeded    |
+| 500    | Internal server error  |

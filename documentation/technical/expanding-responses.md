@@ -8,44 +8,52 @@ UUIDs. For example, the course object has a coordinator. This coordinator is
 identified as the UUID of the person filling the coordination role for this
 course.
 
-If you would like to get the complete information from a linked object, you
-could do this by calling the UUID of this linked object. This would require two
-API requests. If more than one object is linked to the object, this would
-require even more requests. To reduce the number of requests, the expand
-mechanism is introduced.
+If you would like to retrieve the complete information from a linked object,
+this could be done by requesting the linked object separately using its UUID.
+This would require additional API requests. If more than one object is linked
+to the object, this would require even more requests. To reduce the number of
+requests, the expand mechanism is introduced.
 
-This is why the expand mechanism is introduced. This mechanism allows you to
-retrieve the linked objects in a single call by replacing the object ID of the
-linked object with all its properties. The expand mechanism works by adding an
-`expand` parameter and the name of the linked object you would like to expand.
-For example, if you would like to see the details of the person in an
-association, this is done by
-`GET association/{associationID}?expand=person`
+This mechanism allows you to retrieve the linked objects in a single request by
+replacing the object ID of the linked object with all its properties. The
+expand mechanism works by adding an `expand` parameter and the name of the
+linked object you would like to expand. For example, if you would like to see
+the details of the person in an association, this is done by:
+
+```http
+GET /associations/{associationId}?expand=person
+```
 
 ## Endpoints which are expandable
 
 The current list of objects that allow for expansion of the related objects is:
 
-* academic-session
-* association
-* component
-* component-offering
-* course
-* course-offering
-* group
-* organisation
-* programme
-* programme-offering
-* room
+- academic-sessions
+- associations
+- courses
+- course-offerings
+- groups
+- organisations
+- programmes
+- programme-offerings
+- rooms
+- learning-components
+- learning-component-offerings
+- test-components
+- test-component-offerings
 
 ## Example of the use of expand
 
-`GET association/{associationID}` will provide
+```http
+GET /associations/{associationId}
+```
+
+will provide
 
 ```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
-    "associationType": "componentOfferingAssociation",
+    "associationType": "learningComponentOfferingAssociation",
     "role": "student",
     "state": "associated",
     "remoteState": "associated",
@@ -79,12 +87,16 @@ needed. This would then result in three different requests to complete all the
 data. To reduce the number of requests, we can also use the aforementioned
 expand functionality.
 
-`GET association/{associationID}?expand=person,offering` will provide
+```http
+GET /associations/{associationId}?expand=person,offering
+```
+
+will provide
 
 ```json
 {
     "associationId": "123e4567-e89b-12d3-a456-426614174000",
-    "associationType": "componentOfferingAssociation",
+    "associationType": "learningComponentOfferingAssociation",
     "role": "student",
     "state": "associated",
     "remoteState": "associated",
@@ -111,7 +123,7 @@ expand functionality.
     "person": {
         "personId": "05035972-0619-4d0b-8a09-7bdb6eee5e6d",
         "primaryCode": {
-            "codeType": "crohoCreboCode",
+            "codeType": "identifier",
             "code": "string"
         },
         "givenName": "Maartje",
@@ -181,10 +193,10 @@ expand functionality.
     "offering": {
         "offeringId": "811aede5-3f86-4ee8-bd58-925df0b0509d",
         "primaryCode": {
-            "codeType": "crohoCreboCode",
+            "codeType": "identifier",
             "code": "string"
         },
-        "offeringType": "component",
+        "offeringType": "learning-component",
         "academicSession": "937983ad-cc0f-45a6-95ca-a8f60b7cf125",
         "name": [
             {
@@ -201,18 +213,18 @@ expand functionality.
         ],
         "teachingLanguage": "nld",
         "modeOfDelivery": [
-            "situated"
+            "blended"
         ],
         "maxNumberStudents": 200,
         "enrolledNumberStudents": 150,
         "pendingNumberStudents": 50,
         "minNumberStudents": 15,
         "resultExpected": true,
-        "resultValueType": "1-10",
+        "resultValueType": "grade_0_10",
         "link": "https://osiris.uu.nl/osiris_student_uuprd/OnderwijsCatalogusZoekCursus.do#submitForm?cursuscode=INFOMQNM",
         "otherCodes": [
             {
-            "codeType": "crohoCreboCode",
+            "codeType": "identifier",
             "code": "string"
             }
         ],
@@ -279,5 +291,5 @@ expand functionality.
 }
 ```
 
-The expand functionality is inspired by the Stripe examples
+The expand functionality is inspired by the Stripe examples.
 See also [https://stripe.com/docs/expand](https://stripe.com/docs/expand)
