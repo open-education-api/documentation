@@ -17,5 +17,6 @@ exclude_path = [
 # Exclude specific domains or URL patterns
 exclude = [
   "^https?://([^/]*\\.)?example\\.com",
-  "^https?://([^/]*\\.)?example-.*"
+  "^https?://([^/]*\\.)?example-.*",
+  "^https?://([^/]*\\.)?npuls.nl"
 ]

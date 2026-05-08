@@ -16,6 +16,7 @@
   * [Community](governance/README.md#community-governance)
   * [Project teams](governance/README.md#project-groups-governance)
   * [Edustandaard](governance/README.md#edustandaard-governance)
+  * [Version management](governance/version-management.md#start)
   * [By-laws](governance/by-laws.md#start)
   * [Code of conduct](governance/code-of-conduct.md#start)
   * [Architecture Decision Records](governance/adr.html#start)
