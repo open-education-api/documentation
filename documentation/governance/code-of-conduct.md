@@ -4,12 +4,14 @@
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD034 -->
 <!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD003 -->
 ---
 layout: code-of-conduct
 version: v1.0
 ---
 
-| TL;DR | Code of Conduct |
+# Code of Conduct
+
 | --- | --- |
 | | |
 | Section 1 | Purpose |
