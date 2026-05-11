@@ -35,7 +35,7 @@ describing REST APIs.
 
 The current OEAPI specification is available here:
 
-1. [OEAPI v6](https://openonderwijsapi.nl/specification/v6.0/)
+1. [OEAPI v6](https://oeapi.eu/specification/v6.0/)
    (current version, fully supported)
 
 Previous OEAPI versions are available here:
