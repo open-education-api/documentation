@@ -21,9 +21,9 @@
 |                                  | organisations.                                                                             |
 |                                  | The Standardisation council consists of directors of educational institutions and public   |
 |                                  | and private organisations.                                                                 |
-| Community                        | The OOAPI community consists of parties interested in OOAPI developments. Community members|
+| Community                        | The OEAPI community consists of parties interested in OOAPI developments. Community members|
 |                                  | are known by name and email address, and register with the community site themselves.      |
-| Project site                     | The website at [https://openonderwijsapi.nl/](https://openonderwijsapi.nl/). This website is used mainly to provide        |
+| Project site                     | The website at [https://oeapi.eu/](https://oeapi.eu/). This website is used mainly to provide        |
 |                                  | clarification about the project to interested parties.                                     |
 |                                  | The site also provides access to the reference API, online documentation and the code      |
 |                                  | repository.                                                                                |

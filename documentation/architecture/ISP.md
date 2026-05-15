@@ -28,7 +28,7 @@ at the educational institutions.
 
 ## The OEAPI objects
 
-![OEAPI objects and their relationships in a schema](https://openonderwijsapi.nl/specification/v5/OOAPIv5_model.png)
+![OEAPI objects and their relationships in a schema](https://oeapi.eu/specification/v5/OOAPIv5_model.png)
 
 ## Description of the objects
 

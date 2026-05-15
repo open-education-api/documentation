@@ -54,8 +54,8 @@ are present, they are combined using logical **AND**.
 
 ```http
 GET /organisations/{organisationId}/course-offerings
-  ?filter_query[programme_offerings.programme.primary_code][in]=B-IT-2025
-  &filter_query[enrol_start_date_time][gt_date]=2025-08-01T00:00:00Z
+  ?filter_query[programmeOfferings.programme.primaryCode.code][in]=B-IT-2025
+  &filter_query[enrolStartDate][gt_date]=2025-08-01T00:00:00Z
 ```
 
 This request returns all course offerings from an organisation with
@@ -103,12 +103,12 @@ filter_query[__or][][field][operation]=value
 ### Example request
 
 ```http
-GET /courses?filter_query[__or][][name[].value][like]=bio*&filter_query[__or][][name][like]=chem*
+GET /courses?filter_query[__or][][name[].value][like]=bio*&filter_query[__or][][name[].value][like]=chem*
 ```
 
-This request returns all course offerings whose `name` starts with either
-“bio” or “chem”. Outside the `__or` block, all filters continue to be
-combined with logical **AND**.
+This request returns all courses whose `name` starts with either “bio” or
+“chem”. Outside the `__or` block, all filters continue to be combined with
+logical **AND**.
 
 **Note:** OR blocks support a **restricted subset of operators**, typically
 those used for string or categorical matching such as `eq`, `neq`, `like`,
@@ -119,11 +119,12 @@ implementation consistency and performance reasons.
 ### Example request
 
 ```http
-GET /courses?filter_query[__or][][name[].value][like]=bio*&filter_query[__or][][name[].value][like]=chem*&filter_query[programmescode][eq]=B-IT-2025
+GET /courses?filter_query[__or][][name[].value][like]=bio*&filter_query[__or][][name[].value][like]=chem*&filter_query[programmeOfferings.programme.primaryCode.code][eq]=B-IT-2025
+
 GET /organisations/{organisationId}/course-offerings
   ?filter_query[__or][][course.name[].value][like]=bio*
-  &filter_query[__or][][course.name[].value][like]=hem*
-  &filter_query[programme_offerings.programme.primary_code][in]=B-IT-2025
+  &filter_query[__or][][course.name[].value][like]=chem*
+  &filter_query[programmeOfferings.programme.primaryCode.code][in]=B-IT-2025
 ```
 
 This request returns all course offerings whose `name` starts with either
@@ -140,23 +141,23 @@ The following operators are supported in the generic filtering mechanism.
 The actual subset implemented **may vary** per organisation, and support
 **must be documented** in the service endpoint description.
 
-| Operator  | Meaning                                  | Example                                              |
-|-----------|------------------------------------------|------------------------------------------------------|
-| `eq`      | Equal to                                 | `filter_query[name][eq]=Biology`                     |
-| `neq`     | Not equal to                             | `filter_query[status][neq]=inactive`                 |
-| `lt`      | Less than                                | `filter_query[credits][lt]=5`                        |
-| `lte`     | Less than or equal to                    | `filter_query[credits][lte]=10`                      |
-| `gt`      | Greater than                             | `filter_query[credits][gt]=3`                        |
-| `gte`     | Greater than or equal to                 | `filter_query[credits][gte]=5`                       |
-| `eq_date` | Equal to a specific date (RFC3339 date-time) | `filter_query[start_date][eq_date]=2025-09-01T00:00:00Z` |
-| `lt_date` | Before a specific date                   | `filter_query[start_date][lt_date]=2025-09-01T00:00:00Z` |
-| `gt_date` | After a specific date                    | `filter_query[start_date][gt_date]=2025-09-01T00:00:00Z` |
-| `in`      | Field value is in list (comma-separated) | `filter_query[status][in]=active,pending`            |
-| `nin`     | Field value is not in list               | `filter_query[status][nin]=draft,archived`           |
-| `like`    | Partial match using wildcard `*`         | `filter_query[name][like]=bio*`                      |
-| `nlike`   | Negative partial match                   | `filter_query[name][nlike]=chem*`                    |
-| `exists`  | Field exists and is not null             | `filter_query[end_date][exists]=true`                |
-| `nexists` | Field is missing or null                 | `filter_query[end_date][nexists]=true`               |
+| Operator  | Meaning                                       | Example                                                                  |
+|------------|-----------------------------------------------|--------------------------------------------------------------------------|
+| `eq`       | Equal to                                      | `filter_query[name][eq]=Biology`                                         |
+| `neq`      | Not equal to                                  | `filter_query[status][neq]=inactive`                                     |
+| `lt`       | Less than                                     | `filter_query[credits][lt]=5`                                            |
+| `lte`      | Less than or equal to                         | `filter_query[credits][lte]=10`                                          |
+| `gt`       | Greater than                                  | `filter_query[credits][gt]=3`                                            |
+| `gte`      | Greater than or equal to                      | `filter_query[credits][gte]=5`                                           |
+| `eq_date`  | Equal to a specific date (RFC3339 date-time)  | `filter_query[startDate][eq_date]=2025-09-01T00:00:00Z`                  |
+| `lt_date`  | Before a specific date                        | `filter_query[startDate][lt_date]=2025-09-01T00:00:00Z`                  |
+| `gt_date`  | After a specific date                         | `filter_query[startDate][gt_date]=2025-09-01T00:00:00Z`                  |
+| `in`       | Field value is in list (comma-separated)      | `filter_query[status][in]=active,pending`                                |
+| `nin`      | Field value is not in list                    | `filter_query[status][nin]=draft,archived`                               |
+| `like`     | Partial match using wildcard `*`              | `filter_query[name][like]=bio*`                                          |
+| `nlike`    | Negative partial match                        | `filter_query[name][nlike]=chem*`                                        |
+| `exists`   | Field exists and is not null                  | `filter_query[endDate][exists]=true`                                     |
+| `nexists`  | Field is missing or null                      | `filter_query[endDate][nexists]=true`                                    |
 
 ### Operators available within OR blocks
 

@@ -9,19 +9,19 @@ This can be done using the query parameter `q`, e.g. `q=text`.
 
 This parameter filters items by matching on the following attributes:
 
-* `name`
-* `abbreviation`
-* `description`
+- `name`
+- `abbreviation`
+- `description`
 
 or for persons:
 
-* `givenName`
-* `surnamePrefix`
-* `surname`
-* `displayName`
-* `initials`
-* `email`
-* `secondaryEmail`
+- `givenName`
+- `surnamePrefix`
+- `surname`
+- `displayName`
+- `initials`
+- `mail`
+- `secondaryMail`
 
 When an attribute contains the given search term (exact or partial match,
 case-insensitive), an item is returned; otherwise, it is excluded from the
@@ -30,7 +30,10 @@ response.
 ## Filtering items intended for a specific consumer using `consumer`
 
 Clients can filter items meant for a specific consumer using the query
-parameter `consumer`, e.g. `consumer=rio`. See for more information [].
+parameter `consumer`, e.g. `consumer=rio`.
+
+See [Specific consumers](../technical/consumers-and-profiles/)
+for more information.
 
 ## Filtering on other entity-specific attributes
 
