@@ -63,7 +63,11 @@ model and the v6 API specification to describe the changes.
    This makes the link between education structure, scheduling and
    participation clearer.
 
-6. **Expanded enrolment and association model**  
+6. **Support for supplementary information**  
+   v6 adds support for supplementary information for programmes and
+   courses, including programme offerings and course offerings.
+
+7. **Expanded enrolment and association model**  
    The generic v5 association model has been replaced by specific
    association resources per offering type:
    - `ProgrammeOfferingAssociation`
@@ -73,46 +77,60 @@ model and the v6 API specification to describe the changes.
 
    v6 also introduces attempts for test component offering associations.
 
-7. **Learning outcomes made explicit**  
+8. **Learning outcomes made explicit**  
    `LearningOutcome` is part of the v6 model and is explicitly related to
    education entities such as programmes, courses, learning components and
    test components.
 
-8. **Expanded organisational context**  
-   The v6 model includes a clearer organisational context with:
-   - `Organisation`
-   - `Person`
-   - `Group`
-   - `Membership`
-   - `AcademicSession`
-   - `Building`
-   - `Room`
+9. **Improved alignment with European standards and vocabularies**  
+   v6 improves alignment with European interoperability standards,
+   including the use of ELM vocabularies where applicable.
 
-   This supports a clearer connection between education, people, groups,
-   locations and time periods.
+10. **Expanded organisational context**  
+    The v6 model includes a clearer organisational context with:
+    - `Organisation`
+    - `Person`
+    - `Group`
+    - `Membership`
+    - `AcademicSession`
+    - `Building`
+    - `Room`
 
-9. **Standardised and extended filtering**  
-   Filtering has been made more consistent across endpoints, including:
-   - `filterQuery`
-   - `filterQueryOr`
-   - `fields`
+    This supports a clearer connection between education, people, groups,
+    locations and time periods.
 
-   This provides a more uniform query mechanism across resources.
+11. **Extensible enumerations**  
+    v6 introduces extensible enumerations, allowing implementations to use
+    predefined values while still supporting sector-specific or
+    implementation-specific extensions.
 
-10. **Expanded write capabilities**  
+12. **Minimised number of mandatory fields**  
+    The number of mandatory fields has been minimised where possible,
+    making the specification easier to implement while preserving
+    semantic clarity.
+
+13. **Standardised and extended filtering**  
+    Filtering has been made more consistent across endpoints, including:
+    - `filterQuery`
+    - `filterQueryOr`
+    - `fields`
+
+    This provides a more uniform query mechanism across resources.
+
+14. **Expanded write capabilities**  
     v6 adds more write operations, including additional `PUT` support for
     resources such as:
     - `Person`
     - `Group`
 
-11. **Formalised version negotiation**  
+15. **Formalised version negotiation**  
     Version negotiation is explicitly defined in v6, including support for
     `406 Not Acceptable` when no compatible version can be selected.
 
-12. **Technical modernisation**  
+16. **Technical modernisation**  
     The specification has been upgraded from OpenAPI 3.0.3 to OpenAPI 3.1.1.
 
-13. **Security definitions no longer included**  
+17. **Security definitions no longer included**  
     Security schemes are no longer defined in the specification itself.
     This is because OEAPI describes the API specification, while the way
     security is configured is an implementation concern.
