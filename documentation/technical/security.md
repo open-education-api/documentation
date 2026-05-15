@@ -45,7 +45,7 @@ Access policies should be centrally defined and consistently enforced.
 
 ## Data classification
 
-It is recommended to classify data based on confidentiality and integrity.
+It is recommended to classify data based on confidentiality, integrity, and availability.
 
 Examples:
 
