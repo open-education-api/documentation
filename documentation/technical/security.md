@@ -53,7 +53,7 @@ Examples:
 2. Internal data
 3. Sensitive personal data
 
-Access decisions should be based on this classification.
+Access decisions should be based on a data classification approach defined by the implementor, For example using the CIA triad (Confidentiality, Integrity, and Availability) as recommended above.
 
 ## Enforcement
 

@@ -50,7 +50,7 @@ already modelled elsewhere in OEAPI, such as:
 ### 3.1 Schema
 
 ```yaml
-SupplementaryInformation:
+supplementaryInformation:
   type: array
   items:
     type: object
