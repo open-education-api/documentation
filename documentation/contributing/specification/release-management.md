@@ -12,7 +12,7 @@ The model distinguishes between:
 Publication works as follows:
 
 - `main` is published to `specification/unreleased`
-- a new release tag `vX.Y` is published to `specification/vX.Y`
+- release candidate tags (`vX.Y-rcZ`) and stable tags (`vX.Y`) are published to `specification/vX.Y`
 
 This repository contains API specifications.
 
@@ -34,7 +34,7 @@ This is where:
 
 ## Release branches
 
-For each published minor version, a corresponding release branch exists.
+For each published minor version (or release candidate), a corresponding release branch exists.
 
 Examples:
 
@@ -77,8 +77,9 @@ Published versions are represented by Git tags.
 
 Examples:
 
+- `v6.0-rc1`
 - `v6.0`
-- `v6.1`
+- `v6.1-rc1`
 
 A tag:
 
@@ -87,6 +88,8 @@ A tag:
 - never changes after creation
 
 Tags define the official version history.
+
+A stable tag (`vX.Y`) is only created once development of the next minor or major version has started through a release candidate (for example `v6.1-rc1` causing `v6.0` to become stable).
 
 ---
 
@@ -97,13 +100,16 @@ Tags define the official version history.
 3. The change is made.
 4. A pull request is opened.
 5. After review, the change is merged.
-6. When a version is ready, a tag is created.
+6. Release candidate tags may be created for validation.
+7. The stable tag is created once the next version line starts.
 
 ---
 
 ## Summary
 
 - `main` is active development and publishes to `specification/unreleased`
-- `release/x.y` is active maintenance for published versions
+- `release/x.y` may exist for published versions
 - tags represent official releases and publish to `specification/vX.Y`
+- release candidates use `vX.Y-rcZ`
+- stable releases use `vX.Y`
 - branches are temporary and used for review

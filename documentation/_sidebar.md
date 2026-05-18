@@ -69,7 +69,7 @@
   * [Target groups (OEAPI v4)](technical/target-groups/)
     * [EuroTeQ](technical/target-groups/euroteq.md#start)
 * [Contributing](contributing/)
-  * [Specification development](contributing/specification/)
+  * [Specification development](contributing/)
     * [Change management](contributing/specification/change-management.md#start)
     * [Release management](contributing/specification/release-management.md#start)
 * [Abbreviations and definitions](abbreviations.md)
