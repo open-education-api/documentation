@@ -67,7 +67,7 @@ directly on `main`.
 **Clarification (to avoid confusion):**
 `main` is **not** the latest stable release. It is the **integration branch for ongoing work**.
 The latest stable release is defined by the **most recent Git tag** (for example
-`v6.0.0` or `v6.1.0`), not by a branch.
+`v6.0` or `v6.1`), not by a branch.
 
 This means it is expected that `main` is both:
 
@@ -90,8 +90,19 @@ A release branch:
 Release branches are **not** used for feature development or breaking changes.
 
 **Patch releases are the exception, not the rule:**
-In principle, the specification does **not** publish patch releases (for example
-`v6.0.1`). Patch releases are only created under **special circumstances**, such as:
+In principle, the specification does **not** publish patch releases or use a
+third version segment. Stable versions are tagged as `v<major>.<minor>`
+(for example `v6.0` or `v6.1`).
+
+Before a stable release is published, one or more release candidates may be
+created. Release candidates are tagged as
+`v<major>.<minor>-rc<releaseCandidate>` (for example `v6.1-rc1`).
+
+A stable version tag (`v<major>.<minor>`) is only created once development of
+the **next minor or major version** has started through a new release
+candidate (for example `v6.1-rc1` causing `v6.0` to become stable).
+
+Patch releases are only created under **special circumstances**, such as:
 
 - a serious error in a published tag that must be corrected,
 - an urgent clarification needed to prevent incorrect implementations,
@@ -135,9 +146,10 @@ directory structures.
 
 Examples:
 
-- `v6.1.0`
-- `v6.1.1`
-- `v7.0.0`
+- `v6.0-rc1`
+- `v6.0`
+- `v6.1-rc1`
+- `v6.1`
 
 A tag always points to an immutable commit and represents the authoritative state
 of the specification for that version. Documentation and published artefacts are
@@ -161,7 +173,9 @@ The general workflow is as follows:
    - If the bug affects a maintained older version and exceptional circumstances
      justify a patch release:
      - start on the **lowest maintained release branch**
-     - tag a patch release (e.g. `v6.0.1`)
+     - optionally create one or more release candidate tags in the same
+      version line (e.g. `v6.0-rc2`)
+   - publish the stable release tag when the next version line starts
      - forward-merge into newer maintained branches if applicable
      - finally forward-merge into `main`
    - Otherwise:
