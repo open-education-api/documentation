@@ -23,9 +23,9 @@ to the general specification.
 
 ## Consumers — data extension within responses
 
-A consumer is an entity (an application, platform, or system) that consumes the OEAPI. 
+A consumer is an entity (an application, platform, or system) that consumes the OEAPI.
 The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
-In practice: you pass a '?consumer=<name>' query parameter in the request, and the response includes a nested consumer-specific object with additional fields. 
+In practice: you pass a ?consumer={name} query parameter in the request, and the response includes a nested consumer-specific object with additional fields.
 
 For example:
 The RIO consumer adds fields like educationOffererCode and jointPartnerCodes for programmes.
