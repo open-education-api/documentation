@@ -54,7 +54,6 @@ Profiles CAN use a consumer to add additional attributes to a OEAPI object but d
 | Purpose        | Add extra fields for a specific system     | Define which parts of OEAPI must be implemented |
 | Used by        | Receiving systems requesting tailored data | Standards bodies, validators, platform operators |
 
-
 **The `consumer` extends what data is returned**, while **a `profile` defines what endpoints and fields must be present.** They are complementary — a profile like "eduXchange" may require that implementations also support the eduXchange consumer object. [OKE](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) is a very specific example where the OEAPIv5 has been redefined to fit the use case for test management.
 
 ## Filtering responses for a specific consumer
