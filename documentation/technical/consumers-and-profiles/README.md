@@ -16,16 +16,16 @@ specification, this documentation also provides information about which
 requests and responses should be implemented to ensure that specific
 consumers (applications) function correctly.
 
-There is a key difference between a consumer and a profile. Consumers are 
-developed as add-on attributes specifically for one object and one use case. 
-If an attribute has more than one use case the specific attribute could be added 
+There is a key difference between a consumer and a profile. Consumers are
+developed as add-on attributes specifically for one object and one use case.
+If an attribute has more than one use case the specific attribute could be added
 to the general specification.
 
 ## Consumers — data extension within responses
 
 A consumer is an entity (an application, platform, or system) that consumes the OEAPI. 
 The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
-In practice: you pass a ?consumer=<name> query parameter in the request, and the response includes a nested consumer-specific object with additional fields. 
+In practice: you pass a '?consumer=<name>' query parameter in the request, and the response includes a nested consumer-specific object with additional fields. 
 
 For example:
 The RIO consumer adds fields like educationOffererCode and jointPartnerCodes for programmes.
@@ -43,9 +43,9 @@ A profile is a formal document that defines a subset of OEAPI tailored for a spe
 
 Profiles live outside the API itself — they operate at the specification level and are used for conformance checking and validation. Tools like the eduhub-validator use profiles to test whether an OEAPI endpoint meets the requirements for a particular context (e.g., the RIO profile or the eduXchange profile).
 
-Profiles CAN use a consumer to add additional attributes to a OEAPI object but do not have to. 
+Profiles CAN use a consumer to add additional attributes to a OEAPI object but do not have to.
 
-## Comparisson between a profile and a consumer:
+## Comparisson between a profile and a consumer
 
 |                | Consumer                                   | Profile|
 |:-----------    | :------------                              | :---------- |
