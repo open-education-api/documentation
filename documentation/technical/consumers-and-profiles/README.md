@@ -22,8 +22,9 @@ If an attribute has more than one use case the specific attribute could be added
 to the general specification.
 
 ## Consumers — data extension within responses
+
 A consumer is an entity (an application, platform, or system) that consumes the OEAPI. 
-The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base spec defines.
+The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
 In practice: you pass a ?consumer=<name> query parameter in the request, and the response includes a nested consumer-specific object with additional fields. 
 
 For example:
@@ -33,7 +34,9 @@ The eduXchange consumer adds fields like themes for courses and programmes, and 
 Consumers operate inside the API response — they enrich data for a specific receiving system.
 
 ## Profiles — conformance rules above the API
+
 A profile is a formal document that defines a subset of OEAPI tailored for a specific use case or ecosystem. It specifies:
+
 * Which endpoints are required to be implemented
 * Which fields must be populated
 * What validation rules apply
@@ -52,8 +55,7 @@ Profiles CAN use a consumer to add additional attributes to a OEAPI object but d
 | Used by        | Receiving systems requesting tailored data | Standards bodies, validators, platform operators |
 
 
-**the `consumer` extends what data is returned**, while **a `profile` defines what endpoints and fields must be present.** They are complementary — a profile like "eduXchange" may require that implementations also support the eduXchange consumer object. [OKE](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) is a very specific example where the OEAPIv5 has been redefined to fit the use case for test management.
-
+**The `consumer` extends what data is returned**, while **a `profile` defines what endpoints and fields must be present.** They are complementary — a profile like "eduXchange" may require that implementations also support the eduXchange consumer object. [OKE](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) is a very specific example where the OEAPIv5 has been redefined to fit the use case for test management.
 
 ## Filtering responses for a specific consumer
 

@@ -39,19 +39,23 @@ institutions and borders. More information about EduXchange and OEAPI can be fou
 [EduXchange implementation documentation](https://wiki.surfnet.nl/display/EDX/Step+1.+Implementing+an+OOAPI+endpoint).
 
 ## Profiles
+
 A profile is a formal document that defines a subset of OEAPI tailored for a specific use case or ecosystem. It specifies:
+
 * Which endpoints are required to be implemented
 * Which fields must be populated
 * What validation rules apply
 
 Examples of profiles include:
+
 * [OKE](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/)
 * eduXchange.eu
 
 ## Consumers
-A consumer is an entity (an application, platform, or system) that consumes the OEAPI. 
-The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base spec defines.
-In practice: you pass a ?consumer=<name> query parameter in the request, and the response includes a nested consumer-specific object with additional fields. 
+
+A consumer is an entity (an application, platform, or system) that consumes the OEAPI.
+The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
+In practice: you pass a `?consumer=<name>` query parameter in the request, and the response includes a nested consumer-specific object with additional fields.
 
 More information on consumers and profiles and a comparisson between the two is available in the [technical documentation](/technical/consumers-and-profiles/)
 
