@@ -102,14 +102,14 @@ MBO, HBO and WO).
 
 Work has been undertaken to map OEAPI v5 to the RIO data model. This
 mapping has resulted in additional objects and consumer elements.
-Further information on [RIO](../technical/consumers-and-profiles/rio.md).
+Further information on [RIO](/technical/consumers-and-profiles/rio.md).
 
 ## OEAPI (data) ownership
 
 The OEAPI Specification is a set of definitions that enable institutions
 to make their internal data accessible. The specification is
 maintained by the working group. Changes to the specification can be made
-according to the [governance by-laws](../governance/).
+according to the [governance by-laws](/governance/).
 
 Institutions that wish to provide access to their internal data through
 the OEAPI specification do so under their own responsibility. The OEAPI
