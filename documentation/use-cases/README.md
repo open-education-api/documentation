@@ -57,7 +57,7 @@ A consumer is an entity (an application, platform, or system) that consumes the 
 The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
 In practice: you pass a `?consumer={name}` query parameter in the request, and the response includes a nested consumer-specific object with additional fields.
 
-More information on consumers and profiles and a comparisson between the two is available in the [technical documentation](technical/consumers-and-profiles/)
+More information on consumers and profiles and a comparison between the two is available in the [technical documentation](technical/consumers-and-profiles/)
 
 ## References
 

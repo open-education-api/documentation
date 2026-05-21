@@ -43,9 +43,9 @@ A profile is a formal document that defines a subset of OEAPI tailored for a spe
 
 Profiles live outside the API itself — they operate at the specification level and are used for conformance checking and validation. Tools like the eduhub-validator use profiles to test whether an OEAPI endpoint meets the requirements for a particular context (e.g., the RIO profile or the eduXchange profile).
 
-Profiles CAN use a consumer to add additional attributes to a OEAPI object but do not have to.
+Profiles CAN use a consumer to add additional attributes to an OEAPI object but do not have to.
 
-## Comparisson between a profile and a consumer
+## Comparison between a profile and a consumer
 
 |                | Consumer                                   | Profile|
 |:-----------    | :------------                              | :---------- |
