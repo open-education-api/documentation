@@ -16,6 +16,46 @@ specification, this documentation also provides information about which
 requests and responses should be implemented to ensure that specific
 consumers (applications) function correctly.
 
+There is a key difference between a consumer and a profile. Consumers are
+developed as add-on attributes specifically for one object and one use case.
+If an attribute has more than one use case the specific attribute could be added
+to the general specification.
+
+## Consumers — data extension within responses
+
+A consumer is an entity (an application, platform, or system) that consumes the OEAPI.
+The specification lets any consumer attach extra attributes to standard OEAPI objects, beyond what the base specification defines.
+In practice: you pass a `?consumer={name}` query parameter in the request, and the response includes a nested consumer-specific object with additional fields.
+
+For example:
+The RIO consumer adds fields like educationOffererCode and jointPartnerCodes for programmes.
+The eduXchange consumer adds fields like themes for courses and programmes, and current enrolment details for persons.
+
+Consumers operate inside the API response — they enrich data for a specific receiving system.
+
+## Profiles — conformance rules above the API
+
+A profile is a formal document that defines a subset of OEAPI tailored for a specific use case or ecosystem. It specifies:
+
+* Which endpoints are required to be implemented
+* Which fields must be populated
+* What validation rules apply
+
+Profiles live outside the API itself — they operate at the specification level and are used for conformance checking and validation. Tools like the eduhub-validator use profiles to test whether an OEAPI endpoint meets the requirements for a particular context (e.g., the RIO profile or the eduXchange profile).
+
+Profiles CAN use a consumer to add additional attributes to an OEAPI object but do not have to.
+
+## Comparison between a profile and a consumer
+
+|                | Consumer                                   | Profile|
+|:-----------    | :------------                              | :---------- |
+| What it is     | An extension mechanism in API responses    | A conformance definition for a use case         |
+| Where it lives | Inside the response payload                | External specification/validation document      |
+| Purpose        | Add extra fields for a specific system     | Define which parts of OEAPI must be implemented |
+| Used by        | Receiving systems requesting tailored data | Standards bodies, validators, platform operators |
+
+**The `consumer` extends what data is returned**, while **a `profile` defines what endpoints and fields must be present.** They are complementary — a profile like "eduXchange" may require that implementations also support the eduXchange consumer object. [OKE](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) is a very specific example where the OEAPIv5 has been redefined to fit the use case for test management.
+
 ## Filtering responses for a specific consumer
 
 The `consumer` query parameter mechanism allows clients to request items
