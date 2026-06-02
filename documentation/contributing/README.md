@@ -96,11 +96,11 @@ third version segment. Stable versions are tagged as `v<major>.<minor>`
 
 Before a stable release is published, one or more release candidates may be
 created. Release candidates are tagged as
-`v<major>.<minor>-rc<releaseCandidate>` (for example `v6.1-rc1`).
+`v<major>.<minor>-rc.<releaseCandidate>` (for example `v6.1-rc.1`).
 
 A stable version tag (`v<major>.<minor>`) is only created once development of
 the **next minor or major version** has started through a new release
-candidate (for example `v6.1-rc1` causing `v6.0` to become stable).
+candidate (for example `v6.1-rc.1` causing `v6.0` to become stable).
 
 Patch releases are only created under **special circumstances**, such as:
 
@@ -146,9 +146,9 @@ directory structures.
 
 Examples:
 
-- `v6.0-rc1`
+- `v6.0-rc.1`
 - `v6.0`
-- `v6.1-rc1`
+- `v6.1-rc.1`
 - `v6.1`
 
 A tag always points to an immutable commit and represents the authoritative state
@@ -174,7 +174,7 @@ The general workflow is as follows:
      justify a patch release:
      - start on the **lowest maintained release branch**
      - optionally create one or more release candidate tags in the same
-      version line (e.g. `v6.0-rc2`)
+      version line (e.g. `v6.0-rc.2`)
    - publish the stable release tag when the next version line starts
      - forward-merge into newer maintained branches if applicable
      - finally forward-merge into `main`
