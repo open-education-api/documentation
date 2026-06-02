@@ -77,7 +77,7 @@ development version.
 Publication to the website follows automatically.
 
 - the development version is published to `specification/unreleased`
-- once a version tag such as `vX.Y-rcZ` or `vX.Y` is created, it is
+- once a version tag such as `vX.Y-rc.Z` or `vX.Y` is created, it is
   published to `specification/vX.Y`
 
 The published version represents the official state of that release.
@@ -89,7 +89,7 @@ number is assigned in accordance with the versioning policy.
 
 Examples:
 
-- a release candidate is published as `vX.Y-rcZ`
+- a release candidate is published as `vX.Y-rc.Z`
 - a stable version is published as `vX.Y`
 
 A minor or major release introduces new functionality or structural
