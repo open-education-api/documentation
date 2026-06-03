@@ -72,6 +72,7 @@ For RIO [this mechanism](/technical/historical-and-future-data) can be leveraged
 ![Example of timelineOverrides for mapping a Programme of programmeType specification to an OpleidingsEenheid and its Perioden.](../../_media/rio-oeapi-v6-timeline-overrides.png "Example of timelineOverrides for mapping a Programme of programmeType specification to an OpleidingsEenheid and its Perioden.")
 
 ### Example
+
 The above diagram shows an example of this mechanism when applied to a Programme of programmeType `specification`:
 - On the horizontal axis we've depicted "valid time".
 - A vertical line indicates when the OEAPI request `GET /programmes/{programmeId}?returnTimelineOverrides=true` was made.
@@ -83,6 +84,7 @@ The above diagram shows an example of this mechanism when applied to a Programme
 *Note that this mechanism also works for other Programmes and Courses.*
 
 ### RIO contraints
+
 RIO enforces the following constraints when dealing with Perioden:
 - Perioden should be contiguous, that is, there should be *no gaps* in time.
 - Perioden should not overlap in time.
@@ -109,6 +111,7 @@ RIO enforces the following constraints when dealing with Perioden:
 ![Mapping of OEAPI Programmes of programmeType `specification` to RIO Opleidingseenheden](../../_media/rio-oeapi-v6-specification-types.png "Mapping of OEAPI Programmes of programmeType `specification` to RIO Opleidingseenheden")
 
 ### Mapping variant relationships between OEAPI Programmes of programmeType `specification`
+
 Programmes of programmeType specification can be related to another Programme of programmeType specification, which will be translated to RIO as relations between OpleidingsEenheden. Right now the SURFeduhub RIO mapping functionality only supports relations between a Programme of programmeType `specification` with `consumer › specificationType = programme` on the one side, and a Programme of programmeType `specification` with `consumer › specificationType = variant` on the other side. To link the two together, the Programme with `consumer › specificationType = variant` will have to contain an extra attribute in the consumer object `consumer › variantOf` which contains the `programmeId` of the related Programme. The Programme with `consumer › specificationType = specification` will have to contain an extra attribute in the consumer object `consumer › variantIds`, listing all programmeIds that are a variant of that programme.
 ![Mapping of OEAPI Programmes of programmeType `specification` to RIO Opleidingseenheden](../../_media/rio-oeapi-v6-variants.png "Mapping of OEAPI Programmes of programmeType `specification` to RIO Opleidingseenheden")
 
@@ -234,6 +237,7 @@ Programmes of programmeType specification can be related to another Programme of
 <!-- tabs:end -->
 
 > ### RIO field constraints ###
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
@@ -381,6 +385,7 @@ Notes:
 <div id="rio-field-constraints-2" style="height: 0px;overflow:hidden">&nbsp;</div>
 
 > ### RIO field constraints ###
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
@@ -428,6 +433,7 @@ Notes:
 <div id="rio-field-constraints-3" style="height: 0px;overflow:hidden">&nbsp;</div>
 
 > ### RIO field constraints ###
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
@@ -541,6 +547,7 @@ The following OEAPI modesOfDelivery values cannot be mapped to any value in RIO:
 - coil
 
 ### consumer RIO modesOfDelivery › opleidingsvorm
+
 | consumer RIO modesOfDelivery | opleidingsvorm       |
 | ---------------------------- | -------------------- |
 | online                       | ONLINE               |
@@ -656,6 +663,7 @@ See also [this overview of language tags](https://www.loc.gov/standards/iso639-2
 | total_costs   | TOTALE_VERPLICHTE_KOSTEN   |
 
 ### privateCategory › categorie
+
 | category                                 | categorie                      |
 | ---------------------------------------- | ------------------------------ |
 | business_and_project_support             | BEDRIJFS_PROJECTONDERSTEUNING  |
