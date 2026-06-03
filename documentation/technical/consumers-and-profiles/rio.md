@@ -235,6 +235,7 @@ Programmes of programmeType specification can be related to another Programme of
 <!-- tabs:end -->
 
 > ### RIO field constraints
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
@@ -379,6 +380,7 @@ Notes:
 <div id="rio-field-constraints-2" style="height: 0px;overflow:hidden">&nbsp;</div>
 
 > ### RIO field constraints
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
@@ -419,18 +421,16 @@ Notes:
 | link                                       | » website [0..1]                                |                                       | De locatie op het World Wide Web waar documenten en andere objecten kunnen worden gevonden                                                                            |                                                                                                                                                                                                                                                                                                                                     |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <div id="rio-field-constraints-3" style="height: 0px;overflow:hidden">&nbsp;</div>
 
-> ### RIO field constraints ###
+> ### RIO field constraints
 > 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
 > [4] 3 cijfers, de hoofdletter A en drie cijfers.
-
 
 </div>
 
@@ -463,18 +463,16 @@ Notes:
 | flexibleEntryPeriodEndDateTime             | » (flexibel) eindeInstroomperiode [0..1] |                                                                             | De laatste dag dat een student kan beginnen in een cohort van een aangeboden opleiding met een flexibele instroom.                                                    | Studenten kunnen niet later dan deze datum aan dit cohort van deze aangeboden opleiding beginnen.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 > OEAPI fields marked with `[*]` are required fields in the OEAPI specification.
-
 > RIO fields marked with `[1]` or `[1..n]` are required by RIO.
 
 <div id="rio-field-constraints-4" style="height: 0px;overflow:hidden">&nbsp;</div>
 
-> ### RIO field constraints ###
+> ### RIO field constraints
+> 
 > [1] Niet toegestaan zijn: line feeds, carriage return, tabs, spaties voorafgaande en achter de tekst spaties en dubbele spaties in de tekst. \
 > [2] Toegestane tekens zijn letters, cijfers, punt, underscore, min, slash en spatie. \
 > [3] ISCED Detailed fields will be mapped to Broad fields according to Appendix I of the [ISCED-F 2013 Manual](http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf) \
 > [4] 3 cijfers, de hoofdletter A en drie cijfers.
-
-
 
 </div>
 
@@ -519,7 +517,6 @@ The following OEAPI level values cannot be mapped to any value in RIO:
 ### modesOfDelivery › opleidingsvorm
 
 **Note: It is recommended to always override the modesOfDelivery through the value of the RIO consumer: consumer › modesOfDelivery for clarity purposes, since both from OEAPI to RIO and from RIO to OEAPI there are values that can either can not be mapped outside of the consumer or can not be mapped at all.**
-
 
 | modesOfDelivery | opleidingsvorm       | remarks                                                               |
 | --------------- | -------------------- | --------------------------------------------------------------------- |
