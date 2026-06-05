@@ -80,7 +80,7 @@ This document is intended for both the technical implementers who build and main
 
 ### 1.2 Definitions
 
-**Base specification** — The OEAPI specification (currently at version 6.0, https://oeapi.eu/v6.0/) that a profile is derived from.
+**Base specification** — The OEAPI specification (currently at [version 6.0] (https://oeapi.eu/v6.0/)) that a profile is derived from.
 
 **Profile** — A precisely defined adaptation of the base specification intended to meet the needs of a specific community. A profile may restrict the base specification, extend it using permitted mechanisms, or both. A profile must clearly state which version of the base specification it derives from.
 
@@ -102,11 +102,11 @@ This document is intended for both the technical implementers who build and main
 
 | Reference | Description |
 |---|---|
-| [OEAPI v6] | Open Education API v6.0 — https://oeapi.eu/v6.0/ |
-| [NED-OOAPI] | OKE MBO exam administration profile — https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/ |
-| [eduxchange] | eduxchange cross-institutional enrolment profile — https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange |
-| [eduxchange-tech] | eduxchange technical documentation — https://tech-docs.eduxchange.eu/ |
-| [OEAPI-DP] | OEAPI Design Principles (companion document) — [OEAPI-Design-Principles.md](../design-principles.md) |
+| [OEAPI v6](https://oeapi.eu/v6.0/) | Open Education API v6.0 |
+| [NED-OOAPI](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) | OKE MBO exam administration profile |
+| [eduxchange](https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange) | eduxchange cross-institutional enrolment profile |
+| [eduxchange-tech](https://tech-docs.eduxchange.eu/) | eduxchange technical documentation |
+| [OEAPI-DP](../design-principles.md) | OEAPI Design Principles (companion document) |
 
 ---
 
@@ -239,7 +239,7 @@ Profiles must have an information point that provides additional information on 
 
 Every published profile version should have a stable, permanent URI so that implementations can reference a specific version precisely. For example:
 
-```
+```text
 https://profiles.oeapi.example/myprofile/v1.2/
 ```
 
@@ -251,7 +251,7 @@ The profile document should also state the **lifecycle status** of each version:
 
 The process of developing an OEAPI profile follows these phases, which may be revisited iteratively:
 
-```
+```text
 Community → Requirements → Analysis → Decision → Development → Publication → Maintenance
 ```
 
@@ -376,9 +376,9 @@ A field may be required when another field has a particular value. This is a non
 Where the base specification references an open or extensible vocabulary, the profile may specify a closed, community-specific vocabulary.
 
 **Clarifying the meaning of a field**  
-The profile may provide additional narrative explaining how a field is to be interpreted within the community context. This does not change the structure but reduces ambiguity. 
+The profile may provide additional narrative explaining how a field is to be interpreted within the community context. This does not change the structure but reduces ambiguity.
 
-*Note it is important that the meaning does NOT change based on the clarification otherwise the profile WILL become incompatible*
+*Note: It is important that the meaning does NOT change based on the clarification otherwise the profile WILL become incompatible.*
 
 ### 6.4 Extensive modifications
 
@@ -476,6 +476,7 @@ Good documentation is what makes a profile usable. This section defines the mini
 Every profile must include:
 
 **Identity**
+
 - Name of the profile
 - Version number
 - Date of publication
@@ -484,12 +485,14 @@ Every profile must include:
 - Which version(s) of the OEAPI base specification this profile is derived from
 
 **Governance**
+
 - Name and contact details of the profile owner
 - List of participating organisations
 - Decision-making and change proposal process
 - IPR and license statement
 
 **Scope**
+
 - The use case(s) the profile addresses
 - The community it is designed for
 - Systems and roles involved
@@ -567,6 +570,7 @@ Each conformance requirement should be testable — either automatically (via an
 
 **Conformance testing approach**  
 The profile should describe:
+
 - which tool(s) can be used to validate API responses against the profile schema,
 - any additional tests for conditional requirements, flow behaviour, or security,
 - whether a formal certification process exists.
@@ -641,6 +645,7 @@ Each registry entry for a **consumer** should include:
 **Proposed registry location:** `[to be determined — suggested: a GitHub repository under the OEAPI organisation, rendered via GitHub Pages]`
 
 Until a formal registry exists, profiles and consumers should at minimum be:
+
 - published in a public repository with a stable URL,
 - announced to the OEAPI community mailing list or forum,
 - linked from the OEAPI specification website.
@@ -655,15 +660,15 @@ The following profiles can be used as reference implementations of these guideli
 
 **Purpose:** Cross-institutional course enrolment between higher education institutions in university alliances.  
 **Approach:** Defines a consumer (`eduxchange`) with additional fields on `person` and `association` objects. Specifies required endpoints and their mandatory fields. Defines the full enrolment interaction flow.  
-**Repository:** https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange  
-**Technical docs:** https://tech-docs.eduxchange.eu/  
+**Repository:** [documentation repository](https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange)
+**Technical docs:** [technical documentation](https://tech-docs.eduxchange.eu/)
 **What to learn from this profile:** How to define a consumer, how to document minimal required fields per endpoint, how to describe a multi-step interaction flow.
 
 ### OKE MBO exam administration profile (NED-OOAPI)
 
 **Purpose:** Standardised exchange of exam planning, participant registration, session data, and results between student information systems, planning tools, and exam delivery systems in Dutch MBO (vocational education).  
 **Approach:** Defines a profile of OOAPI v5 with a shortened YAML, per-object field tables, multiple interaction flows, and detailed per-flow documentation. The profile was developed iteratively through a series of pilots.  
-**Repository:** https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/  
+**Repository:** [full profile repository](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/)
 **Specification document:** `OKE MBO-toetsafname specs v1.0 (definitief)`, September 2024  
 **What to learn from this profile:** How to structure a detailed profile document, how to document data model changes per object, how to define and document multiple interaction flows, how to manage a multi-stakeholder development process through pilots.
 
