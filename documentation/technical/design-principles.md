@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # OEAPI Design Principles
 
 **Version:** 0.1 (Draft)  
@@ -84,6 +85,7 @@ The following `codeType` values are predefined in v6.0:
 | `username` | User login name |
 | `uuid` | Universally unique identifier |
 | `x-*` | Custom values (must use `x-` prefix) |
+
 *(Full list available in the OEAPI v6 technical documentation.)*
 
 > **Profile implication.** Profiles must not invent their own identifier fields. All identifiers — including those added through consumers — must follow the `primaryCode` / `otherCodes` pattern or use the resource UUID.
