@@ -211,4 +211,4 @@ Typical access control levels to consider:
 
 ---
 
-*This document is maintained alongside the [OEAPI Profiling Guidelines](./OEAPI-Profiling-Guidelines.md). Feedback and contributions are welcome via the project repository.*
+*This document is maintained alongside the [OEAPI Profiling Guidelines](./consumers-and-profiles/profiling-guidelines.md). Feedback and contributions are welcome via the project repository.*
