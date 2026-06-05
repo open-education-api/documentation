@@ -303,6 +303,10 @@ This example reflects:
           "activities": "lectures and practises",
           "microcredential": "standalone",
           "targetGroup": "forProfessionals"
+        },
+        {
+          "name": "kom",
+          "instructorNames": ["Jane Doe"]
         }
       ]
     }
@@ -351,6 +355,12 @@ When a waitlist is used for enrolment, these attributes communicate this in the 
           "enrollStartTime": "13:00",
           "enrollEndTime": "20:00",
           "dateComment": "This time is in ECT and the course takes place on Monday morning."
+        },
+        {
+          "name": "kom",
+          "enrollStartTime": "09:00",
+          "enrollEndTime": "17:00",
+          "dateComment": "The minor takes place on Tuesday and Thursday afternoons."
         }
       ]
     }
@@ -468,6 +478,17 @@ To be compatible with the registering process of the `broker` after the 'registe
 An alliance is a partnership between two or more institutions that agreed to exchange student information using eduXchange. To refer to partners in an alliance, a list of partner codes is specified.
 
 Some attributes in OEAPI can have multiple values. It is recommended that all participants within an alliance agree on the use of these values. This results in an unambiguous list on the frontend for students.
+
+### Alliance Keys
+
+The following keys are used as the `name` value in the alliance object and as the `alliances.name` query parameter:
+
+| Alliance     | Key       | Instance      |
+| ------------ | --------- | ------------- |
+| EWUU         | `ewuu`    | eduxchange.nl |
+| LDE          | `lde`     | eduxchange.nl |
+| Kies op Maat | `kom`     | eduxchange.nl |
+| EuroTeQ      | `euroteq` | eduxchange.eu |
 
 ### EWUU Alliance
 
