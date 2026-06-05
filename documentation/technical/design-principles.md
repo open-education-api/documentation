@@ -84,7 +84,6 @@ The following `codeType` values are predefined in v6.0:
 | `username` | User login name |
 | `uuid` | Universally unique identifier |
 | `x-*` | Custom values (must use `x-` prefix) |
-
 *(Full list available in the OEAPI v6 technical documentation.)*
 
 > **Profile implication.** Profiles must not invent their own identifier fields. All identifiers — including those added through consumers — must follow the `primaryCode` / `otherCodes` pattern or use the resource UUID.
@@ -205,7 +204,6 @@ Typical access control levels to consider:
 ## 10. Language
 
 **British English for documentation and enumerations.** Following EU policy norms and the practice of European higher education institutions, the OEAPI uses British English in its documentation, descriptions, and enumeration values (ADR 0001, accepted August 2025).
-
 
 > **Profile implication.** Profiles should follow British English for all new documentation, field descriptions, and enumeration values they introduce, consistent with the base specification's language policy.
 

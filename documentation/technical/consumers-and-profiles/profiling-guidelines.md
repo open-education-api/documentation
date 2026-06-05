@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # OEAPI Profiling Guidelines
 
 **Version:** 0.1 (Draft)  
@@ -42,7 +43,7 @@
 7. [Extending the specification](#7-extending-the-specification)  
    7.1 [Using consumers](#71-using-consumers)  
    7.2 [Using the ext attribute](#72-using-the-ext-attribute)  
-   7.3 [Adding new objects or endpoints](#73-adding-new-objects-or-endpoints)
+   7.3 [Adding new objects or endpoints](#73-adding-new-objects-and-endpoints)
 
 8. [Documenting a profile](#8-documenting-a-profile)  
    8.1 [Required documentation elements](#81-required-documentation-elements)  
@@ -80,7 +81,7 @@ This document is intended for both the technical implementers who build and main
 
 ### 1.2 Definitions
 
-**Base specification** — The OEAPI specification (currently at [version 6.0] (https://oeapi.eu/v6.0/)) that a profile is derived from.
+**Base specification** — The OEAPI specification (currently at [version 6.0](https://oeapi.eu/v6.0/)) that a profile is derived from.
 
 **Profile** — A precisely defined adaptation of the base specification intended to meet the needs of a specific community. A profile may restrict the base specification, extend it using permitted mechanisms, or both. A profile must clearly state which version of the base specification it derives from.
 
