@@ -40,7 +40,7 @@ These matches are:
   and
   [HOVI v2 and OEAPI v5 field level](../_media/Vergelijking_HOVI_API_v2_OOAPIv50_veldniveau.xlsx?raw=true)
 * A comparison between
-  [RIO and HO is part of the current consumer information](../technical/consumers-and-profiles/rio.md)
+  [RIO and HO is part of the current consumer information](/technical/consumers-and-profiles/rio.md)
 
 ## Link with policies and other standards
 

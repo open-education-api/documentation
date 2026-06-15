@@ -32,7 +32,7 @@ response.
 Clients can filter items meant for a specific consumer using the query
 parameter `consumer`, e.g. `consumer=rio`.
 
-See [Specific consumers](../technical/consumers-and-profiles/)
+See [Specific consumers](/technical/consumers-and-profiles/)
 for more information.
 
 ## Filtering on other entity-specific attributes

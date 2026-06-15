@@ -4,7 +4,7 @@ The standard evolves continuously based on (among others) community feedback sub
 
 To ensure stability and usability, we avoid introducing breaking changes with every release. Instead, backwards compatibility is guaranteed within each major version.
 
-Please note that consumer versioning is described in the [consumers and profiles](../technical/consumers-and-profiles/README.md).
+Please note that consumer versioning is described in the [consumers and profiles](/technical/consumers-and-profiles/README.md).
 
 ## Version Structure
 
