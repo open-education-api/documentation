@@ -24,12 +24,12 @@ A new major version is created when the specification contains breaking changes.
 
 A change is considered breaking when an existing implementation may no longer work without modification. Examples include:
 
-- Removing an endpoint, object, attribute, or enum value.
-- Renaming an endpoint, object, attribute, or enum value.
-- Changing the meaning of an existing attribute.
-- Changing the type or structure of an existing attribute.
-- Adding a new mandatory attribute to an existing request or response.
-- Changing validation rules in a way that rejects previously valid data.
+- Removing an endpoint, object, attribute, or enum value
+- Renaming an endpoint, object, attribute, or enum value
+- Changing the meaning of an existing attribute
+- Changing the type or structure of an existing attribute
+- Adding a new mandatory attribute to an existing request or response
+- Changing validation rules in a way that rejects previously valid data
 
 ### Minor versions
 
@@ -37,11 +37,11 @@ A new minor version is created for non-breaking changes.
 
 A change is considered non-breaking when existing implementations that support the previous minor version can continue to operate without modification. Examples include:
 
-- Adding optional attributes.
-- Adding optional enum values.
-- Adding new endpoints.
-- Extending descriptions, examples, or documentation.
-- Clarifying existing behaviour without changing its meaning.
+- Adding optional attributes
+- Adding optional enum values
+- Adding new endpoints
+- Extending descriptions, examples, or documentation
+- Clarifying existing behaviour without changing its meaning
 
 Minor versions are therefore backwards and forwards compatible within the same major version.
 
@@ -65,20 +65,20 @@ A new major version is created when the consumer definition contains breaking ch
 
 A change is considered breaking when an existing implementation of the consumer may no longer work without modification. Examples include:
 
-- Removing a consumer attribute.
-- Renaming a consumer attribute.
-- Changing the meaning of a consumer attribute.
-- Changing the type or structure of a consumer attribute.
-- Adding a new mandatory consumer attribute.
+- Removing a consumer attribute
+- Renaming a consumer attribute
+- Changing the meaning of a consumer attribute
+- Changing the type or structure of a consumer attribute
+- Adding a new mandatory consumer attribute
 
 A new minor version is created for non-breaking changes.
 
 A change is considered non-breaking when existing implementations can continue to operate without modification. Examples include:
 
-- Adding optional consumer attributes.
-- Adding optional enum values.
-- Extending descriptions, examples, or documentation.
-- Clarifying existing behaviour without changing its meaning.
+- Adding optional consumer attributes
+- Adding optional enum values
+- Extending descriptions, examples, or documentation
+- Clarifying existing behaviour without changing its meaning
 
 Minor versions are therefore backwards compatible within the same major version.
 
