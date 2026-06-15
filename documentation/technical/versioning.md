@@ -1,6 +1,6 @@
 # Versioning
 
-## Version numbers
+## OEAPI Versioning
 
 OEAPI uses semantic versioning with a major and minor version number:
 
