@@ -18,5 +18,5 @@ exclude_path = [
 exclude = [
   "^https?://([^/]*\\.)?example\\.com",
   "^https?://([^/]*\\.)?example-.*",
-  "^https?://([^/]*\\.)?npuls.nl"
+  "^https?://([^/]*\\.)?mbodigitaal.nl"
 ]
