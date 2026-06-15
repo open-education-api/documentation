@@ -16,13 +16,9 @@ jobs:
       # Checkout the repository.
       - uses: actions/checkout@v6
 
-      - name: Test MORA
-        run: |
-          curl -I -L -v https://mbodigitaal.nl/mora/
-
       # Check documentation links with Lychee.
       - uses: lycheeverse/lychee-action@v2
         if: github.base_ref != 'release/5.0'
         with:
-          args: --verbose --include-fragments --timeout 60 -p ./lychee-preprocess.sh --root-dir documentation documentation
+          args: --include-fragments -p ./lychee-preprocess.sh --root-dir documentation documentation
           
