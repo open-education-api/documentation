@@ -20,5 +20,5 @@ jobs:
       - uses: lycheeverse/lychee-action@v2
         if: github.base_ref != 'release/5.0'
         with:
-          args: --include-fragments -p ./lychee-preprocess.sh --root-dir documentation documentation
+          args: --include-fragments --timeout 60 -p ./lychee-preprocess.sh --root-dir documentation documentation
           
