@@ -4,9 +4,9 @@
 <!-- markdownlint-disable MD051 -->
 # RIO consumer
 
-### Version 6.0
+## Version 6.0
 
-!> This consumer specification and mapping is currently in testing phase and can still be subject to minor changes. If you have any feedback, or would like to participate in testing the RIOmapper with OEAPIv6 please contact us at surfeduhub-beheer@surf.nl
+!> This consumer specification and mapping is currently in testing phase and can still be subject to minor changes. If you have any feedback, or would like to participate in testing the RIOmapper with OEAPIv6 let us know by [sending us an email](surfeduhub-beheer@surf.nl)
 
 RIO stands for [Register Instellingen en Opleidingen](https://www.rio-onderwijs.nl/). It is a Dutch national register provided by [DUO](https://www.duo.nl) in which educational institutions record three things: their educational offerings, how they are organised, and how to get in touch with them. DUO and other accrediting organisations record accreditations and licences in RIO.
 
