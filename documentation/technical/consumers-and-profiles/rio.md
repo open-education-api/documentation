@@ -2,7 +2,11 @@
 <!-- markdownlint-disable MD032 -->
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD051 -->
-# RIO
+# RIO consumer
+
+## Version 6.0
+
+!> This consumer specification and mapping is currently in testing phase and can still be subject to minor changes. If you have any feedback, or would like to participate in testing the RIOmapper with OEAPIv6 let us know by [sending us an email](surfeduhub-beheer@surf.nl)
 
 RIO stands for [Register Instellingen en Opleidingen](https://www.rio-onderwijs.nl/). It is a Dutch national register provided by [DUO](https://www.duo.nl) in which educational institutions record three things: their educational offerings, how they are organised, and how to get in touch with them. DUO and other accrediting organisations record accreditations and licences in RIO.
 
@@ -12,11 +16,11 @@ To make the RIO functionality of SURFeduhub work an OEAPI implementation needs t
 
 An educational institution needs to implement the following calls to be compatible with RIO:
 - `GET /programmes/{programmeId}?returnTimelineOverrides=true`
-- `GET /programmes/{programmeId}/programme-offerings?pageSize=250&consumer=rio`
+- `GET /programmes/{programmeId}/programme-offerings?pageSize=250`
 - `GET /courses/{courseId}?returnTimelineOverrides=true`
-- `GET /courses/{courseId}/course-offerings?pageSize=250&consumer=rio`
+- `GET /courses/{courseId}/course-offerings?pageSize=250`
 
-!> All calls returning collections need to support at least the `consumer` query parameter and should only return entities meant for RIO when this parameter is set to `rio`, e.g. `?consumer=rio`.
+!> All calls need to support the [Accept header containing the consumer version](/technical/versioning) and should only return entities meant for RIO when the consumer in this header is set to `rio`. An example header: `Accept: application/vnd.oeapi+json;version=6.0;consumer=rio;consumer-version=6.0`
 
 !> All calls returning resources should have the "rio consumer object" in the `consumer` attribute. The `consumerKey` of this consumer should be set to `"rio"`.
 
