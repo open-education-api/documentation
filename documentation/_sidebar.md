@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
 * [OEAPI Introduction](home.md)
   * [Benefits](introduction/benefits.md#start)
   * [Scope](introduction/scope.md#start)
