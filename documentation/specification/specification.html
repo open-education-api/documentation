@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=https://oeapi.eu/specification/unreleased">
+  <script>
+    const version = location.pathname.split("/")[1];
+    location.replace(`/specification/${version}`);
+  </script>
 </head>
 <body></body>
 </html>
