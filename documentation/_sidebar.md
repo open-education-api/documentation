@@ -33,7 +33,7 @@
 * [Data model](specification/data-model.md)
   * [Data model](specification/data-model.md#data-model)
   * [Entities](specification/data-model.md#entity-definitions)
-* [The specification](specification/specification.html#start)
+* <li><a href="specification/specification.html">The specification</a></li>
 * [Implementation guidelines](implementation/)
   * [Guidelines](implementation/implementation.md#start)
   * [Timetabling](implementation/timetabling.md#start)
