@@ -90,13 +90,19 @@ Each consumer version defines the minimum OEAPI version it requires.
 |------------------|-----------------------|
 | v2.0             | v6.1                  |
 | v2.1             | v6.1                  |
-| v3.0             | v6.2                  |
+| v3.0             | v6.1                  |
+| v3.1             | v6.4                  |
+| v4.0             | v6.6                  |
 
 In this example:
 
 - Consumer version `v2.1` is a non-breaking update of `v2.0` and therefore continues to require OEAPI `v6.1`.
-- Consumer version `v3.0` introduces breaking changes and requires OEAPI `v6.2`.
+- Consumer version `v3.0` introduces breaking changes and still requires OEAPI `v6.1`.
+- Consumer version `v3.1` is a non-breaking update of `v3.0` but requires al least OEAPI `v6.4`.
+- Consumer version `v3.0` introduces breaking changes and requires OEAPI `v6.6`.
 - A request using consumer version `v3.0` cannot be served by an OEAPI implementation that only supports `v6.1`.
+- A request using consumer version `v3.1` cannot be served by an OEAPI implementation that only supports 
+  `v6.1` through `v6.3`.
 
 ## Header based versioning model
 
