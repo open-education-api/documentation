@@ -4,6 +4,7 @@ In this documentation of the eduXchange consumer object you will find:
 
 - [Versions](#versions)
 - [Required OEAPI Resources](#required-oeapi-resources)
+- [Videos - Consumer Profile Extension](#videos---consumer-profile-extension)
 - [Student Registration Consumer Objects](#student-registration-consumer-objects)
 - [Agreements per Alliance](#agreements-per-alliance)
 
@@ -367,7 +368,52 @@ When a waitlist is used for enrolment, these attributes communicate this in the 
   ]
 }
 ```
+--- 
 
+
+## Videos - Consumer Profile Extension
+
+
+To allow showing embedded video's on course and program pages, an *optional* attribute can be supplied in the Consumer Object for `programs` and `courses`, called `supplementaryInformation`. It is a subset of the `supplementaryInformation` as defined in OOAPI v6, where it is part of the standard definition, whereas in v5, it is part of the  Consumer Object.
+
+**Presently, only `type` of `video` will be supported.**
+
+It is an `Array` consisting of objects containing the following fields, all are required:
+
+| Field | Type   | Description                                                                                                                                                                                                                                                                                                                                                         |
+| ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| role  | string | The fundamental semantic purpose of the supplementary content. The selected `role` describes the intent or function of the item.<br><br>Valid values are:<br> - `promo`<br>                                                                                                                                                                                         |
+| type  | string | The type of the promo. Valid values are:<br>- `text_plain`<br>- `image` <br>- `video`                                                                                                                                                                                                                                                                               |
+| value | array  | An array containing at least one object, to allow unique videos per language. Each of the objects in the array  must define the following attributes:<br>- language (string): identifies the language according to RFC 4647 [https://www.rfc-editor.org/rfc/rfc4647.html](https://www.rfc-editor.org/rfc/rfc4647.html) . <br>- value (string): the URL to the video |
+
+Simplified  example, focusing only on the `supplementaryInformation`, :
+
+```json
+{
+	"consumers": [
+		{
+			"consumerKey": "eduxchange",
+			"alliances": [
+				{
+	              "name": "ewuu",
+	              "supplementaryInformation": [
+		              {
+		              "role": "promo",
+		              "type": "video",
+		              "value": [
+			              {
+				              "language": "en",
+							  "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+			              }
+		              ]
+		              }
+	              ] 
+	            }
+			]
+		}
+	]
+}
+```
 ---
 
 ## Student Registration Consumer Objects
