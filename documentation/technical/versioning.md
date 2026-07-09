@@ -156,7 +156,7 @@ to operate without modification. Examples include:
 
 Minor versions are therefore backwards compatible within the same major version.
 
-#### Consumer compatibility examples
+### Consumer compatibility examples
 
 Each consumer version defines the minimum OEAPI version it requires.
 
