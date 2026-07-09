@@ -17,7 +17,7 @@ OEAPI management is the final decision-making body of the OEAPI, where the educa
 The three Dutch education sectors each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
 
 * MBO (vocational education): Gertjan Flinterman (Deltion College)
-* HBO (higher professional education): Rene Schenk (Avans University of Applied Sciences)
+* HBO (higher professional education): Froukje Meirink (NHL Stenden Hogeschool)
 * WO (university education): Jan-Willem Brock (Leiden University); chair of the OEAPI management
 * Chair of the OEAPI technical working group: Patrick vd Veer (SURF)
 
