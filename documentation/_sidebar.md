@@ -44,6 +44,7 @@
   * [Security](technical/security.md#start)
   * [Versioning](technical/versioning.md)
     * [OEAPI versioning](technical/versioning.md#oeapi-versioning)
+    * [Profile versioning](technical/versioning.md#profile-versioning)
     * [Consumer versioning](technical/versioning.md#consumer-versioning)
     * [Header based versioning model](technical/versioning.md#header-based-versioning-model)
   * [About identifiers](technical/identifiers.md#start)

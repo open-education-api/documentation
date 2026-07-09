@@ -22,7 +22,8 @@ Patch versions are not used.
 
 A new major version is created when the specification contains breaking changes.
 
-A change is considered breaking when an existing implementation may no longer work without modification. Examples include:
+A change is considered breaking when an existing implementation may no longer
+work without modification. Examples include:
 
 - Removing an endpoint, object, attribute, or enum value
 - Renaming an endpoint, object, attribute, or enum value
@@ -35,7 +36,9 @@ A change is considered breaking when an existing implementation may no longer wo
 
 A new minor version is created for non-breaking changes.
 
-A change is considered non-breaking when existing implementations that support the previous minor version can continue to operate without modification. Examples include:
+A change is considered non-breaking when existing implementations that support
+the previous minor version can continue to operate without modification.
+Examples include:
 
 - Adding optional attributes
 - Adding optional enum values
@@ -43,27 +46,97 @@ A change is considered non-breaking when existing implementations that support t
 - Extending descriptions, examples, or documentation
 - Clarifying existing behaviour without changing its meaning
 
-Minor versions are therefore backwards and forwards compatible within the same major version.
+Minor versions are therefore backwards and forwards compatible within the same
+major version.
 
 ### Compatibility
 
-Implementations that support a specific minor version within a major version should also support later minor versions of the same major version, provided they ignore unknown optional fields.
+Implementations that support a specific minor version within a major version
+should also support later minor versions of the same major version, provided
+they ignore unknown optional fields.
 
-For example, an implementation supporting `v6.0` should also be able to process responses from `v6.1`.
+For example, an implementation supporting `v6.0` should also be able to process
+responses from `v6.1`.
 
-Implementations must not assume that future minor versions contain exactly the same set of attributes. Additional optional data may be introduced in any minor version.
+Implementations must not assume that future minor versions contain exactly the
+same set of attributes. Additional optional data may be introduced in any minor
+version.
 
-### Consumer versioning
+## Profile versioning
 
-Consumer definitions use semantic versioning with a major and minor version number:
+Profile definitions use semantic versioning with a major and minor version
+number:
 
 ```text
 vMAJOR.MINOR
 ```
 
-A new major version is created when the consumer definition contains breaking changes.
+A new major version is created when the profile definition contains breaking
+changes.
 
-A change is considered breaking when an existing implementation of the consumer may no longer work without modification. Examples include:
+A change is considered breaking when an existing implementation of the profile
+may no longer work without modification. Examples include:
+
+- Removing a profile attribute
+- Renaming a profile attribute
+- Changing the meaning of a profile attribute
+- Changing the type or structure of a profile attribute
+- Adding a new mandatory profile attribute
+
+A new minor version is created for non-breaking changes.
+
+A change is considered non-breaking when existing implementations can continue
+to operate without modification. Examples include:
+
+- Adding optional profile attributes
+- Adding optional enum values
+- Extending descriptions, examples, or documentation
+- Clarifying existing behaviour without changing its meaning
+
+Minor versions are therefore backwards compatible within the same major
+version.
+
+### Profile compatibility examples
+
+Each profile version defines the minimum OEAPI version it requires.
+
+| Profile version | Minimum OEAPI version |
+|-----------------|-----------------------|
+| v2.0            | v6.1                  |
+| v2.1            | v6.1                  |
+| v3.0            | v6.1                  |
+| v3.1            | v6.4                  |
+| v4.0            | v6.6                  |
+
+In this example:
+
+- Profile version `v2.1` is a non-breaking update of `v2.0` and therefore
+  continues to require OEAPI `v6.1`.
+- Profile version `v3.0` introduces breaking changes and still requires OEAPI
+  `v6.1`.
+- Profile version `v3.1` is a non-breaking update of `v3.0` but requires at
+  least OEAPI `v6.4`.
+- Profile version `v4.0` introduces breaking changes and requires OEAPI
+  `v6.6`.
+- A profile based on version `v3.0` cannot be used with an OEAPI
+  implementation that only supports `v6.1`.
+- A profile based on version `v3.1` cannot be used with an OEAPI
+  implementation that only supports `v6.1` through `v6.3`.
+
+## Consumer versioning
+
+Consumer definitions use semantic versioning with a major and minor version
+number:
+
+```text
+vMAJOR.MINOR
+```
+
+A new major version is created when the consumer definition contains breaking
+changes.
+
+A change is considered breaking when an existing implementation of the consumer
+may no longer work without modification. Examples include:
 
 - Removing a consumer attribute
 - Renaming a consumer attribute
@@ -73,7 +146,8 @@ A change is considered breaking when an existing implementation of the consumer 
 
 A new minor version is created for non-breaking changes.
 
-A change is considered non-breaking when existing implementations can continue to operate without modification. Examples include:
+A change is considered non-breaking when existing implementations can continue
+to operate without modification. Examples include:
 
 - Adding optional consumer attributes
 - Adding optional enum values
@@ -96,13 +170,18 @@ Each consumer version defines the minimum OEAPI version it requires.
 
 In this example:
 
-- Consumer version `v2.1` is a non-breaking update of `v2.0` and therefore continues to require OEAPI `v6.1`.
-- Consumer version `v3.0` introduces breaking changes and still requires OEAPI `v6.1`.
-- Consumer version `v3.1` is a non-breaking update of `v3.0` but requires al least OEAPI `v6.4`.
-- Consumer version `v3.0` introduces breaking changes and requires OEAPI `v6.6`.
-- A request using consumer version `v3.0` cannot be served by an OEAPI implementation that only supports `v6.1`.
-- A request using consumer version `v3.1` cannot be served by an OEAPI implementation that only supports 
-  `v6.1` through `v6.3`.
+- Consumer version `v2.1` is a non-breaking update of `v2.0` and therefore
+  continues to require OEAPI `v6.1`.
+- Consumer version `v3.0` introduces breaking changes and still requires OEAPI
+  `v6.1`.
+- Consumer version `v3.1` is a non-breaking update of `v3.0` but requires at
+  least OEAPI `v6.4`.
+- Consumer version `v4.0` introduces breaking changes and requires OEAPI
+  `v6.6`.
+- A request using consumer version `v3.0` cannot be served by an OEAPI
+  implementation that only supports `v6.1`.
+- A request using consumer version `v3.1` cannot be served by an OEAPI
+  implementation that only supports `v6.1` through `v6.3`.
 
 ## Header based versioning model
 

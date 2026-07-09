@@ -37,9 +37,9 @@ Consumers operate inside the API response — they enrich data for a specific re
 
 A profile is a formal document that defines a subset of OEAPI tailored for a specific use case or ecosystem. It specifies:
 
-* Which endpoints are required to be implemented
-* Which fields must be populated
-* What validation rules apply
+- Which endpoints are required to be implemented
+- Which fields must be populated
+- What validation rules apply
 
 Profiles live outside the API itself — they operate at the specification level and are used for conformance checking and validation. Tools like the eduhub-validator use profiles to test whether an OEAPI endpoint meets the requirements for a particular context (e.g., the RIO profile or the eduXchange profile).
 
@@ -118,50 +118,108 @@ requester, you are responsible for the maintenance of the consumer.
 
 ## Consumer versioning
 
-Consumers that are part of the standard are kept in sync with the versioning
-scheme of OEAPI. This is required to communicate with which OEAPI versions a
-consumer is compatible and can be used. The basic rule is that the major
-version number of the OEAPI standard must always be adopted by the consumer
-specification:
+Consumer definitions use semantic versioning with a major and minor version
+number:
 
-1. A new major version of OEAPI is released. All consumers must be reviewed
-   and, if required, adjusted. This always results in a new consumer version
-   (with or without changes) following the major version number of the OEAPI
-   standard.
+```text
+vMAJOR.MINOR
+```
 
-In addition to this basic rule regarding a major OEAPI release, three other
-situations can occur regarding OEAPI minor releases (1a and 1b) and new
-consumer releases (2):
+A new major version is created when the consumer definition contains breaking
+changes.
 
-1. A new OEAPI minor version is released. Consumers can be:
-   a. Compatible with the new release and require no change.  
-      The consumer version will not change to indicate backwards (and
-      forwards) compatibility.
-   b. Not compatible with the new OEAPI release. Any impact on the consumer
-      must be reviewed and resolved. A new consumer release will take place.  
-      The consumer version number of this new release will change and will
-      use the lowest (or current) minor version of the OEAPI specification to
-      which it is backwards compatible. This could be the current minor
-      version, but also one or multiple earlier minor releases. If this
-      conflicts with an earlier consumer version number, a patch number is
-      introduced or increased.
+A change is considered breaking when an existing implementation of the
+consumer may no longer work without modification. Examples include:
 
-2. A new consumer version is released without a new OEAPI release.  
-   The consumer version number will use the patch version number,
-   introducing or increasing the patch version number following the lowest
-   minor release of OEAPI with which this release is compatible.
+- Removing a consumer attribute
+- Renaming a consumer attribute
+- Changing the meaning of a consumer attribute
+- Changing the type or structure of a consumer attribute
+- Adding a new mandatory consumer attribute
 
-An example of the versioning of consumers based on these rules is shown in
-the following table:
+A new minor version is created for non-breaking changes.
 
-![Consumer versioning overview](../../_media/consumer_versioning_table.png)
+A change is considered non-breaking when existing implementations can continue
+to operate without modification. Examples include:
 
-## Profiles
+- Adding optional consumer attributes
+- Adding optional enum values
+- Extending descriptions, examples, or documentation
+- Clarifying existing behaviour without changing its meaning
 
-In addition to the `consumer` query parameter and the `consumer` object, it
-may be necessary for a specific application or use case to specify which
-requests must be implemented for it to function. Applications may also
-require attributes that are not required in the base specification. To
-specify such requirements, we recognise "profiles". Since there is currently
-no specific format defined to specify such a profile, profiles are described
-using text and lists.
+Minor versions are therefore backwards compatible within the same major
+version.
+
+See also: [Consumer versioning](technical/versioning.md#consumer-versioning)
+
+### Consumer compatibility
+
+Each consumer version defines the minimum OEAPI version it requires.
+
+A new OEAPI release does not automatically require a new consumer version.
+Consumers only need a new version when changes to the consumer definition are
+required.
+
+When a new OEAPI major version is released, existing consumers must be
+reviewed to determine whether a new consumer version is required.
+
+When a new OEAPI minor version is released, an existing consumer version
+remains valid unless changes to the consumer definition are needed. If changes
+are required, a new consumer version is released indicating the minimum OEAPI
+version with which it is compatible.
+
+## Profile versioning
+
+Profile definitions use semantic versioning with a major and minor version
+number:
+
+```text
+vMAJOR.MINOR
+```
+
+A new major version is created when the profile definition contains breaking
+changes.
+
+A change is considered breaking when an existing implementation of the profile
+may no longer work without modification. Examples include:
+
+- Removing a profile attribute
+- Renaming a profile attribute
+- Changing the meaning of a profile attribute
+- Changing the type or structure of a profile attribute
+- Adding a new mandatory profile attribute
+
+A new minor version is created for non-breaking changes.
+
+A change is considered non-breaking when existing implementations can continue
+to operate without modification. Examples include:
+
+- Adding optional profile attributes
+- Adding optional enum values
+- Extending descriptions, examples, or documentation
+- Clarifying existing behaviour without changing its meaning
+
+Minor versions are therefore backwards compatible within the same major
+version.
+
+See also: [Profile versioning](technical/versioning.md#profile-versioning)
+
+### Profile compatibility
+
+Each profile version defines the minimum OEAPI version it requires.
+
+A new OEAPI release does not automatically require a new profile version.
+Profiles only need a new version when changes to the profile definition are
+required.
+
+When a new OEAPI major version is released, existing profiles must be reviewed
+to determine whether a new profile version is required.
+
+When a new OEAPI minor version is released, an existing profile version
+remains valid unless changes to the profile definition are needed. If changes
+are required, a new profile version is released indicating the minimum OEAPI
+version with which it is compatible.
+
+Profiles describe additional functional or implementation requirements on top
+of the base OEAPI specification. They may define required endpoints,
+constraints, or additional optional attributes for a particular use case.
