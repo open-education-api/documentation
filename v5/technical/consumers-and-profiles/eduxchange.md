@@ -157,34 +157,35 @@ To be compatible with eduXchange, an institution needs to implement the followin
 
 #### Offerings
 
-| Attribute                  | Required | Multilingual |
-| -------------------------- | :------: | :----------: |
-| `offeringId`               |    ✓    |              |
-| `primaryCode`              |    ✓    |              |
-| `offeringType`             |    ✓    |              |
-| `name`                     |    ✓    |      ✓      |
-| `description`              |    ✓    |      ✓      |
-| `teachingLanguage`         |    ✓    |              |
-| `resultExpected`           |    ✓    |              |
-| `startDate`                |    ✓    |              |
-| `endDate`                  |    ✓    |              |
-| `consumers`                |    ✓    |              |
-| `abbreviation`             |          |              |
-| `modeOfDelivery`           |          |              |
-| `maxNumberStudents`        |          |              |
-| `enrolledNumberStudents`   |          |              |
-| `pendingNumberStudents`    |          |              |
-| `minNumberStudents`        |          |              |
-| `link`                     |          |              |
-| `otherCodes`               |          |              |
-| `enrollStartDate`          |          |              |
-| `enrollEndDate`            |          |              |
-| `flexibleEntryPeriodStart` |          |              |
-| `flexibleEntryPeriodEnd`   |          |              |
-| `addresses`                |          |              |
+| Attribute                  |     Required      | Multilingual |
+| -------------------------- | :---------------: | :----------: |
+| `offeringId`               |        ✓         |              |
+| `primaryCode`              |        ✓         |              |
+| `offeringType`             |        ✓         |              |
+| `name`                     |        ✓         |      ✓      |
+| `description`              |        ✓         |      ✓      |
+| `teachingLanguage`         |        ✓         |              |
+| `resultExpected`           |        ✓         |              |
+| `resultValueType`          |        ✓         |              |
+| `startDate`                |        ✓         |              |
+| `endDate`                  |        ✓         |              |
+| `consumers`                |        ✓         |              |
+| `abbreviation`             |                   |              |
+| `modeOfDelivery`           |                   |              |
+| `maxNumberStudents`        |                   |              |
+| `enrolledNumberStudents`   |                   |              |
+| `pendingNumberStudents`    |                   |              |
+| `minNumberStudents`        |                   |              |
+| `link`                     |                   |              |
+| `otherCodes`               |                   |              |
+| `enrollStartDate`          |                   |              |
+| `enrollEndDate`            |                   |              |
+| `flexibleEntryPeriodStart` |                   |              |
+| `flexibleEntryPeriodEnd`   |                   |              |
+| `addresses`                |                   |              |
 | `academicSession`          | ✓ (via `expand`) |      ✓      |
-| `priceInformation`         |          |      ✓      |
-| `organization`             |          |              |
+| `priceInformation`         |                   |      ✓      |
+| `organization`             |                   |              |
 
 #### Persons (Coordinators, Orientation Phase)
 
@@ -587,18 +588,25 @@ For KOM, the `priceInformation` attribute on offerings is used to display additi
 
 ```json
 {
-  "priceInformation": [
-    {
-      "costType": "additional costs",
-      "displayAmount": "€150",
-      "ext": {
-        "description": [
-          { "language": "nl-NL", "value": "Materiaalkosten" },
-          { "language": "en-GB", "value": "Material costs" }
-        ]
-      }
-    }
-  ]
+    "priceInformation": [
+        {
+            "costType": "additional costs",
+            "amount": "150.00",
+            "vatAmount": "0.00",
+            "amountWithoutVat": "150.00",
+            "currency": "EUR",
+            "displayAmount": [
+                { "language": "nl-NL", "value": "€150" },
+                { "language": "en-GB", "value": "€150" }
+            ],
+            "ext": {
+                "description": [
+                    { "language": "nl-NL", "value": "Materiaalkosten" },
+                    { "language": "en-GB", "value": "Material costs" }
+                ]
+            }
+        }
+    ],
 }
 ```
 
