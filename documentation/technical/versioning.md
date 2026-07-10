@@ -100,24 +100,26 @@ version.
 
 Each profile version defines the minimum OEAPI version it requires.
 
-| Profile version | Minimum OEAPI version |
-|-----------------|-----------------------|
-| v2.0            | v6.1                  |
-| v2.1            | v6.1                  |
-| v3.0            | v6.1                  |
-| v3.1            | v6.4                  |
-| v4.0            | v6.6                  |
+| Profile version | Minimum OEAPI version(s) |
+|-----------------|--------------------------|
+| v2.0            | v5.0, v6.1               |
+| v2.1            | v6.1                     |
+| v3.0            | v6.1                     |
+| v3.1            | v6.4                     |
+| v4.0            | v6.6, v7.0               |
 
 In this example:
 
+- Profile version `v2.0` works with OEAPI versions `v5.0` and `v6.1` (profiles
+  can be compatible with multiple major OEAPI versions).
 - Profile version `v2.1` is a non-breaking update of `v2.0` and therefore
   continues to require OEAPI `v6.1`.
 - Profile version `v3.0` introduces breaking changes and still requires OEAPI
   `v6.1`.
 - Profile version `v3.1` is a non-breaking update of `v3.0` but requires at
   least OEAPI `v6.4`.
-- Profile version `v4.0` introduces breaking changes and requires OEAPI
-  `v6.6`.
+- Profile version `v4.0` introduces breaking changes and requires minimum OEAPI
+  `v6.6` or 'v7.0'
 - A profile based on version `v3.0` cannot be used with an OEAPI
   implementation that only supports `v6.1`.
 - A profile based on version `v3.1` cannot be used with an OEAPI
@@ -160,16 +162,18 @@ Minor versions are therefore backwards compatible within the same major version.
 
 Each consumer version defines the minimum OEAPI version it requires.
 
-| Consumer version | Minimum OEAPI version |
-|------------------|-----------------------|
-| v2.0             | v6.1                  |
-| v2.1             | v6.1                  |
-| v3.0             | v6.1                  |
-| v3.1             | v6.4                  |
-| v4.0             | v6.6                  |
+| Consumer version | Minimum OEAPI version(s) |
+|------------------|--------------------------|
+| v2.0             | v5.0, v6.1               |
+| v2.1             | v6.1                     |
+| v3.0             | v6.1                     |
+| v3.1             | v6.4                     |
+| v4.0             | v6.6, v7.0               |
 
 In this example:
 
+- Consumer version `v2.0` works with OEAPI versions `v5.0` and `v6.1` (consumers
+  can be compatible with multiple major OEAPI versions).
 - Consumer version `v2.1` is a non-breaking update of `v2.0` and therefore
   continues to require OEAPI `v6.1`.
 - Consumer version `v3.0` introduces breaking changes and still requires OEAPI
@@ -177,7 +181,7 @@ In this example:
 - Consumer version `v3.1` is a non-breaking update of `v3.0` but requires at
   least OEAPI `v6.4`.
 - Consumer version `v4.0` introduces breaking changes and requires OEAPI
-  `v6.6`.
+  `v6.6` and is compatible with `v7.0`.
 - A request using consumer version `v3.0` cannot be served by an OEAPI
   implementation that only supports `v6.1`.
 - A request using consumer version `v3.1` cannot be served by an OEAPI
