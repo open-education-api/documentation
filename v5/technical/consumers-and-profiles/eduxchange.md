@@ -4,6 +4,7 @@ In this documentation of the eduXchange consumer object you will find:
 
 - [Versions](#versions)
 - [Required OEAPI Resources](#required-oeapi-resources)
+- [Videos - Consumer Profile Extension](#videos---consumer-profile-extension)
 - [Student Registration Consumer Objects](#student-registration-consumer-objects)
 - [Agreements per Alliance](#agreements-per-alliance)
 
@@ -304,6 +305,10 @@ This example reflects:
           "activities": "lectures and practises",
           "microcredential": "standalone",
           "targetGroup": "forProfessionals"
+        },
+        {
+          "name": "kom",
+          "instructorNames": ["Jane Doe"]
         }
       ]
     }
@@ -352,13 +357,64 @@ When a waitlist is used for enrolment, these attributes communicate this in the 
           "enrollStartTime": "13:00",
           "enrollEndTime": "20:00",
           "dateComment": "This time is in ECT and the course takes place on Monday morning."
+        },
+        {
+          "name": "kom",
+          "enrollStartTime": "09:00",
+          "enrollEndTime": "17:00",
+          "dateComment": "The minor takes place on Tuesday and Thursday afternoons."
         }
       ]
     }
   ]
 }
 ```
+--- 
 
+
+## Videos - Consumer Profile Extension
+
+
+To allow showing embedded video's on course and program pages, an *optional* attribute can be supplied in the Consumer Object for `programs` and `courses`, called `supplementaryInformation`. It is a subset of the `supplementaryInformation` as defined in OOAPI v6, where it is part of the standard definition, whereas in v5, it is part of the  Consumer Object.
+
+**Presently, only `type` of `video` will be supported.**
+
+It is an `Array` consisting of objects containing the following fields, all are required:
+
+| Field | Type   | Description                                                                                                                                                                                                                                                                                                                                                         |
+| ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| role  | string | The fundamental semantic purpose of the supplementary content. The selected `role` describes the intent or function of the item.<br><br>Valid values are:<br> - `promo`<br>                                                                                                                                                                                         |
+| type  | string | The type of the promo. Valid values are:<br>- `text_plain`<br>- `image` <br>- `video`                                                                                                                                                                                                                                                                               |
+| value | array  | An array containing at least one object, to allow unique videos per language. Each of the objects in the array  must define the following attributes:<br>- language (string): identifies the language according to RFC 4647 [https://www.rfc-editor.org/rfc/rfc4647.html](https://www.rfc-editor.org/rfc/rfc4647.html) . <br>- value (string): the URL to the video |
+
+Simplified  example, focusing only on the `supplementaryInformation`, :
+
+```json
+{
+	"consumers": [
+		{
+			"consumerKey": "eduxchange",
+			"alliances": [
+				{
+	              "name": "ewuu",
+	              "supplementaryInformation": [
+		              {
+		              "role": "promo",
+		              "type": "video",
+		              "value": [
+			              {
+				              "language": "en",
+							  "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+			              }
+		              ]
+		              }
+	              ] 
+	            }
+			]
+		}
+	]
+}
+```
 ---
 
 ## Student Registration Consumer Objects
@@ -469,6 +525,17 @@ To be compatible with the registering process of the `broker` after the 'registe
 An alliance is a partnership between two or more institutions that agreed to exchange student information using eduXchange. To refer to partners in an alliance, a list of partner codes is specified.
 
 Some attributes in OEAPI can have multiple values. It is recommended that all participants within an alliance agree on the use of these values. This results in an unambiguous list on the frontend for students.
+
+### Alliance Keys
+
+The following keys are used as the `name` value in the alliance object and as the `alliances.name` query parameter:
+
+| Alliance     | Key       | Instance      |
+| ------------ | --------- | ------------- |
+| EWUU         | `ewuu`    | eduxchange.nl |
+| LDE          | `lde`     | eduxchange.nl |
+| Kies op Maat | `kom`     | eduxchange.nl |
+| EuroTeQ      | `euroteq` | eduxchange.eu |
 
 ### EWUU Alliance
 
