@@ -120,8 +120,6 @@ In this example:
   least OEAPI `v6.4`.
 - Profile version `v4.0` introduces breaking changes and requires minimum OEAPI
   `v6.6` or 'v7.0'
-- A profile based on version `v3.0` cannot be used with an OEAPI
-  implementation that only supports `v6.1`.
 - A profile based on version `v3.1` cannot be used with an OEAPI
   implementation that only supports `v6.1` through `v6.3`.
 
@@ -182,8 +180,6 @@ In this example:
   least OEAPI `v6.4`.
 - Consumer version `v4.0` introduces breaking changes and requires OEAPI
   `v6.6` and is compatible with `v7.0`.
-- A request using consumer version `v3.0` cannot be served by an OEAPI
-  implementation that only supports `v6.1`.
 - A request using consumer version `v3.1` cannot be served by an OEAPI
   implementation that only supports `v6.1` through `v6.3`.
 
