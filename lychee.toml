@@ -1,5 +1,5 @@
 # Equivalent of: --include-fragments
-include_fragments = true
+include_fragments = "full"
 
 # Equivalent of: -v (choose log level)
 verbose = "error"          # Possible values: "error", "warn", "info", "debug", "trace"
