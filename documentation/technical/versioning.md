@@ -119,7 +119,7 @@ In this example:
 - Profile version `v3.1` is a non-breaking update of `v3.0` but requires at
   least OEAPI `v6.4`.
 - Profile version `v4.0` introduces breaking changes and requires minimum OEAPI
-  `v6.6` or 'v7.0'
+  `v6.6` or `v7.0`
 - A profile based on version `v3.1` cannot be used with an OEAPI
   implementation that only supports `v6.1` through `v6.3`.
 
