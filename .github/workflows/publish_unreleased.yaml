@@ -40,7 +40,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p target/unreleased
-          rsync -a --delete documentation/ target/unreleased/
+          rsync -a --delete --exclude='changelog/' documentation/ target/unreleased/
 
       # Commit and push only when the sync introduced changes.
       - name: Commit and push if there are changes
