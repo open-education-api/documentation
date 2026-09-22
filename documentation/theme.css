@@ -244,13 +244,13 @@ body.page-toc-expanded #page-toc-list {
 /*   Changelog                                               */
 /* ========================================================= */
 
-body[data-page$="/changelog/changelog.md"] .markdown-section > h1:not(:first-child) {
+body[data-page$="changelog/changelog.md"] .markdown-section > h1:not(:first-child) {
   margin-top: 3.5rem;
   padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--theme-color);
 }
 
-body[data-page$="/changelog/changelog.md"] .markdown-section h2 {
+body[data-page$="changelog/changelog.md"] .markdown-section h2 {
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.6rem;
@@ -260,7 +260,7 @@ body[data-page$="/changelog/changelog.md"] .markdown-section h2 {
   line-height: 1.4;
 }
 
-body[data-page$="/changelog/changelog.md"] .markdown-section h3 {
+body[data-page$="changelog/changelog.md"] .markdown-section h3 {
   margin-top: 1rem;
   margin-bottom: 0.4rem;
   font-size: 0.95rem;
@@ -268,7 +268,7 @@ body[data-page$="/changelog/changelog.md"] .markdown-section h3 {
   color: var(--theme-color);
 }
 
-body[data-page$="/changelog/changelog.md"] .markdown-section h3 + ul {
+body[data-page$="changelog/changelog.md"] .markdown-section h3 + ul {
   margin-top: 0.25rem;
   margin-bottom: 1.5rem;
 }
