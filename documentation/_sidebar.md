@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
 * [OEAPI Introduction](home.md)
   * [Benefits](introduction/benefits.md#start)
   * [Scope](introduction/scope.md#start)
@@ -33,7 +34,7 @@
 * [Data model](specification/data-model.md)
   * [Data model](specification/data-model.md#data-model)
   * [Entities](specification/data-model.md#entity-definitions)
-* [The specification](specification/specification.html#start)
+* <li><a href="specification/specification.html">The specification</a></li>
 * [Implementation guidelines](implementation/)
   * [Guidelines](implementation/implementation.md#start)
   * [Timetabling](implementation/timetabling.md#start)
@@ -42,7 +43,11 @@
   * [Major changes since last version](technical/major-changes.md#start)
   * [Changelog](https://markdownpreview.github.io/?https://raw.githubusercontent.com/open-education-api/specification/v6.0/CHANGELOG.md)
   * [Security](technical/security.md#start)
-  * [versioning](technical/versioning.md#start)
+  * [Versioning](technical/versioning.md)
+    * [OEAPI versioning](technical/versioning.md#oeapi-versioning)
+    * [Profile versioning](technical/versioning.md#profile-versioning)
+    * [Consumer versioning](technical/versioning.md#consumer-versioning)
+    * [Header based versioning model](technical/versioning.md#header-based-versioning-model)
   * [About identifiers](technical/identifiers.md#start)
   * [Enumerations](technical/enumerations.md#start)
   * [Formatting text](technical/formatting-text.md#start)

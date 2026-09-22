@@ -22,7 +22,7 @@ institution’s data into a format that RIO can process, ensuring a streamlined
 and consistent data flow between educational institutions and the national
 registry, and making sure the data is always up to date and synchronised.
 More information about the RIO functionality with OEAPI can be found in the
-[RIO functionality documentation](https://wiki.surfnet.nl/display/SURFeduhub/RIO+Functionality).
+[RIO functionality documentation](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/198967389/RIO+Functionality).
 
 ### EduXchange
 
@@ -66,6 +66,6 @@ universities and cross-sectoral. An example of the latter is a tool
 implemented for the acceleration
 [zone flexible education](https://www.versnellingsplan.nl/en/making-education-more-flexible/index.html).
 Another example of such cross-sectoral implementations is the current
-development of the RIO adapter and the SURFeduhub.
+development of the RIO adapter and SURFeduhub.
 
-![OEAPI gateway](../_media/surfeduhub-architectuur-v5_0.png)
+![SURFeduhub](../_media/surfeduhub-architectuur-v5_0.png)
