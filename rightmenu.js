@@ -16,6 +16,13 @@
       document.body.classList.remove('has-page-toc');
       document.body.classList.remove('page-toc-expanded');
 
+      const page = document.body.dataset.page || '';
+
+      // Do not show the right-hand page menu on changelog pages.
+      if (page.endsWith('/changelog/changelog.md')) {
+        return;
+      }
+
       const route = window.location.hash.split('?')[0];
       const headings = document.querySelectorAll('.markdown-section h2, .markdown-section h3');
 
