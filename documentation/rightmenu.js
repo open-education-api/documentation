@@ -19,7 +19,7 @@
       const page = document.body.dataset.page || '';
 
       // Do not show the right-hand page menu on changelog pages.
-      if (page.endsWith('/changelog/changelog.md')) {
+      if (page.endsWith('changelog/changelog.md')) {
         return;
       }
 
