@@ -41,3 +41,5 @@ ignores:
   - "**/.DS*"
   - "**.html"
   - "**/.gitattributes"
+  - "**/*.js"
+  - "**/*.css"
