@@ -41,7 +41,7 @@
 * [Technical information](technical/)
   * [Design principles](technical/design-principles.md)
   * [Major changes since last version](technical/major-changes.md#start)
-  * [Changelog](https://markdownpreview.github.io/?https://raw.githubusercontent.com/open-education-api/specification/v6.0/CHANGELOG.md)
+  * [Changelog](changelog/changelog.md#start)
   * [Security](technical/security.md#start)
   * [Versioning](technical/versioning.md)
     * [OEAPI versioning](technical/versioning.md#oeapi-versioning)
