@@ -1,6 +1,6 @@
-# OEAPI v6: Major Changes in release candidates
+# OEAPI v6: Major Changes
 
-## 6.0-RC.3
+## Changes in release cadidate 6.0-RC.3
 
 1. **Content type standardisation**  
    Updated the content type to `application/vnd.oeapi+json`.
@@ -23,7 +23,7 @@
 7. **Association corrections**  
    Removed incorrect `readOnly` restrictions from `ProgrammeOfferingAssociation`.
 
-## 6.0-RC.2
+## Changes in release cadidate 6.0-RC.2
 
 1. **Schema and validation corrections**  
    Fixed required fields, schemas, examples, date-time formats and OpenAPI 3.1 compatibility issues.
@@ -40,9 +40,7 @@
 5. **Documentation improvements**  
    Improved Zudoku preprocessing, schema sorting and specification documentation.
 
-# OEAPI v6: Major Changes Since v5
-
-## Introduction
+## Major Changes Since v5
 
 OEAPI v6 introduces a significant redesign since v5. This overview uses
 the v5 API specification as the baseline, and uses both the v6 conceptual
