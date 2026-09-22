@@ -39,7 +39,7 @@
   * [Guidelines](implementation/implementation.md#start)
   * [Timetabling](implementation/timetabling.md#start)
 * [Technical information](technical/)
-  * [Design principles](technical/design-principles.md)
+  * [Design principles](technical/design-principles.md#start)
   * [Major changes since last version](technical/major-changes.md#start)
   * [Changelog](https://markdownpreview.github.io/?https://raw.githubusercontent.com/open-education-api/specification/v6.0/CHANGELOG.md)
   * [Security](technical/security.md#start)
