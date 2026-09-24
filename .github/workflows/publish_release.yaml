@@ -61,7 +61,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "target/$SITE_PATH"
-          rsync -a --delete "$SOURCE_FOLDER/" "target/$SITE_PATH/"
+          rsync -a --delete --exclude='changelog/' "$SOURCE_FOLDER/" "target/$SITE_PATH/"
 
       # Commit and push only when the sync introduced changes.
       - name: Commit and push if there are changes
