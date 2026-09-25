@@ -24,7 +24,7 @@
 * [Technical information](technical/)
   * [Data model](technical/data-model.md)
   * [Major changes since v4](technical/major-changes.md)
-  * [Changelog](changelog/changelog.md)
+  * [Changelog](changelog/CHANGELOG.md)
   * [Implementation](technical/implementation.md)
   * [About identifiers](technical/identifiers.md)
   * [Expanding responses](technical/expanding-responses.md)
