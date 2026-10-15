@@ -234,6 +234,7 @@ The consumer object for eduXchange has the following structure:
 | `visibleForGuests`           |          | boolean | Whether enrollment should be visible for students outside partner institutions. *Note: a higher-level institution setting controls program/course visibility.*                                                                   |
 | `enrollmentForGuests`        |          | string  | Enrollment process for guest students. Allowed values: `"broker"`, `"url"`. Only used if `visibleForGuests` is `true`. If `"url"`, the `enrollmentUrlForGuests` in the **offering** consumer object is mandatory.                |
 | `enrollmentForProfessionals` |          | string  | Enrollment process for professionals. Allowed values: `"broker"`, `"url"`. Only used if `targetGroup` is `"forProfessionals"`. If `"url"`, the `enrollmentUrlForProfessionals` in the **offering** consumer object is mandatory. |
+| `registrationTargets` |          | array  | Indicates if enrollment should take place on the minor, underlying courses or the minor AND the underlying courses, e.g., `["minor", "courses"]` Default: enrollment only on the relevant offering |
 | `jointPartnerCodes`          |          | array   | Array of partner codes for joint programs. Uses agreed partner codes, e.g., `["21PF", "21PB"]` for LDE.                                                                                                                          |
 | `source`                     |          | object  | Reference to the source of a Course/Program for joint programs. See `source` object attributes below.                                                                                                                            |
 | `modeOfDelivery`             |          | string  | Used only for the EuroTeQ alliance to override the regular OEAPI modes of delivery                                                                                                                                               |
@@ -281,7 +282,8 @@ This example reflects:
           "theme": "Information and Communication Technologies",
           "selection": false,
           "type": "broadening",
-          "visibleForOwnStudents": false
+          "visibleForOwnStudents": false,
+          "registrationTargets": ["minor", "courses"]
         },
         {
           "name": "lde",
