@@ -1,203 +1,86 @@
-# Contributing Guidelines
+# Governance
 
-## General
+The governance model describes the decision-making process and the role of the various members: [OEAPI Management](#oeapi-management-governance), [Technical Working group](#technical-working-group-governance), [Community](#community-governance), and [Project groups](#project-groups-governance). It also outlines the strategic goals and procedures within the project, and provides an understanding of how the Open Education API is governed.
 
-The following general rules apply for this project:
+The shared goals of the governance model are:
 
-- All contributions, including documentation, file names, and discussions, must be written in British English.
+* **Sustainability**: ensure the sustainability and health of the project and the Community.
+* **Structure**: provide structure to the organisation so that the decision-making process is clear.
+* **Transparency**: provide transparency to the Community about the participation in and decision-making within the project.
+* **Growth**: provide a structure that can develop according to the needs of new adopters and developers, and that can support the Community.
+* **Development**: support effective development and maintenance of the Open Education API.
 
-## Issue tracker
+## OEAPI Management (governance)
 
-Our [issue tracker](https://github.com/open-education-api/specification/issues) is used to discuss problems or additions to the current and next versions of the Open Education API specification.
+OEAPI management is the final decision-making body of the OEAPI, where the education sector is in charge of the further development and future of the OEAPI standard. It ensures alignment with sector-wide objectives, approves major changes to the specification, and validates recommendations from the Working Group and Edustandaard before they are formally adopted.
 
-Before opening an issue, please ensure that:
+The three Dutch education sectors each have their own representation in OEAPI management, alongside the chair of the OEPI technical working group. OEAPI management consists of:
 
-- The issue is not a duplicate of an existing issue..
-- The issue is relevant to the specification.
+* MBO (vocational education): Gertjan Flinterman (Deltion College)
+* HBO (higher professional education): Froukje Meirink (NHL Stenden Hogeschool)
+* WO (university education): Jan-Willem Brock (Leiden University); chair of the OEAPI management
+* Chair of the OEAPI technical working group: Patrick vd Veer (SURF)
 
-## Formatting / naming conventions
+Besides these four Dutch national seats within OEAPI management there are international seats available for (representation of) European public education institutions.
 
-- The specification must comply with the
-  [OpenAPI Specification v3.1](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md)
-- The specification files must be written in
-  [YAML 1.2 format](https://yaml.org/spec/1.2.2/)
-- YAML indentation should use two spaces (not tabs)
-- YAML string keys and values should be unquoted when quotation is not required
-- YAML string keys and values should be single-quoted when quotation is required
-- Duplication should be avoided where possible (e.g. using
-  [`$ref`](https://json-schema.org/draft/2020-12/json-schema-core#section-8.2.3.1)
-  references)
-- Whether property and relation names are written as singular or plural depends
-  on the cardinality of the property or relation.
-- Parameter or property names are written in
-  [lowerCamelCase](https://en.wikipedia.org/wiki/CamelCase), including
-  abbreviations (e.g. `organisationUnitId`).
-- Path names are written in
-  [kebab-case](https://en.wikipedia.org/wiki/Kebab_case), for example
-  `/learning-component-offerings/{learningComponentOfferingId}`.
-- The default order of properties is:
-  - Identifier
-  - Properties
-  - Meta properties (e.g. `createdAt`)
-- Links should have descriptive names (e.g. `ccordinators` instead of `person` for
-  indicating the person that is n charge of coordinating the course).
-- Nesting of properties is allowed.
-- Date and date-time properties are formatted in accordance with
-  [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339.html).
+## Technical Working Group (governance)
 
-## Versioning and Branching Strategy
+The technical working group is the implementing body for the standard. Its technically knowledgeable specialists work on the further development and modification of the OEAPI. The technical working group consists of members from education institutions, suppliers and SURF. A thorough technical background in the OEAPI standard is a prerequisite for participation in the technical working group. The technical working group develops new functionality itself or oversees the development of modifications and extensions.
 
-This chapter describes how versioning and branching are handled for the OEAPI
-specification repository.
+### Who can join the Technical working group
 
-### `main` as the single integration branch
+* Participation is not limited to higher education institutions, and is open to anyone who can represent the interests of the OEAPI. Suppliers can therefore also join the technical working group.
+* The members of the technical working group are appointed from within the institutions, whereby a solid technical background in the OEAPI standard is a prerequisite.
+* The chair of the technical working group has the authority to appoint or reject candidates, provided that the decision is duly substantiated.
+* Prospective members can enlist by sending an email to [info@openonderwijsapi.nl](mailto:info@openonderwijsapi.nl), with a brief motivation.
 
-The repository uses **`main`** as its only long-lived integration branch.
+## Community (governance)
 
-There is **no dedicated release branch for the highest active major version**.
-For example, when version 7.0 is the highest working version, there is **no
-`release/7.0` branch**. Development for the highest version always happens
-directly on `main`.
+The OEAPI community consists of all those interested in the OEAPI who wish to stay informed and/or be involved in its further development. Meetings are organised within the community to discuss developments in OEAPI and to exchange ideas and experiences with other education institutions. The community can also provide input in the form of wishes and requirements with regard to the standard. These wishes and requirements may lead to a new amendment proposal for the OEAPI.
 
-`main` therefore always represents:
+### Who can join the OEAPI community?
 
-- the latest in-development specification, and
-- the next intended major or minor release.
+* Participation is not limited to education institutions, and is open to anyone who can represent the interests of the OEAPI.
+* Interested community members can subscribe through the [OEAPI mailing list](https://list.surf.nl/postorius/lists/openonderwijsapi.list.surf.nl).
 
-**Clarification (to avoid confusion):**
-`main` is **not** the latest stable release. It is the **integration branch for ongoing work**.
-The latest stable release is defined by the **most recent Git tag** (for example
-`v6.0` or `v6.1`), not by a branch.
+## Project groups (governance)
 
-This means it is expected that `main` is both:
+OEAPI Project groups may be set up for the maintenance or further development of specific uses of the OEAPI. These are groups that work on a specific part of the OEAPI under the supervision of the technical working group and, in close cooperation with the technical working group, safeguard the functioning and future of the standard.
 
-- actively being worked on, and
-- the place where the next release is assembled.
+## Edustandaard (governance)
 
----
+[Edustandaard](https://www.edustandaard.nl/) is a platform where public and private parties in the research and educational fields in the Netherlands collaborate to make agreements on important matters. These agreements, for example, include how to use recognised concepts to find digital learning material, or transfer education data from one system to another.
 
-### Release branches for maintained versions only
+The Edustandaard platform ensures knowledge sharing, communication and interaction between services, systems, and organisations, which in turn improves the digital online experience of pupils, students and researchers alike.
 
-Release branches are created **only** for versions that require maintenance after
-a newer version has become active.
+Amongst others, Edustandaard:
 
-A release branch:
+* gives advice on specific standards for the research and educational sectors.
+* manages agreements, architectures, and standards.
+* manages the chain reference architecture [ROSA](https://rosa.wikixl.nl/) for the entire education domain.
+* safeguards the agreed standards.
 
-- is named `release/<major>.<minor>` (for example `release/6.0`);
-- contains the specification source in a single, generic `/source/` directory;
-- is used exclusively for bug fixes and clarifications within that version line.
+Collaboration within Edustandaard takes place within:
 
-Release branches are **not** used for feature development or breaking changes.
+* the **Standardisation council** (a council consisting of directors of educational institutions, public and private organisations),
+* the **Architecture council**, and
+* the **Edustandaard working groups**.
 
-**Patch releases are the exception, not the rule:**
-In principle, the specification does **not** publish patch releases or use a
-third version segment. Stable versions are tagged as `v<major>.<minor>`
-(for example `v6.0` or `v6.1`).
+To achieve their goals the bureau also maintains contact with other (national and international) standards organisations.
 
-Before a stable release is published, one or more release candidates may be
-created. Release candidates are tagged as
-`v<major>.<minor>-rc<releaseCandidate>` (for example `v6.1-rc1`).
+### Edustandaard and the OEAPI
 
-A stable version tag (`v<major>.<minor>`) is only created once development of
-the **next minor or major version** has started through a new release
-candidate (for example `v6.1-rc1` causing `v6.0` to become stable).
+The Open Education API is registered at Edustandaard. For the Open Education API, Edustandaard:
 
-Patch releases are only created under **special circumstances**, such as:
+* gives advice on the standardisation of the OEAPI.
+* ensure that the OEAPI conforms to other standards in the context of ROSA by means of a ROSA scan.
+* inform the Community about updates and changes to the OEAPI.
+* publish all relevant information concerning the OEAPI on the [Edustandaard website](https://www.edustandaard.nl/).
 
-- a serious error in a published tag that must be corrected,
-- an urgent clarification needed to prevent incorrect implementations,
-- a critical backwards-compatible fix required by the community.
+## Version management
 
-In all normal cases, fixes and improvements are delivered through the next planned
-minor or major release on `main`.
+How the Open Education API uses versioning of the specifcation is described in the [Version management](/governance/version-management.md)
 
-**Example scenario:**
-If `main` is currently developing **6.1**, but an issue is found that must be fixed
-in **6.0**, then under exceptional circumstances a patch release may be created:
+## By-laws and code of conduct
 
-- fix goes into `release/6.0`
-- release via tag: `v6.0.1`
-- then forward-merge the fix into:
-  - `main` (and into any newer maintained release branches if applicable)
-
-If there is **no maintained `release/6.0` branch**, then 6.0 is **not maintained**,
-and fixes will only land in the active development line (for example 6.1 on `main`).
-
----
-
-### Feature branches (where new 6.1 work is parked)
-
-New features intended for the upcoming release line (for example **6.1**) are
-developed in **short-lived feature branches** branched off from `main`, such as:
-
-- `feature/add-result-type-x`
-- `feature/extend-mode-of-study`
-- `feature/adr-0012-...`
-
-These feature branches are merged back into `main` via pull requests and removed
-after merging.
-
----
-
-### Tags as the authoritative version markers
-
-Semantic versions are defined **exclusively by Git tags**, not by branches or
-directory structures.
-
-Examples:
-
-- `v6.0-rc1`
-- `v6.0`
-- `v6.1-rc1`
-- `v6.1`
-
-A tag always points to an immutable commit and represents the authoritative state
-of the specification for that version. Documentation and published artefacts are
-always generated from tagged commits.
-
----
-
-### Workflow overview
-
-The general workflow is as follows:
-
-1. **Active development**
-   - Takes place on `main`.
-   - Results in new major or minor versions.
-
-2. **Creating a maintained version**
-   - When a version requires long-term maintenance, a release branch
-     (`release/x.y`) is created from the relevant release tag or commit.
-
-3. **Bug fixes**
-   - If the bug affects a maintained older version and exceptional circumstances
-     justify a patch release:
-     - start on the **lowest maintained release branch**
-     - optionally create one or more release candidate tags in the same
-      version line (e.g. `v6.0-rc2`)
-   - publish the stable release tag when the next version line starts
-     - forward-merge into newer maintained branches if applicable
-     - finally forward-merge into `main`
-   - Otherwise:
-     - fix directly on `main` and include it in the next planned minor or major release
-
-4. **Releases**
-   - Are created by tagging the appropriate commit on `main` or on a
-     `release/x.y` branch.
-   - No release exists without a corresponding tag.
-
----
-
-### Key principles
-
-- `main` is the single source of truth for the highest working version **in development**.
-- There is no “latest release” branch.
-- Release branches exist only when maintenance is required.
-- Release branches are for **patches only** (bug fixes / clarifications), not features.
-- Patch releases are **not issued by default**, only in exceptional circumstances.
-- Feature development happens in short-lived branches merged into `main`.
-- Tags, not branches or folders, define versions.
-- Published documentation is always traceable to an exact tagged commit.
-
-This approach keeps the branching model minimal and ensures fully reproducible
-and auditable releases.
+In addition to this governance document, there are also the [Bylaws](/governance/by-laws.md) and a [Code of conduct](/governance/code-of-conduct.md)

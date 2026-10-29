@@ -14,8 +14,6 @@ Each error code is described with:
 - behavioural rules
 - concrete JSON examples
 
----
-
 ## Error response format
 
 All OEAPI error responses MUST conform to the Problem Details format.
