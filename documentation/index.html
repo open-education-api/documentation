@@ -48,7 +48,10 @@
       repo: 'https://github.com/open-education-api/specification',
       homepage: 'home.md',
       basePath: '',
-      search: 'auto',
+      search: {
+        paths: 'auto',
+        namespace: location.pathname
+      },
       //name: 'Open Education API V6.0',
       externalLinkTarget: '_self',
       loadSidebar: true,
