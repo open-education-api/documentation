@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 # Change, version and release management
 
 The OEAPI specification evolves continuously based on community feedback,

@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD059 -->
 # Open Education API 6.0 for interoperability
 
 For a brief introduction to OEAPI, please take a look at the short

@@ -73,10 +73,10 @@ For handling authorisation, this is usually either business rule-based,
 which would be handled in the data services themselves, or in the API
 manager when rules pertain to:
 
-* device
-* key
-* IP range
-* throttling
+- device
+- key
+- IP range
+- throttling
 
 Of course, the API manager itself could also have additional security
 measures, such as firewalls, whitelisting for specific endpoints or
