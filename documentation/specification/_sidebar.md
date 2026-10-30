@@ -3,8 +3,9 @@
 * [OEAPI specification](specification/README.md#start)
 * <li><a href="specification/specification.html">API reference</a></li>
 * [Major changes](specification/major-changes.md#start)
-* [Changelog](specification/CHANGELOG.md#start)
+* [Changelog](specification/changelog/CHANGELOG.md#start)
 * [Data model](specification/data-model.md#start)
+* [Interfacing](specification/interfacing.md#start)
 * [Conventions](specification/convention/)
   * [Data minimisation](specification/convention/data-minimisation.md#start)
   * [Enumerations](specification/convention/enumerations.md#start)

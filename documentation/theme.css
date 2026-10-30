@@ -355,3 +355,13 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
     grid-template-columns: 1fr !important;
   }
 }
+
+body[data-page="/documentation/home.md"] .sidebar,
+body[data-page="/documentation/home.md"] .sidebar-toggle {
+  display: none !important;
+}
+
+body[data-page="/documentation/home.md"] .content {
+  left: 0 !important;
+  margin-left: 0 !important;
+}
