@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD025 -->
 # IAA (Identification, Authentication and Authorisation)
 
 Although the name Open Education API might suggest that all data
