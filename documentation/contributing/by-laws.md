@@ -29,7 +29,7 @@ The decision-making procedure is as follows: There are two forms of decision-mak
 *  Decisions on the specification description on GitHub
 *  Decisions on the method and the acceptance of proposed major changes within GitHub, for example, a release.
 
-**Decisions within GitHub** For issues within the GitHub environment, the following applies: If an issue is submitted, the master committer has 5 days to prepare for handling the issue. The voting procedure is started within these 5 days so that the decision can be voted on. The decision in respect of which an issue is handled is recorded within the GitHub environment. See the info at [https://oeapi.eu/v6.0/#/governance/README?id=community-governance](/governance/README.md#community-governance)
+**Decisions within GitHub** For issues within the GitHub environment, the following applies: If an issue is submitted, the master committer has 5 days to prepare for handling the issue. The voting procedure is started within these 5 days so that the decision can be voted on. The decision in respect of which an issue is handled is recorded within the GitHub environment. See the info at [https://oeapi.eu/v6.0/#/contributing/README?id=community-governance](/contributing/README.md#community-governance)
 
 **Other decisions** Voting can take place by sending your vote to info@openonderwijsapi.nl. Any Technical Working Group member can submit a decision to be voted on. All Technical Working Group members receive an email of the forthcoming vote. This notification specifies:
 *  the matter which is the subject of the vote;
@@ -51,4 +51,4 @@ This section describes how an institution or supplier can demonstrate that they 
 *  Documentation on own implementation is available online for at least the Technical Working Group members. Compliance with the specification can be demonstrated with a badge stating 'complies with OEAPI'. Each version of the OEAPI will have its own 'complies with OEAPI Vx.x' badge so that it is clear which version of the specification it complies with.
 
 # Appendix A: Code of Conduct (COC)
-The Open Education API project applies the following [code of conduct](code-of-conduct.md)
+The Open Education API project applies the following [code of conduct](/contributing/code-of-conduct.md)

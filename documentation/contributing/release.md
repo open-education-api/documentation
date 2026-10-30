@@ -17,7 +17,7 @@ distinguishes between:
 - automatic publication to the website
 
 Consumer versioning is described in
-[consumers and profiles](/technical/consumers-and-profiles/README.md).
+[consumers and profiles](/implementation/consumers-and-profiles/README.md).
 
 ## Versioning policy
 

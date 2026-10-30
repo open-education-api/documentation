@@ -218,7 +218,7 @@ Implementations can extend OEAPI by adding extra attributes to the `ext`
 object that is defined in the specification for most resources. Extending
 OEAPI can also be done by specifying a specific consumer. This is a
 mechanism that allows specifying an extension that can be more easily reused
-across several implementations. See [Specific consumers](/governance/README.md#community-governance)
+across several implementations. See [Specific consumers](/contributing/README.md#community-governance)
 for more information.
 
 All users of OEAPI are encouraged to feed their extensions back to the OEAPI

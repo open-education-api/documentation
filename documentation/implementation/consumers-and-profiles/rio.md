@@ -20,7 +20,7 @@ An educational institution needs to implement the following calls to be compatib
 - `GET /courses/{courseId}?returnTimelineOverrides=true`
 - `GET /courses/{courseId}/course-offerings?pageSize=250`
 
-!> All calls need to support the [Accept header containing the consumer version](/technical/versioning) and should only return entities meant for RIO when the consumer in this header is set to `rio`. An example header: `Accept: application/vnd.oeapi+json;version=6.0;consumer=rio;consumer-version=6.0`
+!> All calls need to support the [Accept header containing the consumer version](/specification/convention/versioning) and should only return entities meant for RIO when the consumer in this header is set to `rio`. An example header: `Accept: application/vnd.oeapi+json;version=6.0;consumer=rio;consumer-version=6.0`
 
 !> All calls returning resources should have the "rio consumer object" in the `consumer` attribute. The `consumerKey` of this consumer should be set to `"rio"`.
 

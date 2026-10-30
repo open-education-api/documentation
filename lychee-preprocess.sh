@@ -4,4 +4,6 @@
 # lychee --include-fragments -p ./lychee-preprocess.sh documentation
 
 # Convert "#_1" → "#1" and remove "#start" markers
-sed -E 's/#_([0-9])/#\1/g; s/#start//g' "$1"
+sed -E 's/#_([0-9])/#\1/g; s/#start//g' "$1" |
+# Remove "#" from Docsify tile links in home.md
+sed -E '/href="#\//s|href="#/|href="/|g'

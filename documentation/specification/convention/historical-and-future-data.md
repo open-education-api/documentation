@@ -37,7 +37,7 @@ The timelineOverride mechanism consists of the following:
 In the following example, `name` is a required field and must therefore be
 repeated in the timelineOverrides.
 
-![Example timelineOverride](../_media/example-timeline-override.png "Example timelineOverride")
+![Example timelineOverride](../../_media/example-timeline-override.png "Example timelineOverride")
 
 1. The first known state of events starts on 1990-01-23. The example entity
    has the following attributes:
@@ -89,7 +89,7 @@ This sequence of changes can be specified in OEAPI as follows:
 Without changing the underlying data, let us look at the result at a later
 point in time:
 
-![Example timelineOverride later in time](../_media/example-timeline-override-later.png "Example timelineOverride later in time")
+![Example timelineOverride later in time](../../_media/example-timeline-override-later.png "Example timelineOverride later in time")
 
 ```json
 {

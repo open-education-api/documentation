@@ -12,7 +12,7 @@ structure.
 The OEAPI Specification is a set of definitions that enable institutions
 to make their internal data accessible. The specification is
 maintained by the working group. Changes to the specification can be made
-according to the [governance by-laws](/governance/).
+according to the [governance by-laws](/contributing/by-laws.md).
 
 Institutions that wish to provide access to their internal data through
 the OEAPI specification do so under their own responsibility. The OEAPI
