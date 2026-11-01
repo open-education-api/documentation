@@ -365,3 +365,86 @@ body[data-page$="home.md"] .content {
   left: 0 !important;
   margin-left: 0 !important;
 }
+
+
+/* ========================================================= */
+/*   Version banner (below the fixed topbar)                 */
+/* ========================================================= */
+
+#version-banner {
+  position: fixed;
+  top: 66px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Centre text within the content width */
+.version-banner-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 10px 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ========================================================= */
+/*   Banner variants                                         */
+/* ========================================================= */
+
+/* Old version: yellow */
+#version-banner.banner-old {
+  background: #FFC400;
+  color: #002d72 !important;
+}
+
+#version-banner.banner-old strong,
+#version-banner.banner-old a,
+#version-banner.banner-old a:visited {
+  color: #002d72 !important;
+}
+
+#version-banner.banner-old a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Beta and unreleased versions: teal */
+#version-banner.banner-beta,
+#version-banner.banner-unreleased {
+  background: #2CA1A3;
+  color: #ffffff !important;
+}
+
+#version-banner.banner-beta strong,
+#version-banner.banner-beta .version-label,
+#version-banner.banner-beta a,
+#version-banner.banner-beta a:visited,
+#version-banner.banner-unreleased strong,
+#version-banner.banner-unreleased .version-label,
+#version-banner.banner-unreleased a,
+#version-banner.banner-unreleased a:visited {
+  color: #ffffff !important;
+}
+
+#version-banner.banner-beta a,
+#version-banner.banner-unreleased a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ========================================================= */
+/*   Content offset when banner is visible                   */
+/* ========================================================= */
+
+body.with-banner .content {
+  margin-top: 52px;
+}
+
+body.with-banner .sidebar {
+  top: 118px;
+}

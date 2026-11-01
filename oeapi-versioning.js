@@ -81,24 +81,6 @@
   }
 
   /**
-   * Set header background based on version status.
-   */
-  function updateHeaderColour() {
-    const activeVersion = getActiveVersion();
-    const header = document.querySelector('.topbar');
-    if (!activeVersion || !header) return;
-
-    const colours = {
-      current: '#17233d',
-      old: '#FFC400',
-      beta: '#2CA1A3',
-      unreleased: '#2CA1A3'
-    };
-
-    header.style.backgroundColor = colours[activeVersion.status] || colours.current;
-  }
-
-  /**
    * Initialise header version dropdown.
    */
   function initialiseVersionDropdown() {
@@ -171,7 +153,6 @@
   function initialise() {
     // kleine delay zodat Docsify de layout klaar heeft
     setTimeout(renderBanner, 80);
-    setTimeout(updateHeaderColour, 80);
     initialiseVersionSwitch();
     initialiseVersionDropdown();
   }
