@@ -16,6 +16,6 @@
   * [Formatting text](/specification/convention/formatting-text.md#start)
   * [Historical and future data](/specification/convention/historical-and-future-data.md#start)
   * [Identifiers](/specification/convention/identifiers.md#start)
-  * [Suplementary information](/specification/conventions/supplementary-information.md#start)
+  * [Suplementary information](/specification/convention/supplementary-information.md#start)
   * [Sorting / Ordering](/specification/convention/sorting-language.md#start)
   * [Versioning](/specification/convention/versioning.md#start)
