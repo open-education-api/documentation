@@ -3,6 +3,8 @@
 * [Implementation](/implementation/#start)
 * [Implementation guidelines](/implementation/guidelines.md#start)
 * [Security and IAA](/implementation/security-iaa.md#start)
+* [Design principles](/implementation/design-principles.md#start)
+* [Filtering](/implementation/filtering-generic.md#start)
 * [Timetabling](/implementation/timetabling.md#start)
 * [Versioning](/implementation/versioning.md#start)
 * [Consumers and profiles](/implementation/consumers-and-profiles/)

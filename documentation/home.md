@@ -15,7 +15,7 @@ A common standard for exchanging education data between institutions and applica
     <span>Explore the data model and entities, major changes introduced in version 6.0 and the changelog. Find information about previous versions and how the standard has evolved. Understand the structure of the specification and the differences between releases.</span>
   </a>
   <a class="oeapi-tile" href="#/implementation/">
-    <strong>Implememtation</strong>
+    <strong>Implementation</strong>
     <span>Get started with implementing OEAPI using practical guidelines, including timetabling, profiles and consumers, security, identity and access management, and extensions. Explore technical conventions for identifiers, enumerations, filtering, sorting, expanding responses, data minimisation, versioning and error handling.</span>
   </a>
   <a class="oeapi-tile" href="#/contributing/">

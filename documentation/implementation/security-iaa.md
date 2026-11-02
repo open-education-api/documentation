@@ -91,6 +91,51 @@ exchange information on their behalf.
 
 [![swimlanes for enrolling students](https://static.swimlanes.io/1d4366f0a7a921b63426545ef8219b1c.png)](https://swimlanes.io/d/PtQjnQqqF)
 
+## Security implementation guideline
+
+### Server responsibility
+
+All access to data must be controlled and enforced by the server. The
+server is responsible for determining which data a client is allowed to
+access, enforcing access restrictions consistently and preventing access
+to unauthorised data, regardless of request parameters.
+
+Clients must never be able to influence access control decisions through
+query parameters, headers or request manipulation.
+
+### Access control
+
+Access control should be applied based on the identity and context of the
+client, typically distinguishing between:
+
+1. Internal clients: access to broader datasets, still subject to privacy
+   constraints.
+2. External or third-party clients: access limited to a minimal required
+   dataset.
+3. Public clients: access restricted to data explicitly classified as public.
+
+Access policies should be centrally defined and consistently enforced.
+Access decisions should use the implementor's data classification, as
+outlined in the CIA/BIV mapping below. This may distinguish public data,
+internal data and sensitive personal data.
+
+### Enforcement
+
+Security must be enforced server-side at all times. The server must:
+
+1. Ignore unauthorised field requests.
+2. Never expose restricted data.
+3. Ensure consistent behaviour across all endpoints.
+
+Non-public data exposure must always be explicitly authorised. Public data
+exposure is allowed by default, but remains controlled by the server.
+
+### Relation to data minimisation
+
+Security determines what a client is allowed to access. Data minimisation
+determines what is returned within that allowed scope. Security always
+takes precedence.
+
 # Mapping OEAPI to BIV
 
 ## CIA and BIV
@@ -212,49 +257,3 @@ These three elements of the triad are then classified into 4 different levels:
   students enrol and undertake assessment tasks in order to achieve specified
   learning outcomes (based on
   [Law Insider](https://www.lawinsider.com/dictionary/unit-of-study)).
-
-# Extending OEAPI
-
-Implementations can extend OEAPI by adding extra attributes to the `ext`
-object that is defined in the specification for most resources. Extending
-OEAPI can also be done by specifying a specific consumer. This is a
-mechanism that allows specifying an extension that can be more easily reused
-across several implementations. See [Specific consumers](/contributing/README.md#community-governance)
-for more information.
-
-All users of OEAPI are encouraged to feed their extensions back to the OEAPI
-Technical Working Group so this information can be used as feedback for future
-versions of OEAPI.
-
-## When to use `ext` and when to use `consumer`?
-
-Use `ext` when:
-
-- You only need a few extra attributes that will only be used by a limited
-  set of clients or consuming systems.
-- The attributes are specific to your own institution.
-- The extension is implementation-specific and not intended for reuse across
-  multiple institutions or systems.
-
-Use `consumer` when:
-
-- You need a set of extra attributes to supply a system that will be used by
-  more than one institution.
-- You would like to promote the use of this extension.
-- The extension represents a reusable integration profile or consumer-specific
-  agreement.
-
-Consumer extensions are intended to improve reuse and interoperability between
-implementations that share the same integration requirements.
-
-## Do not add extra paths or resources
-
-Adding extra paths or resources that are not defined in the specification is
-discouraged. If you have a specific use case that cannot be served with the
-existing resources and paths, we recommend contacting the OEAPI Technical
-Working Group to determine how the specification should be updated to
-accommodate your use case.
-
-The preferred approach is to extend existing resources through the supported
-extension mechanisms instead of introducing custom endpoints that reduce
-interoperability between OEAPI implementations.
