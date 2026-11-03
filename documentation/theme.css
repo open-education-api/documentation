@@ -50,7 +50,7 @@ body[data-page="technical/consumers-and-profiles/rio.md"] .markdown-section code
 
 #page-toc {
   position: fixed;
-  top: 100px;
+  top: 75px;
   right: 32px;
   z-index: 20;
   width: 140px;
@@ -107,6 +107,11 @@ body[data-page="technical/consumers-and-profiles/rio.md"] .markdown-section code
 
 #page-toc-list a:hover {
   color: var(--sidebar-nav-link-color--active, var(--theme-color));
+}
+
+/* Move the page TOC below the version banner when present */
+body.with-banner #page-toc {
+  top: 127px;
 }
 
 body.page-toc-expanded #page-toc {
