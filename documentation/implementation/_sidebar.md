@@ -8,6 +8,6 @@
 * [Timetabling](/implementation/timetabling.md#start)
 * [Versioning](/implementation/versioning.md#start)
 * [Consumers and profiles](/implementation/consumers-and-profiles/)
-  * [Profiling guidelines](/implementation/consumers-and-profiles/profiling-guidelines.md)
+  * [Profiling guidelines](/implementation/consumers-and-profiles/profiling-guidelines.md#start)
   * [RIO](/implementation/consumers-and-profiles/rio.md#start)
   * [eduXchange](/implementation/consumers-and-profiles/eduxchange.html#start)

@@ -105,7 +105,7 @@ This document is intended for both the technical implementers who build and main
 |---|---|
 | [OEAPI v6](https://oeapi.eu/v6.0/) | Open Education API v6.0 |
 | [NED-OOAPI](https://netwerkexamineringdigitalisering.github.io/NED-OOAPI/) | OKE MBO exam administration profile |
-| [eduxchange](https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange) | eduxchange cross-institutional enrolment profile |
+| [eduxchange](/implementation/consumers-and-profiles/eduxchange.md) | eduxchange cross-institutional enrolment profile |
 | [eduxchange-tech](https://tech-docs.eduxchange.eu/) | eduxchange technical documentation |
 | [OEAPI-DP](../design-principles.md) | OEAPI Design Principles (companion document) |
 
@@ -661,7 +661,7 @@ The following profiles can be used as reference implementations of these guideli
 
 **Purpose:** Cross-institutional course enrolment between higher education institutions in university alliances.  
 **Approach:** Defines a consumer (`eduxchange`) with additional fields on `person` and `association` objects. Specifies required endpoints and their mandatory fields. Defines the full enrolment interaction flow.  
-**Repository:** [documentation repository](https://openonderwijsapi.nl/#/technical/consumers-and-profiles/eduxchange)
+**Repository:** [documentation repository](/implementation/consumers-and-profiles/eduxchange.md)
 **Technical docs:** [technical documentation](https://tech-docs.eduxchange.eu/)
 **What to learn from this profile:** How to define a consumer, how to document minimal required fields per endpoint, how to describe a multi-step interaction flow.
 

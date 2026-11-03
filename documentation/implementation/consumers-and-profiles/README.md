@@ -150,7 +150,7 @@ to operate without modification. Examples include:
 Minor versions are therefore backwards compatible within the same major
 version.
 
-See also: [Consumer versioning](technical/versioning.md#consumer-versioning)
+See also: [Consumer versioning](/specification/convention/versioning.md#consumer-version-compatibility)
 
 ### Consumer compatibility
 
@@ -202,7 +202,7 @@ to operate without modification. Examples include:
 Minor versions are therefore backwards compatible within the same major
 version.
 
-See also: [Profile versioning](technical/versioning.md#profile-versioning)
+See also: [Profile versioning](/specification/convention/versioning.md#profile-version-compatibility)
 
 ### Profile compatibility
 

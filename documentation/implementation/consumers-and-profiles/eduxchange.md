@@ -248,7 +248,7 @@ The documentation below is essential for the orientation part.
 
 ## eduXchange consumer object and query parameter for Programmes and Courses
 
-To be compatible with the [eduXchange catalogue website](https://www.eduxchange.nl), an implementation needs to implement the eduXchange consumer object and query parameter. See [specific consumers](consumers.md) for more information:
+To be compatible with the [eduXchange catalogue website](https://www.eduxchange.nl), an implementation needs to implement the eduXchange consumer object and query parameter. See [specific consumers](/implementation/consumers-and-profiles/) for more information:
 
 !> When a client requests programmes or courses and the query parameter `consumer` is set to `eduxchange`, only Programmes and Courses meant for eduxchange should be returned.
 

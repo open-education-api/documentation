@@ -1,6 +1,4 @@
-
 <!-- markdownlint-disable MD033 -->
-
 # Open Education API 6.0
 
 A common standard for exchanging education data between institutions and applications.
