@@ -22,8 +22,8 @@
 /*   Rio adjustments                                         */
 /* ========================================================= */
 
-body[data-page="technical/consumers-and-profiles/rio.md"] .colored-table,
-body[data-page="technical/consumers-and-profiles/rio.md"] .markdown-section code {
+body[data-page="implementation/consumers-and-profiles/rio.md"] .colored-table,
+body[data-page="implementation/consumers-and-profiles/rio.md"] .markdown-section code {
   font-size: 14px;
 }
 
@@ -246,6 +246,12 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
   background: #30415f;
 }
 
+/* Keep the Docsify sidebar toggle below the fixed header. */
+.sidebar-toggle {
+  top: 75px;
+  z-index: 101;
+}
+
 .sidebar {
   top: 66px;
   bottom: 44px;
@@ -453,6 +459,10 @@ body[data-page$="home.md"] .content {
 
 body.with-banner .content {
   margin-top: 52px;
+}
+
+body.with-banner .sidebar-toggle {
+  top: 127px;
 }
 
 body.with-banner .sidebar {
