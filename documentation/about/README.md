@@ -9,7 +9,7 @@ video below:
 <video id="html5_video_872" style="width: 100%; height: 100%;"
 controls="controls" preload="auto" width="630" height="355">
 <source type="video/mp4"
-src="../_media/animation_open_onderwijs_api_uk_v2.mp4" />
+src="_media/animation_open_onderwijs_api_uk_v2.mp4" />
 </video>
 </div>
 
