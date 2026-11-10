@@ -1,71 +1,23 @@
 <!-- markdownlint-disable MD033 -->
-# Open Education API 6.0 for interoperability
+# Open Education API 6.0
 
-For a brief introduction to the OEAPI, please take a look at the short
-video below:
+A common standard for exchanging education data between institutions and applications.
 
-<div class="video_frame" style="width:630px;" data-ratio="1.77">
-<video id="html5_video_872" style="width: 100%; height: 100%;"
-controls="controls" preload="auto" width="630" height="355">
-<source type="video/mp4"
-src="./_media/animation_open_onderwijs_api_uk_v2.mp4" />
-</video>
+<div class="oeapi-tiles">
+  <a class="oeapi-tile" href="#/about/">
+    <strong>About OEAPI</strong>
+    <span>Discover the purpose and benefits of OEAPI, its scope and the education domains it covers. Explore use cases, international developments and examples of institutions and applications using the standard. Learn about its architecture, positioning, data ownership and approach to exchanging education data.</span>
+  </a>
+  <a class="oeapi-tile oeapi-tile--primary" href="#/specification/">
+    <strong>Specification</strong>
+    <span>Explore the data model and entities, major changes introduced in version 6.0 and the changelog. Find information about previous versions and how the standard has evolved. Understand the structure of the specification and the differences between releases.</span>
+  </a>
+  <a class="oeapi-tile" href="#/implementation/">
+    <strong>Implementation</strong>
+    <span>Get started with implementing OEAPI using practical guidelines, including timetabling, profiles and consumers, security, identity and access management, and extensions. Explore technical conventions for identifiers, enumerations, filtering, sorting, expanding responses, data minimisation, versioning and error handling.</span>
+  </a>
+  <a class="oeapi-tile" href="#/contributing/">
+    <strong>Contributing</strong>
+    <span>Learn how OEAPI is developed and maintained, including its governance structure and opportunities to contribute. Follow the process from proposing a change through assessment, review and release. Explore Architecture Decision Records, by-laws, the code of conduct and ways to contact the community.</span>
+  </a>
 </div>
-
-Educational institutions are increasingly sharing education data:
-with their students via apps, between different systems within an
-institution and with other institutions.
-
-The underlying data, however, are stored in various systems, such as
-databases, both within and outside educational institutions. To be able
-to communicate with these systems, a set of definitions known as an
-Application Programming Interface (API) is required.
-
-## A standard is needed
-
-Of course, each school, college or university can develop its own APIs,
-but this is a time-consuming and costly process. That is why the Open
-Education API was
-created. The OEAPI conforms to the design principles of REST
-Representational State Transfer, a flexible, lightweight way of
-integrating applications.
-
-This open API is the result of a collaboration between several
-educational institutions and suppliers in the Netherlands and is
-facilitated by SURF, known collectively as the Community. Within the
-Technical Working Group of the Community, the OEAPI is constantly defined and
-developed so that new and existing education data can be processed
-efficiently.
-
-## OEAPI is widely supported
-
-Via the Dutch Npuls programme, MBO, HBO and WO institutions have
-embraced the OEAPI standard. Implementation of the standard is needed
-to be future-ready. Dutch, but also international institutions, are
-working with the OEAPI standard. Check out the
-[Npuls programme](https://npuls.nl/en/) and specifically more information
-about [Technology Infrastructure](https://npuls.nl/en/technology-infrastructure/).
-
-Not only Dutch educational institutions, but also international
-institutions find their way to OEAPI. Increasingly, there are
-international initiatives and use cases. Check out the page about
-international usage and find out more on our use cases page.
-
-## Creating a standard together
-
-Apps are constantly evolving. To create an all-encompassing standard
-API, it is essential to understand the ever-changing needs of the
-various educational institutions. Therefore, the Community places great
-value on working closely together to create a standard API the OEAPI
-that best serves as many educational institutions in the Netherlands as
-possible.
-
-Furthermore, educational institutions that want to publish education
-data in a standardised way can implement their own API based on the
-OEAPI standard.
-
-## Interested in joining us?
-
-Are you an educational institution and interested in having the OEAPI
-developed to suit your needs? Then why not join us. You can find more
-information here.

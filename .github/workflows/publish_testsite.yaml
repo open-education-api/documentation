@@ -1,0 +1,59 @@
+# This workflow publishes the current documentation from the main branch
+# to the 'unreleased' folder of the open-education-api.github.io repository.
+
+name: Publish documentation to open-education-api.github.io (testsite)
+
+on:
+  push:
+    branches:
+      - testsite
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout this repository containing the documentation.
+      - uses: actions/checkout@v6
+
+      # Create a GitHub App token used to push to the publication repository.
+      - name: Create GitHub App installation token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.OEAPI_APP_PUBLISH_CLIENT_ID }}
+          private-key: ${{ secrets.OEAPI_APP_PUBLISH_SECRET }}
+          owner: open-education-api
+          repositories: |
+            open-education-api.github.io
+
+      # Checkout the documentation website repository.
+      - name: Checkout target repository
+        uses: actions/checkout@v6
+        with:
+          repository: open-education-api/open-education-api.github.io
+          token: ${{ steps.app-token.outputs.token }}
+          path: target
+
+      # Sync documentation to the 'unreleased' folder.
+      - name: Sync documentation to testsite
+        run: |
+          set -euo pipefail
+          mkdir -p target/testsite
+          rsync -a --delete --exclude='specification/changelog/' documentation/ target/testsite/
+
+      # Commit and push only when the sync introduced changes.
+      - name: Commit and push if there are changes
+        run: |
+          set -euo pipefail
+          cd target
+          if git status --porcelain | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Publish documentation -> testsite"
+            git push
+          else
+            echo "No changes to publish."
+          fi
+          

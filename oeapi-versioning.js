@@ -1,11 +1,11 @@
 /*
  *  OOAPI Documentation Version Handling
  *  ------------------------------------------------------
-    - Informational banner indicating a version that is not the latest, but may still be under maintenance
-    - Banner is fixed at the top of the viewport
-    - All alignment handled via CSS
-    - Version selector overridden for clean URLs
- */
+   - Informational banner indicating a version that is not the latest, but may still be under maintenance
+   - Banner is fixed at the top of the viewport
+   - All alignment handled via CSS
+   - Version selector overridden for clean URLs
+*/
 
 (function () {
   // Load versions.json once (synchronously) so Docsify (and the versioned plugin) can use it.
@@ -25,11 +25,11 @@
    */
   function getActiveVersion() {
     if (!VERSIONS_CFG || !Array.isArray(VERSIONS_CFG.versions)) return null;
-	  let activeVersion = VERSIONS_CFG.versions.find(versionEntry => (location.pathname + '/').startsWith(`/${versionEntry.folder}/`) );
+    let activeVersion = VERSIONS_CFG.versions.find(versionEntry => (location.pathname + '/').startsWith(`/${versionEntry.folder}/`) );
     if (!activeVersion) activeVersion = VERSIONS_CFG.versions.find(versionEntry => (VERSIONS_CFG.current === versionEntry.label) );
     return activeVersion;
   }
-    
+  
   /**
    * Add current folder to versions for Docsify versioned plugin.
    */
@@ -81,25 +81,70 @@
   }
 
   /**
+   * Initialise header version dropdown.
+   */
+  function initialiseVersionDropdown() {
+    if (!VERSIONS_CFG || !Array.isArray(VERSIONS_CFG.versions)) return;
+
+    const menu = document.querySelector('.version-menu');
+    const button = document.getElementById('version-toggle');
+    const dropdown = document.getElementById('version-dropdown');
+    const activeVersion = getActiveVersion();
+
+    if (!menu || !button || !dropdown || !activeVersion) return;
+
+    button.textContent = activeVersion.label + ' ▾';
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-haspopup', 'true');
+
+    dropdown.replaceChildren();
+
+    VERSIONS_CFG.versions.forEach(version => {
+      const link = document.createElement('a');
+      link.href = '/' + version.folder + '/';
+      link.textContent = version.label;
+
+      if (version.folder === activeVersion.folder) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+
+      dropdown.appendChild(link);
+    });
+
+    button.addEventListener('click', function () {
+      const isOpen = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!menu.contains(event.target)) {
+        menu.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        menu.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /**
    * Override Docsify Versioned Plugin to ensure stable URLs.
    */
   function initialiseVersionSwitch() {
     document.addEventListener(
       'change',
       function (event) {
-        const el = event.target;
-        if (!el || el.tagName !== 'SELECT') return;
-
-        const folder = (el.value || '').replace(/^\/|\/$/g, '');
-        if (!folder) return;
-
+        const select = event.target;
+        if (!select || select.tagName !== 'SELECT') return;
         event.stopImmediatePropagation();
-
-        const hash = window.location.hash || '#/';
-        const base = window.location.origin;
-
-        window.location.href =
-          base + '/' + folder + '/' + hash.replace(/^#?/, '#');
+        fetch(window.location.origin + '/' + select.value + '/' + window.location.hash.replace(/^#\/?/, '') + '.md', { method: 'HEAD' })
+          .then(function (result) { window.location.href = result.ok ? window.location.origin + '/' + select.value + '/' + window.location.hash : window.location.origin + '/' + select.value;})
+          .catch(function () { window.location.href = window.location.origin + '/' + select.value; });
       },
       true
     );
@@ -109,18 +154,33 @@
     // kleine delay zodat Docsify de layout klaar heeft
     setTimeout(renderBanner, 80);
     initialiseVersionSwitch();
+    initialiseVersionDropdown();
+  }
+
+  /* --- Execution (side-effects) ------------------------------------------- */
+
+  // Ensure current path folder exists in versions config.
+  // If not, add it as an extra entry so the version selector always shows.
+  if (VERSIONS_CFG && Array.isArray(VERSIONS_CFG.versions)) {
+    const folder = (location.pathname || '/').split('/').filter(Boolean)[0];
+    if (folder && !VERSIONS_CFG.versions.some(v => v && v.folder === folder)) {
+      VERSIONS_CFG.versions.push({
+        folder: folder,
+        label: folder,
+        text: folder,
+        status: 'unreleased'
+      });
+    }
   }
 
   // Apply config to Docsify versions (single source: versions.json).
-  (function applyConfig() {
-    if (window.$docsify) {
-      const docsifyVersions = toDocsifyVersions();
-      if (docsifyVersions && docsifyVersions.length) {
-        window.$docsify.versions = docsifyVersions;
-        window.$docsify.versionSelectorLabel = window.$docsify.versionSelectorLabel || 'Version';
-      }
+  if (window.$docsify) {
+    const docsifyVersions = toDocsifyVersions();
+    if (docsifyVersions && docsifyVersions.length) {
+      window.$docsify.versions = docsifyVersions;
+      window.$docsify.versionSelectorLabel = window.$docsify.versionSelectorLabel || 'Version';
     }
-  })();
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initialise);

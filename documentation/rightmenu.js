@@ -1,16 +1,9 @@
 (function () {
-  let resizeHandler;
-
   function rightMenuPlugin(hook) {
     hook.doneEach(function () {
       const existingToc = document.getElementById('page-toc');
       if (existingToc) {
         existingToc.remove();
-      }
-
-      if (resizeHandler) {
-        window.removeEventListener('resize', resizeHandler);
-        resizeHandler = null;
       }
 
       document.body.classList.remove('has-page-toc');
@@ -56,12 +49,6 @@
         list.appendChild(item);
       });
 
-      function setTocState() {
-        const expanded = window.innerWidth >= 1400;
-        document.body.classList.toggle('page-toc-expanded', expanded);
-        toggle.setAttribute('aria-expanded', String(expanded));
-      }
-
       toggle.addEventListener('click', function () {
         const expanded = document.body.classList.toggle('page-toc-expanded');
         toggle.setAttribute('aria-expanded', String(expanded));
@@ -71,10 +58,6 @@
       toc.appendChild(list);
       document.body.appendChild(toc);
       document.body.classList.add('has-page-toc');
-
-      resizeHandler = setTocState;
-      setTocState();
-      window.addEventListener('resize', resizeHandler);
     });
   }
 

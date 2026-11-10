@@ -9,7 +9,7 @@ preprocess = { command = "./lychee-preprocess.sh" }
 
 # Example: exclude specific directories using regex patterns
 exclude_path = [
-  "(^|/)technical/consumers-and-profiles",    # Skip the entire directory
+  "(^|/)implementation/consumers-and-profiles/rio.md",    # Skip the entire directory
   "(^|/)_media/",                             # Skip the entire directory
   "(^|/)_old/",                               # Skip the entire directory
 ]
@@ -18,5 +18,5 @@ exclude_path = [
 exclude = [
   "^https?://([^/]*\\.)?example\\.com",
   "^https?://([^/]*\\.)?example-.*",
-  "^https?://([^/]*\\.)?mbodigitaal.nl"
+  "^https?://([^/]*\\.)?servicedesk.surf.nl"
 ]

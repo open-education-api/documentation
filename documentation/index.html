@@ -14,32 +14,68 @@
 </head>
 
 <body>
-  <!-- Version banner rendered dynamically -->
+  <!-- Header menu --> 
+  <header class="topbar">
+    <a href="#/" class="brand">
+      <img src="_media/OpenEducationApi_Logo.png" alt="OEAPI">
+    </a>
+
+    <div class="main-menu">
+      <a href="#/about/">About</a>
+      <a href="#/specification/">Specification</a>
+      <a href="#/implementation/">Implementation</a>
+      <a href="#/contributing/">Contributing</a>
+    </div>
+
+    <div class="topbar-actions">
+      <a class="api-button" href="specification/specification.html">API reference</a>
+      <div class="version-menu">
+        <button class="version-button" id="version-toggle"
+                type="button" aria-expanded="false">
+          -
+        </button>
+        <div class="version-dropdown" id="version-dropdown"></div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Version banner rendered dynamically -->
   <div id="version-banner"></div>
 
   <!-- Docsify application root -->
   <div id="app"></div>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <a href="#/abbreviations.md">Abbreviations</a>
+    <a href="#/contributing/contact.md">Contact</a>
+    <a href="#/LICENSE.md">Licence: EUPL-1.2</a>
+  </footer>
+  
   <!-- Docsify configuration -->
   <script>
     window.$docsify = {
       repo: 'https://github.com/open-education-api/specification',
       homepage: 'home.md',
       basePath: '',
-      search: 'auto',
-      name: 'Open Education API V6.0',
+      search: {
+        paths: 'auto',
+        namespace: location.pathname
+      },
+      //name: 'Open Education API V6.0',
       externalLinkTarget: '_self',
       loadSidebar: true,
       //loadNavbar: true,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
+      //alias: {
+      //  '/.*/_sidebar.md': '/_sidebar.md'
+      //},
       subMaxLevel: 0,
       maxLevel: 1,          // sidebar nesting depth
       sidebarDisplayLevel: 0,          // Initieel collapsed
-      logo: '_media/OpenEducationApi_Logo.png',
+      //logo: '_media/OpenEducationApi_Logo.png',
       tabs: false,
-      versionSelectorLabel: 'Version'
+      auto2top: true,
+      //versionSelectorLabel: 'Version'
     }
   </script>
 
@@ -57,5 +93,6 @@
 
   <!-- Custom versioning behaviour -->
   <script src="../oeapi-versioning.js"></script>
+
 </body>
 </html>
