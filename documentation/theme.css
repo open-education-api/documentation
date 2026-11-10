@@ -128,18 +128,6 @@ body.page-toc-expanded #page-toc-list {
   display: block;
 }
 
-@media screen and (min-width: 1400px) {
-  body.has-page-toc .content {
-    right: 284px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #page-toc {
-    display: none;
-  }
-}
-
 /* ========================================================= */
 /*   Changelog                                               */
 /* ========================================================= */
@@ -242,7 +230,6 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
 }
 
 .version-button {
-  border: 0;
   cursor: pointer;
   background: #30415f;
 }
@@ -329,8 +316,7 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
   background: #f4f3ef;
   color: #19253b !important;
   text-decoration: none !important;
-  transition: background 0.15s ease;
-}
+je dat is }
 
 .oeapi-tile:hover {
   background: #e9e8e2;
@@ -355,10 +341,7 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
   color: #fff !important;
 }
 
-.oeapi-tile--primary strong {
-  color: #fff !important;
-}
-
+.oeapi-tile--primary strong,
 .oeapi-tile--primary span {
   color: #fff !important;
 }
