@@ -1,12 +1,6 @@
 <!-- markdownlint-disable MD036 -->
 # OEAPI Profiling Guidelines
 
-**Version:** 0.1 (Draft)  
-**Date:** June 2026  
-**Status:** Draft for review
-
----
-
 ## Table of Contents
 
 1. [Introduction](#1-introduction)  

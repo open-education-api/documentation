@@ -1,13 +1,6 @@
 <!-- markdownlint-disable MD036 -->
 # OEAPI Design Principles
 
-**Version:** 0.1 (Draft)  
-**Date:** June 2026  
-**Status:** Draft for review  
-**Relates to:** [Profiling Guidelines](./consumers-and-profiles/profiling-guidelines.md)
-
----
-
 ## Table of Contents
 
 1. [Purpose](#1-purpose)
@@ -25,7 +18,7 @@
 
 ## 1. Purpose
 
-This document describes the design principles behind the OEAPI base specification. It is intended as a reference for anyone creating an OEAPI profile, consumer, or implementation. Profiles that respect these principles are more likely to be interoperable, maintainable, and accepted by the broader community. Profiles that violate them create friction for implementers and reduce ecosystem coherence.
+This document describes the design principles behind the OEAPI base specification. It provides guidelines and rules for the current and future development of the specification itself. The information provided is also intended as a reference for anyone creating an OEAPI profile, consumer, or implementation. Profiles that respect these principles are more likely to be interoperable, maintainable, and accepted by the broader community. Profiles that violate them create friction for implementers and reduce ecosystem coherence, and will not be considered an OEAPI profiel as such.
 
 ---
 
