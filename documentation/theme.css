@@ -316,7 +316,7 @@ body[data-page$="changelog/CHANGELOG.md"] .markdown-section h3 + ul {
   background: #f4f3ef;
   color: #19253b !important;
   text-decoration: none !important;
-je dat is }
+}
 
 .oeapi-tile:hover {
   background: #e9e8e2;
